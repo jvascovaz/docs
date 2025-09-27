@@ -1,0 +1,258 @@
+---
+title: 'Performance Tracking'
+description: 'Monitor your brand performance across all AI models in real-time'
+icon: 'chart-mixed'
+---
+
+# Performance Tracking
+
+Track and analyze your brand's AI performance with comprehensive metrics and insights.
+
+## Overview
+
+Performance tracking in Friction provides deep visibility into how AI models perceive and present your brand. Our system continuously monitors responses across multiple language models to give you actionable insights.
+
+<Frame>
+  <img
+    src="/images/performance-dashboard.png"
+    alt="Performance Dashboard"
+    style={{ borderRadius: '8px' }}
+  />
+</Frame>
+
+## Core Metrics
+
+### Overall Performance Score
+
+Your performance score is calculated using a weighted algorithm that considers:
+
+<ParamField path="visibility" type="number" required>
+  How often your brand appears in relevant AI responses (40% weight)
+</ParamField>
+
+<ParamField path="sentiment" type="number" required>
+  The tone and context of brand mentions (25% weight)
+</ParamField>
+
+<ParamField path="authority" type="number" required>
+  Recognition as a category leader (20% weight)
+</ParamField>
+
+<ParamField path="intent" type="number" required>
+  Purchase recommendation likelihood (15% weight)
+</ParamField>
+
+## Tracking Dimensions
+
+### By AI Model
+
+Monitor performance across different language models:
+
+<Tabs>
+  <Tab title="OpenAI">
+    - **GPT-4**: Latest model with enhanced reasoning
+    - **GPT-4 Turbo**: Faster responses with recent training data
+    - **GPT-3.5**: Widely used, cost-effective model
+  </Tab>
+  <Tab title="Anthropic">
+    - **Claude 3 Opus**: Most capable for complex tasks
+    - **Claude 3 Sonnet**: Balanced performance and speed
+    - **Claude 3 Haiku**: Fast responses for simple queries
+  </Tab>
+  <Tab title="Google">
+    - **Gemini Pro**: Google's flagship model
+    - **Gemini Ultra**: Advanced reasoning capabilities
+    - **PaLM 2**: Previous generation, still widely used
+  </Tab>
+</Tabs>
+
+### By Query Type
+
+Understand how your brand performs across different query categories:
+
+1. **Direct Brand Queries**: "Tell me about [Your Brand]"
+2. **Comparison Queries**: "Compare [Your Brand] vs [Competitor]"
+3. **Recommendation Queries**: "Best [product category] for [use case]"
+4. **Problem-Solving Queries**: "How to [task] with [product type]"
+
+### By Geography
+
+<Note>
+  Geographic tracking is available for Enterprise plans and tracks AI responses in 50+ countries.
+</Note>
+
+Track regional variations in AI responses:
+- North America
+- Europe
+- Asia-Pacific
+- Latin America
+- Middle East & Africa
+
+## Performance Charts
+
+### Trend Analysis
+
+View your performance over time with customizable date ranges:
+
+```javascript
+// Sample data structure for trend analysis
+{
+  "dateRange": "30d",
+  "metrics": {
+    "visibility": [85, 87, 86, 89, 91],
+    "sentiment": [72, 74, 75, 73, 76],
+    "authority": [68, 69, 70, 71, 72]
+  },
+  "timestamps": ["2024-01-01", "2024-01-08", "2024-01-15", "2024-01-22", "2024-01-29"]
+}
+```
+
+### Competitive Benchmarking
+
+Compare your metrics against industry averages and specific competitors:
+
+<CardGroup cols={2}>
+  <Card title="Industry Average" icon="building">
+    See how you stack up against your industry's average AI performance
+  </Card>
+  <Card title="Direct Competitors" icon="users">
+    Track up to 10 competitors side-by-side
+  </Card>
+</CardGroup>
+
+## Alert Configuration
+
+Set up custom alerts for performance changes:
+
+<AccordionGroup>
+  <Accordion title="Threshold Alerts">
+    Trigger when metrics cross defined thresholds:
+    - Performance score drops below 60
+    - Visibility decreases by 20% or more
+    - Negative sentiment exceeds 30%
+  </Accordion>
+  <Accordion title="Anomaly Detection">
+    Automatic detection of unusual patterns:
+    - Sudden spikes or drops in metrics
+    - Deviation from historical trends
+    - Competitive landscape shifts
+  </Accordion>
+  <Accordion title="Model Updates">
+    Notifications when AI models are updated:
+    - New model releases
+    - Training data updates
+    - Algorithm changes affecting rankings
+  </Accordion>
+</AccordionGroup>
+
+## Data Export
+
+Export your performance data for further analysis:
+
+### Available Formats
+- **CSV**: For spreadsheet analysis
+- **JSON**: For programmatic processing
+- **PDF**: For presentation reports
+- **API**: Real-time data access
+
+### Export Options
+
+<Steps>
+  <Step title="Select Date Range">
+    Choose from preset ranges or custom dates
+  </Step>
+  <Step title="Choose Metrics">
+    Select which metrics to include in the export
+  </Step>
+  <Step title="Apply Filters">
+    Filter by AI model, geography, or query type
+  </Step>
+  <Step title="Download">
+    Generate and download your custom report
+  </Step>
+</Steps>
+
+## Best Practices
+
+<Info>
+  For optimal tracking accuracy, ensure your brand name and variations are properly configured in Settings.
+</Info>
+
+### Monitoring Frequency
+
+- **Daily**: Check overall performance score and alerts
+- **Weekly**: Review trend analysis and competitive positioning
+- **Monthly**: Deep dive into comprehensive reports
+- **Quarterly**: Strategic planning based on long-term trends
+
+### Key Actions
+
+Based on performance tracking insights:
+
+1. **Low Visibility**: Increase content production and optimization
+2. **Poor Sentiment**: Address negative feedback sources
+3. **Weak Authority**: Build thought leadership content
+4. **Low Intent**: Improve product information and reviews
+
+## Advanced Features
+
+### Custom Metrics
+
+Create custom KPIs tailored to your business:
+
+```python
+# Example custom metric configuration
+custom_metric = {
+  "name": "Brand Preference Score",
+  "formula": "(visibility * 0.3) + (positive_sentiment * 0.4) + (purchase_intent * 0.3)",
+  "threshold": 75,
+  "alert_on_decrease": True
+}
+```
+
+### Cohort Analysis
+
+Segment performance data by:
+- User intent (research vs. purchase)
+- Query complexity (simple vs. detailed)
+- Time of day/week patterns
+- Seasonal variations
+
+### Predictive Analytics
+
+<Badge variant="outline">Coming Soon</Badge>
+
+Forecast future performance based on:
+- Historical trends
+- Planned content updates
+- Competitive movements
+- AI model evolution
+
+## API Integration
+
+Access performance data programmatically:
+
+```bash
+curl -X GET "https://api.friction.com/v1/performance" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json"
+```
+
+## Related Features
+
+<CardGroup cols={2}>
+  <Card
+    title="Experiments"
+    icon="flask"
+    href="/features/experiments"
+  >
+    Test content variations to improve performance
+  </Card>
+  <Card
+    title="Reports"
+    icon="file-chart-line"
+    href="/features/reports"
+  >
+    Generate detailed performance reports
+  </Card>
+</CardGroup>

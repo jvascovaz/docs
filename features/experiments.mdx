@@ -1,0 +1,317 @@
+---
+title: 'Experiments'
+description: 'A/B test your content to optimize AI model responses'
+icon: 'flask'
+---
+
+# Experiments
+
+Run controlled experiments to improve how AI models represent your brand.
+
+## What are Experiments?
+
+Experiments in Friction allow you to test different content variations to see which performs better in AI-generated responses. By running A/B tests, you can scientifically optimize your brand's AI visibility and sentiment.
+
+<Tip>
+  Experiments typically show results within 48-72 hours, depending on query volume.
+</Tip>
+
+## How Experiments Work
+
+<Steps>
+  <Step title="Create Hypothesis">
+    Define what you want to test and your expected outcome
+  </Step>
+  <Step title="Set Up Variants">
+    Create control and test versions of your content
+  </Step>
+  <Step title="Deploy Test">
+    Friction distributes variants across AI training data sources
+  </Step>
+  <Step title="Monitor Results">
+    Track performance differences between variants
+  </Step>
+  <Step title="Apply Winners">
+    Implement successful variations across your content
+  </Step>
+</Steps>
+
+## Types of Experiments
+
+### Content Experiments
+
+Test different content strategies:
+
+<CardGroup cols={2}>
+  <Card title="Description Testing" icon="text">
+    Compare different ways to describe your product or service
+  </Card>
+  <Card title="Feature Emphasis" icon="star">
+    Test highlighting different product features
+  </Card>
+  <Card title="Tone Variations" icon="message">
+    Experiment with formal vs. conversational tone
+  </Card>
+  <Card title="Length Optimization" icon="ruler">
+    Find the optimal content length for AI comprehension
+  </Card>
+</CardGroup>
+
+### Structural Experiments
+
+Test how information architecture affects AI understanding:
+
+- **Heading Hierarchy**: H1 vs H2 vs H3 for key information
+- **List Formats**: Bullets vs. numbered lists vs. paragraphs
+- **Schema Markup**: Different structured data implementations
+- **FAQ Sections**: Presence and format of Q&A content
+
+### Keyword Experiments
+
+Optimize terminology and phrasing:
+
+```javascript
+// Example keyword experiment configuration
+{
+  "experiment_name": "Product Category Terms",
+  "control": "enterprise software platform",
+  "variants": [
+    "enterprise SaaS solution",
+    "business automation platform",
+    "enterprise cloud software"
+  ],
+  "success_metric": "category_authority_score"
+}
+```
+
+## Setting Up an Experiment
+
+### 1. Define Your Goals
+
+<AccordionGroup>
+  <Accordion title="Visibility Goals">
+    - Increase appearance in top recommendations
+    - Improve ranking in comparison queries
+    - Boost brand mention frequency
+  </Accordion>
+  <Accordion title="Sentiment Goals">
+    - Reduce negative associations
+    - Increase positive descriptors
+    - Improve trust indicators
+  </Accordion>
+  <Accordion title="Authority Goals">
+    - Establish category leadership
+    - Increase expert citations
+    - Improve credibility markers
+  </Accordion>
+</AccordionGroup>
+
+### 2. Create Variants
+
+<Tabs>
+  <Tab title="Simple A/B">
+    Test one variable with two options:
+    - **Control**: Current version
+    - **Variant A**: Modified version
+  </Tab>
+  <Tab title="Multivariate">
+    Test multiple variables simultaneously:
+    - **Control**: Current version
+    - **Variant A**: Change X
+    - **Variant B**: Change Y
+    - **Variant C**: Change X + Y
+  </Tab>
+</Tabs>
+
+### 3. Configure Parameters
+
+<ParamField path="duration" type="string" required>
+  Test duration (minimum 7 days, recommended 14-30 days)
+</ParamField>
+
+<ParamField path="traffic_split" type="object" required>
+  Percentage of queries to include in test (default: 50/50 split)
+</ParamField>
+
+<ParamField path="success_metrics" type="array" required>
+  Which metrics determine the winner
+</ParamField>
+
+<ParamField path="confidence_level" type="number" default="95">
+  Statistical confidence required to declare a winner
+</ParamField>
+
+## Monitoring Experiments
+
+### Real-time Dashboard
+
+Track experiment progress with live metrics:
+
+<Frame>
+  <img
+    src="/images/experiment-dashboard.png"
+    alt="Experiment Dashboard"
+    style={{ borderRadius: '8px' }}
+  />
+</Frame>
+
+### Key Metrics to Watch
+
+1. **Conversion Rate**: How often the variant appears vs. control
+2. **Lift**: Percentage improvement over control
+3. **Confidence Score**: Statistical significance of results
+4. **Sample Size**: Number of AI queries analyzed
+
+### Statistical Significance
+
+<Note>
+  Friction uses Bayesian statistics to determine winners, providing more reliable results than traditional A/B testing.
+</Note>
+
+We calculate significance using:
+- **Bayesian Probability**: Likelihood that variant beats control
+- **Expected Loss**: Risk of choosing the wrong variant
+- **Credible Intervals**: Range of likely true effect sizes
+
+## Experiment Examples
+
+### Case Study 1: E-commerce Product Descriptions
+
+**Challenge**: Low visibility in "best [product]" queries
+
+**Experiment Setup**:
+- **Control**: Technical specifications focus
+- **Variant A**: Benefit-focused descriptions
+- **Variant B**: User testimonial integration
+
+**Results**:
+- Variant B increased visibility by 34%
+- Positive sentiment improved by 28%
+- Purchase intent rose by 41%
+
+### Case Study 2: B2B Software Positioning
+
+**Challenge**: Weak authority score in enterprise software category
+
+**Experiment Setup**:
+- **Control**: Feature-based positioning
+- **Variant**: Problem/solution positioning
+
+**Results**:
+- Authority score increased by 22%
+- Appeared in 45% more "recommended for enterprise" queries
+- Competitive win rate improved by 18%
+
+## Best Practices
+
+<Warning>
+  Always run experiments for at least 7 days to account for AI model caching and update cycles.
+</Warning>
+
+### Do's
+- ✅ Test one major change at a time
+- ✅ Run experiments for statistical significance
+- ✅ Document learnings for future tests
+- ✅ Consider seasonal variations
+- ✅ Test across multiple AI models
+
+### Don'ts
+- ❌ End experiments too early
+- ❌ Test too many variables at once
+- ❌ Ignore negative results
+- ❌ Forget to implement winners
+- ❌ Run conflicting experiments simultaneously
+
+## Advanced Features
+
+### Experiment Templates
+
+Use pre-built templates for common optimization goals:
+
+<CardGroup cols={2}>
+  <Card title="New Product Launch" icon="rocket">
+    Optimize visibility for new offerings
+  </Card>
+  <Card title="Reputation Recovery" icon="shield">
+    Improve sentiment after negative events
+  </Card>
+  <Card title="Competitive Positioning" icon="trophy">
+    Win more comparison queries
+  </Card>
+  <Card title="Geographic Expansion" icon="globe">
+    Optimize for new markets
+  </Card>
+</CardGroup>
+
+### Auto-optimization
+
+<Badge variant="outline">Beta</Badge>
+
+Enable machine learning to automatically:
+- Generate variant suggestions
+- Adjust traffic allocation
+- Stop underperforming variants
+- Scale winning variations
+
+### Integration with CI/CD
+
+```bash
+# Automatically deploy winning variants
+friction experiments apply-winner \
+  --experiment-id=exp_123 \
+  --confidence-threshold=95 \
+  --auto-rollout=true
+```
+
+## Analyzing Results
+
+### Success Criteria
+
+Determine experiment success based on:
+
+1. **Primary Metrics**: Direct goal achievement
+2. **Secondary Metrics**: Indirect benefits
+3. **Guard Rails**: Ensure no negative impacts
+4. **Long-term Effects**: Sustained improvements
+
+### Report Generation
+
+Generate comprehensive experiment reports:
+
+```python
+# Example experiment report structure
+{
+  "experiment_id": "exp_123",
+  "status": "completed",
+  "winner": "variant_b",
+  "metrics": {
+    "visibility_lift": "+34%",
+    "sentiment_lift": "+28%",
+    "confidence": "98.5%"
+  },
+  "recommendations": [
+    "Implement variant B across all product pages",
+    "Test similar approach for other products",
+    "Monitor for 30 days post-implementation"
+  ]
+}
+```
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="View Templates"
+    icon="rectangle-list"
+    href="/features/experiment-templates"
+  >
+    Browse pre-built experiment templates
+  </Card>
+  <Card
+    title="API Documentation"
+    icon="code"
+    href="/api-reference/experiments"
+  >
+    Programmatically manage experiments
+  </Card>
+</CardGroup>

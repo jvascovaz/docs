@@ -1,15 +1,54 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "friction",
+  "name": "Friction",
   "colors": {
-    "primary": "#0A054B",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#3B85C6",
+    "light": "#5096D7",
+    "dark": "#2563EB"
+  },
+  "anchors": {
+    "from": "#3B85C6",
+    "to": "#5096D7"
   },
   "favicon": "/favicon.svg",
+  "font": {
+    "headings": {
+      "family": "Inter"
+    },
+    "body": {
+      "family": "Inter"
+    }
+  },
+  "topbarCtaButton": {
+    "type": "link",
+    "name": "Dashboard",
+    "url": "https://app.friction.com"
+  },
+  "tabs": {
+    "style": "underline"
+  },
   "navigation": {
     "tabs": [
+      {
+        "tab": "Dashboard",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "dashboard/overview"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/performance-tracking",
+              "features/experiments",
+              "features/reports"
+            ]
+          }
+        ]
+      },
       {
         "tab": "Guides",
         "groups": [

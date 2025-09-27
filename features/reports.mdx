@@ -1,0 +1,391 @@
+---
+title: 'Reports & Analytics'
+description: 'Generate comprehensive reports and export your AI performance data'
+icon: 'file-chart-line'
+---
+
+# Reports & Analytics
+
+Create detailed reports to share AI performance insights with your team and stakeholders.
+
+## Report Types
+
+### Executive Summary
+
+High-level overview designed for leadership:
+
+<CardGroup cols={2}>
+  <Card title="Performance Snapshot" icon="gauge">
+    Key metrics and month-over-month changes
+  </Card>
+  <Card title="Competitive Position" icon="ranking-star">
+    Market share and competitive benchmarks
+  </Card>
+  <Card title="ROI Analysis" icon="coins">
+    Impact on business metrics and revenue
+  </Card>
+  <Card title="Strategic Recommendations" icon="lightbulb">
+    AI-driven insights and action items
+  </Card>
+</CardGroup>
+
+### Detailed Analytics
+
+In-depth analysis for marketing and product teams:
+
+- **Performance Trends**: Historical data with annotations
+- **Query Analysis**: Top performing and underperforming queries
+- **Content Effectiveness**: Which content drives AI visibility
+- **Sentiment Drivers**: Factors influencing brand perception
+
+### Custom Reports
+
+Build reports tailored to your specific needs:
+
+<Tabs>
+  <Tab title="Metrics Selection">
+    Choose from 50+ available metrics:
+    - Core performance scores
+    - Model-specific metrics
+    - Geographic breakdowns
+    - Temporal patterns
+  </Tab>
+  <Tab title="Visualization Options">
+    Multiple chart types:
+    - Line graphs for trends
+    - Bar charts for comparisons
+    - Heatmaps for patterns
+    - Scatter plots for correlations
+  </Tab>
+  <Tab title="Filters & Segments">
+    Slice data by:
+    - Date ranges
+    - AI models
+    - Query types
+    - Geographic regions
+  </Tab>
+</Tabs>
+
+## Creating Reports
+
+### Quick Reports
+
+Generate instant reports with one click:
+
+<Steps>
+  <Step title="Select Template">
+    Choose from pre-built report templates
+  </Step>
+  <Step title="Set Date Range">
+    Pick your reporting period
+  </Step>
+  <Step title="Generate">
+    Create report in under 30 seconds
+  </Step>
+  <Step title="Share">
+    Download or share via link
+  </Step>
+</Steps>
+
+### Custom Report Builder
+
+<Frame>
+  <img
+    src="/images/report-builder.png"
+    alt="Custom Report Builder Interface"
+    style={{ borderRadius: '8px' }}
+  />
+</Frame>
+
+Build reports from scratch:
+
+```javascript
+// Example custom report configuration
+{
+  "report_name": "Q4 2024 AI Performance Review",
+  "sections": [
+    {
+      "type": "executive_summary",
+      "metrics": ["overall_score", "visibility", "sentiment"]
+    },
+    {
+      "type": "trend_analysis",
+      "period": "90d",
+      "comparison": "previous_period"
+    },
+    {
+      "type": "competitive_analysis",
+      "competitors": ["Brand A", "Brand B", "Brand C"],
+      "metrics": ["visibility", "authority"]
+    }
+  ],
+  "format": "pdf",
+  "branding": true
+}
+```
+
+## Report Components
+
+### Metrics Dashboard
+
+<ParamField path="overall_score" type="number">
+  Composite AI performance score (0-100)
+</ParamField>
+
+<ParamField path="visibility_rate" type="percentage">
+  Percentage of relevant queries where brand appears
+</ParamField>
+
+<ParamField path="sentiment_breakdown" type="object">
+  Distribution of positive, neutral, and negative mentions
+</ParamField>
+
+<ParamField path="authority_index" type="number">
+  Brand authority score relative to industry average
+</ParamField>
+
+### Trend Analysis
+
+Track changes over time with:
+
+- **Rolling Averages**: 7, 30, and 90-day trends
+- **Period Comparisons**: Week-over-week, month-over-month
+- **Seasonality Detection**: Identify recurring patterns
+- **Anomaly Highlighting**: Automatic flagging of unusual changes
+
+### Competitive Benchmarking
+
+<Note>
+  Competitive data is normalized to ensure fair comparisons regardless of brand size.
+</Note>
+
+Compare your brand against:
+
+1. **Direct Competitors**: Specific brands you're tracking
+2. **Industry Average**: Aggregated industry performance
+3. **Category Leaders**: Top performers in your category
+4. **Market Share**: Relative AI visibility share
+
+## Automated Reporting
+
+### Scheduled Reports
+
+Set up recurring reports:
+
+<AccordionGroup>
+  <Accordion title="Daily Reports">
+    - Performance summary
+    - Alert digest
+    - Competitive movements
+    - Query volume changes
+  </Accordion>
+  <Accordion title="Weekly Reports">
+    - Trend analysis
+    - Experiment results
+    - Content performance
+    - Optimization opportunities
+  </Accordion>
+  <Accordion title="Monthly Reports">
+    - Executive summary
+    - Full performance review
+    - Competitive analysis
+    - Strategic recommendations
+  </Accordion>
+</AccordionGroup>
+
+### Report Distribution
+
+Automatically deliver reports via:
+
+- **Email**: PDF attachments or inline HTML
+- **Slack**: Summary messages with key metrics
+- **API Webhook**: JSON data for integration
+- **Dashboard**: Always-available web view
+
+## Export Options
+
+### File Formats
+
+<CardGroup cols={4}>
+  <Card title="PDF" icon="file-pdf">
+    Presentation-ready documents
+  </Card>
+  <Card title="Excel" icon="file-excel">
+    Detailed data for analysis
+  </Card>
+  <Card title="CSV" icon="file-csv">
+    Raw data export
+  </Card>
+  <Card title="JSON" icon="code">
+    API integration format
+  </Card>
+</CardGroup>
+
+### Data Granularity
+
+Choose your level of detail:
+
+- **Summary**: High-level metrics only
+- **Standard**: Metrics with basic breakdowns
+- **Detailed**: All data points and segments
+- **Raw**: Unprocessed query-level data
+
+## Report Templates
+
+### Pre-built Templates
+
+<Tabs>
+  <Tab title="Marketing">
+    - Brand Health Report
+    - Campaign Performance Analysis
+    - Content Effectiveness Review
+    - Competitive Intelligence Brief
+  </Tab>
+  <Tab title="Product">
+    - Feature Visibility Analysis
+    - User Sentiment Report
+    - Product Comparison Study
+    - Launch Performance Review
+  </Tab>
+  <Tab title="Executive">
+    - Board Presentation Deck
+    - Quarterly Business Review
+    - Strategic Planning Report
+    - ROI & Impact Analysis
+  </Tab>
+</Tabs>
+
+### Custom Templates
+
+Save your custom reports as templates:
+
+```python
+# Save custom template
+template = {
+  "name": "Weekly Team Update",
+  "description": "Performance summary for team standup",
+  "sections": ["key_metrics", "week_over_week", "alerts"],
+  "recipients": ["team@company.com"],
+  "schedule": "every_monday_9am"
+}
+```
+
+## Advanced Analytics
+
+### Correlation Analysis
+
+Discover relationships between metrics:
+
+- Content updates → Visibility changes
+- Sentiment shifts → Purchase intent
+- Competitive actions → Market share impact
+- Seasonal patterns → Query volume
+
+### Predictive Insights
+
+<Badge variant="outline">Enterprise</Badge>
+
+Machine learning models that forecast:
+
+- Next month's performance trajectory
+- Impact of planned content changes
+- Competitive threat assessment
+- Opportunity identification
+
+### Attribution Modeling
+
+Understand what drives your AI performance:
+
+<Steps>
+  <Step title="Content Attribution">
+    Which pages/content contribute most to visibility
+  </Step>
+  <Step title="Update Attribution">
+    Impact of specific content changes
+  </Step>
+  <Step title="Channel Attribution">
+    How different sources influence AI training
+  </Step>
+</Steps>
+
+## Sharing & Collaboration
+
+### Share Settings
+
+Control how reports are shared:
+
+<Warning>
+  Shared reports respect user permissions - viewers only see data they have access to.
+</Warning>
+
+- **Public Link**: Anyone with link can view
+- **Password Protected**: Requires password for access
+- **Team Only**: Limited to team members
+- **Time-Limited**: Links expire after set duration
+
+### Collaboration Features
+
+- **Comments**: Add notes and discussions
+- **Annotations**: Highlight important insights
+- **Version History**: Track report changes
+- **Export Permissions**: Control download access
+
+## API Access
+
+Programmatically generate and access reports:
+
+```bash
+# Generate a report via API
+curl -X POST "https://api.friction.com/v1/reports" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "template": "executive_summary",
+    "date_range": "last_30_days",
+    "format": "json"
+  }'
+
+# Response
+{
+  "report_id": "rpt_abc123",
+  "status": "processing",
+  "estimated_time": 30,
+  "webhook_url": "https://api.friction.com/v1/reports/rpt_abc123"
+}
+```
+
+## Best Practices
+
+### Report Design
+
+1. **Start with objectives**: What decisions will this report inform?
+2. **Focus on actionable insights**: Highlight what can be improved
+3. **Use appropriate visualizations**: Match chart type to data type
+4. **Provide context**: Include benchmarks and comparisons
+5. **Keep it concise**: Lead with key findings
+
+### Distribution Strategy
+
+- **Executives**: Weekly summaries, monthly deep dives
+- **Marketing**: Daily alerts, weekly performance reports
+- **Product**: Feature-specific reports, user sentiment analysis
+- **Sales**: Competitive intelligence, market positioning
+
+## Related Resources
+
+<CardGroup cols={2}>
+  <Card
+    title="Dashboard Overview"
+    icon="chart-line"
+    href="/dashboard/overview"
+  >
+    Explore the main dashboard
+  </Card>
+  <Card
+    title="API Documentation"
+    icon="code"
+    href="/api-reference/reports"
+  >
+    Integrate reports via API
+  </Card>
+</CardGroup>
