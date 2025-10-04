@@ -110,11 +110,6 @@
     "global": {
       "anchors": [
         {
-          "anchor": "API Reference",
-          "href": "/api-reference/introduction",
-          "icon": "code"
-        },
-        {
           "anchor": "Dashboard",
           "href": "https://app.friction.com",
           "icon": "chart-line"
