@@ -3,18 +3,18 @@
   "theme": "mint",
   "name": "Friction",
   "colors": {
-    "primary": "#3B85C6",
-    "light": "#5096D7",
-    "dark": "#2563EB"
+    "primary": "#0A054B",
+    "light": "#3668FF",
+    "dark": "#0A054B"
   },
   "anchors": {
-    "from": "#3B85C6",
-    "to": "#5096D7"
+    "from": "#0A054B",
+    "to": "#3668FF"
   },
   "favicon": "/favicon.svg",
   "font": {
     "headings": {
-      "family": "Inter"
+      "family": "Montserrat"
     },
     "body": {
       "family": "Inter"
@@ -110,14 +110,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "API Reference",
+          "href": "/api-reference/introduction",
+          "icon": "code"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Dashboard",
+          "href": "https://app.friction.com",
+          "icon": "chart-line"
         }
       ]
     }
@@ -130,13 +130,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@friction.com"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://app.friction.com"
     }
   },
   "contextual": {
@@ -153,9 +153,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/friction",
+      "github": "https://github.com/friction",
+      "linkedin": "https://linkedin.com/company/friction"
     }
   }
 }
