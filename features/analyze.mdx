@@ -1,81 +1,151 @@
 ---
-title: 'Competitive Analysis'
-description: 'Benchmark your AI presence against competitors and track brand health metrics'
+title: 'Brand Health Analysis'
+description: 'Deep dive into your brand's AI performance across four core metrics'
 icon: 'chart-mixed'
 ---
 
-# Analyze Your Brand Performance
+# Analyze Your Brand Health
 
-The Analyze page provides deep insights into your brand's health across AI models, with detailed metric breakdowns and competitive benchmarking.
+The Analyze page provides detailed insights into your brand's performance across AI platforms, with metric-specific breakdowns, trend analysis, and actionable recommendations.
 
 <Frame>
   <img
     src="/images/analyze-page-overview.png"
-    alt="Analyze Page Overview"
+    alt="Analyze page showing brand health metrics and trends"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
 
-## What is Analyze?
-
-Analyze helps you:
-
-- **Track four core metrics**: Visibility, Sentiment, Authority, and Purchase Intent
-- **See detailed breakdowns**: Understand what drives each metric score
-- **Compare AI models**: See performance across GPT-4, Claude, Gemini, etc.
-- **Monitor trends over time**: Track improvements or declines
-- **Get actionable insights**: AI-powered recommendations for each metric
+## What You Can Do
 
 <CardGroup cols={2}>
-  <Card title="Brand Health Score" icon="heart-pulse">
-    Overall composite score combining all four metrics
+  <Card title="Track 4 Core Metrics" icon="gauge">
+    Monitor Visibility, Authority, Sentiment, and Purchase Intent scores
   </Card>
-  <Card title="Metric Deep Dives" icon="magnifying-glass">
-    Detailed analysis of each metric with sub-components
+  <Card title="View Detailed Breakdowns" icon="chart-pie">
+    See sub-metric components and how scores are calculated
   </Card>
-  <Card title="Trend Analysis" icon="chart-line">
-    Historical performance tracking over 7, 30, or 90 days
+  <Card title="Analyze Trends" icon="chart-line">
+    Track performance changes over 7 days to 1 year
   </Card>
-  <Card title="AI Model Comparison" icon="brain">
-    Performance breakdown by specific AI engine
+  <Card title="Get Insights" icon="lightbulb">
+    AI-generated recommendations specific to each metric
   </Card>
 </CardGroup>
 
 ---
 
-## Page Overview
+## Page Layout
 
-### Main Components
+The Analyze page displays in this order:
 
-<Tabs>
-  <Tab title="Brand Health Summary">
-    Top card showing overall brand health score (0-100) with trend indicators and quick metrics overview.
-  </Tab>
-  <Tab title="Metric Tabs">
-    Four tabs for deep diving into each metric:
-    - **Purchase Intent**: Likelihood of AI recommendation
-    - **Authority**: Recognition as category leader
-    - **Sentiment**: Brand perception and tone
-    - **Visibility**: Frequency and prominence of mentions
-  </Tab>
-  <Tab title="Trend Charts">
-    Interactive charts showing metric performance over time with period selection (7d, 30d, 90d).
-  </Tab>
-  <Tab title="Score Breakdown">
-    Expandable component showing how scores are calculated from sub-metrics.
-  </Tab>
-  <Tab title="Insights Panel">
-    AI-generated recommendations based on metric performance.
-  </Tab>
-</Tabs>
+### 1. Period Filter
+Select timeframe for all data on the page:
+- **7 Days** - Short-term changes
+- **30 Days** - Monthly trends (default)
+- **90 Days** - Quarterly patterns
+- **180 Days** - Half-year view
+- **1 Year** - Annual trends
+
+### 2. Brand Health Summary Card
+
+Executive summary showing all scores at once:
 
 <Frame>
   <img
-    src="/images/analyze-page-components.png"
-    alt="Analyze Page Components"
+    src="/images/analyze-brand-health-summary.png"
+    alt="Brand Health Summary with 5 radial scores"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
+
+**Layout**:
+- **Overall Score** (large radial chart, cyan color)
+- **4 Metric Scores** (smaller radial charts, navy blue)
+  - Visibility
+  - Authority
+  - Sentiment
+  - Purchase Intent
+
+Each metric shows:
+- Current score (0-100)
+- Trend indicator (up/down/neutral arrow)
+- Info icon with metric description tooltip
+
+**Responsive**: Stacks on mobile, 2 columns on tablet, 5 columns on desktop
+
+### 3. Metric Tabs Navigation
+
+Sticky tab bar for switching between metrics:
+
+<Frame>
+  <img
+    src="/images/analyze-metric-tabs.png"
+    alt="Metric tabs: Visibility, Authority, Sentiment, Purchase Intent"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+Clicking a tab updates everything below:
+- Trend charts
+- Score breakdown
+- Insights panel
+
+### 4. Two Side-by-Side Charts
+
+**Left Chart**: Metric Trend Chart
+- Shows selected metric's score over time
+- Period-dependent data points
+- Interactive tooltips
+
+**Right Chart**: Subcomponent Trend Chart
+- Shows the sub-metrics that make up the overall score
+- Multiple lines for different components
+- Same time period as left chart
+
+<Frame>
+  <img
+    src="/images/analyze-two-charts.png"
+    alt="Metric trend and subcomponent trend charts side by side"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+### 5. Expandable Score Breakdown
+
+Shows how the score is calculated from sub-metrics:
+
+<Frame>
+  <img
+    src="/images/analyze-score-breakdown.png"
+    alt="Expandable score breakdown component"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+**Features**:
+- Click to expand/collapse
+- Lists all sub-metrics with scores
+- Shows weighted contributions
+- Explains calculation method
+
+### 6. Metric Insights Card
+
+AI-generated recommendations specific to the selected metric:
+
+<Frame>
+  <img
+    src="/images/analyze-insights-card.png"
+    alt="Metric-specific insights and recommendations"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+**Insight categories**:
+- Quick Wins
+- Strategic Priorities
+- Competitive Alerts
+- Maintenance Tasks
 
 ---
 
@@ -83,608 +153,495 @@ Analyze helps you:
 
 ### 1. Visibility
 
-Measures how frequently and prominently your brand appears in AI-generated responses.
+**What it measures**: How often your brand appears in AI-generated responses
 
-<Frame>
-  <img
-    src="/images/analyze-visibility-metric.png"
-    alt="Visibility Metric"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+**Data source**: System prompts created during onboarding (~25 prompts)
 
-#### What Visibility Includes:
+**Sub-metrics**:
+- Mention frequency
+- Position in responses (first, top 3, average)
+- Template coverage (% of prompt types where you appear)
+- Consistency across AI models
+- Share of voice (your mentions vs total)
 
-<ParamField path="Mention Frequency" type="number">
-  How often your brand is mentioned across all prompts (0-100 scale)
-</ParamField>
-
-<ParamField path="Position Analysis" type="object">
-  Where your brand appears in responses:
-  - First position rate
-  - Top 3 position rate
-  - Average position overall
-</ParamField>
-
-<ParamField path="Template Coverage" type="number">
-  Percentage of different prompt types where your brand appears
-</ParamField>
-
-<ParamField path="Consistency Score" type="number">
-  How reliably your brand is mentioned across different AI models
-</ParamField>
-
-<ParamField path="Share of Voice" type="percentage">
-  Your brand mentions vs total mentions in your category
-</ParamField>
-
-#### Improving Visibility:
-
-<Steps>
-  <Step title="Create Targeted Content">
-    Publish comprehensive content covering key prompts where you have low visibility
-  </Step>
-  <Step title="Optimize for AI Citation">
-    Ensure your website is well-structured, authoritative, and cited by high-quality sources
-  </Step>
-  <Step title="Build Category Authority">
-    Establish thought leadership through guest posts, speaking, and industry contributions
-  </Step>
-  <Step title="Monitor Competitors">
-    Study why competitors appear more frequently and replicate their successful strategies
-  </Step>
-</Steps>
-
----
-
-### 2. Sentiment
-
-Tracks the emotional tone and context surrounding your brand mentions.
-
-<Frame>
-  <img
-    src="/images/analyze-sentiment-metric.png"
-    alt="Sentiment Metric"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
-#### Sentiment Components:
+**Good score**: 70+
+**Needs work**: Below 50
 
 <AccordionGroup>
-  <Accordion title="Positive Sentiment (70-100)">
-    **Indicators**:
-    - Recommendations and praise
-    - "Best choice" or "top pick" language
-    - Positive adjectives and endorsements
-    - Success stories and customer satisfaction
-
-    **Example**: "Brand X is highly recommended for its excellent customer service and innovative features."
-  </Accordion>
-  <Accordion title="Neutral Sentiment (40-69)">
-    **Indicators**:
-    - Factual mentions without opinion
-    - List inclusions without preference
-    - Balanced comparisons
-    - Descriptive but not evaluative
-
-    **Example**: "Brand X offers project management features including task tracking and team collaboration."
-  </Accordion>
-  <Accordion title="Negative Sentiment (0-39)">
-    **Indicators**:
-    - Criticisms or warnings
-    - "Not recommended" language
-    - Negative comparisons
-    - Problem mentions
-
-    **Example**: "Brand X has been criticized for poor customer support and high pricing."
+  <Accordion title="How to Improve Visibility">
+    <Steps>
+      <Step title="Create Comprehensive Content">
+        Publish authoritative content covering key topics in your category
+      </Step>
+      <Step title="Get High-Quality Backlinks">
+        Earn citations from sources AI models trust (Wikipedia, major publications, industry sites)
+      </Step>
+      <Step title="Optimize Website Structure">
+        Ensure your site is well-organized with clear navigation and proper schema markup
+      </Step>
+      <Step title="Build Category Authority">
+        Establish thought leadership through guest posts, speaking engagements, and industry contributions
+      </Step>
+    </Steps>
   </Accordion>
 </AccordionGroup>
 
-#### Improving Sentiment:
+### 2. Authority
 
-<CardGroup cols={2}>
-  <Card title="Address Root Causes" icon="wrench">
-    Fix actual product/service issues driving negative sentiment
-  </Card>
-  <Card title="Gather Positive Reviews" icon="star">
-    Encourage satisfied customers to leave reviews on trusted platforms
-  </Card>
-  <Card title="Create Positive Content" icon="pen">
-    Publish case studies, success stories, and positive customer testimonials
-  </Card>
-  <Card title="Manage Reputation" icon="shield">
-    Respond to criticism professionally and demonstrate improvement
-  </Card>
-</CardGroup>
+**What it measures**: Recognition as a category leader or trusted expert
 
----
+**Data source**: System prompts analyzing expertise and trust signals
 
-### 3. Authority
+**Sub-metrics**:
+- Source quality (tier of sites citing you)
+- Expertise recognition (how often AI calls you an expert)
+- Citation context (authoritative vs. passing mention)
+- Category leadership positioning
 
-Measures recognition as a category leader or trusted source.
+**Good score**: 65+
+**Needs work**: Below 45
 
-<Frame>
-  <img
-    src="/images/analyze-authority-metric.png"
-    alt="Authority Metric"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<AccordionGroup>
+  <Accordion title="How to Improve Authority">
+    <Steps>
+      <Step title="Build High-Authority Backlinks">
+        Get cited by Wikipedia, major publications, and industry-leading sites
+      </Step>
+      <Step title="Publish Original Research">
+        Create data-driven reports and studies that others cite
+      </Step>
+      <Step title="Earn Industry Recognition">
+        Apply for awards, get analyst coverage (Gartner, Forrester)
+      </Step>
+      <Step title="Contribute Expert Content">
+        Write for authoritative publications, speak at conferences
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
 
-#### Authority Signals:
+### 3. Sentiment
 
-<ParamField path="Source Quality" type="object">
-  Quality and authority of sources citing your brand:
-  - Tier 1 sources (Wikipedia, major publications)
-  - Tier 2 sources (industry sites, reputable blogs)
-  - Tier 3 sources (general websites)
-</ParamField>
+**What it measures**: How positively or negatively AI models discuss your brand
 
-<ParamField path="Expertise Recognition" type="number">
-  How often AI models identify your brand as an expert or leader
-</ParamField>
+**Data source**: Sentiment analysis of all brand mentions in system prompt responses
 
-<ParamField path="Citation Context" type="string">
-  Context in which your brand is cited (authoritative vs. passing mention)
-</ParamField>
+**Scale**:
+- **70-100**: Positive sentiment (praise, recommendations)
+- **40-69**: Neutral/Mixed sentiment (factual mentions)
+- **0-39**: Negative sentiment (criticism, warnings)
 
-<ParamField path="Category Leadership" type="boolean">
-  Whether AI models position you as a category leader
-</ParamField>
+**Good score**: 65+
+**Needs work**: Below 50 or trending downward
 
-#### Building Authority:
-
-<Tabs>
-  <Tab title="Content Strategy">
-    - Publish in-depth, authoritative content
-    - Create original research and data
-    - Develop comprehensive guides and resources
-    - Maintain a consistent thought leadership voice
-  </Tab>
-  <Tab title="Backlink Building">
-    - Get cited by high-authority publications
-    - Contribute to industry publications
-    - Appear on podcasts and webinars
-    - Sponsor or speak at industry events
-  </Tab>
-  <Tab title="Wikipedia & Knowledge Bases">
-    - Ensure accurate Wikipedia presence (if notable)
-    - Claim and optimize knowledge graph entities
-    - Maintain accurate business listings
-    - Contribute to industry wikis and resources
-  </Tab>
-  <Tab title="Awards & Recognition">
-    - Apply for industry awards
-    - Seek analyst recognition (Gartner, Forrester)
-    - Earn certifications and badges
-    - Highlight customer success stories
-  </Tab>
-</Tabs>
-
----
+<AccordionGroup>
+  <Accordion title="How to Improve Sentiment">
+    <Steps>
+      <Step title="Address Root Causes">
+        Fix actual product/service issues driving negative feedback
+      </Step>
+      <Step title="Gather Positive Reviews">
+        Encourage satisfied customers to leave reviews on trusted platforms
+      </Step>
+      <Step title="Publish Success Stories">
+        Create case studies and customer testimonials
+      </Step>
+      <Step title="Manage Reputation">
+        Respond professionally to criticism and demonstrate continuous improvement
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
 
 ### 4. Purchase Intent
 
-Analyzes whether AI models recommend your brand for purchase decisions.
+**What it measures**: Whether AI models recommend your brand for purchase decisions
 
-<Frame>
-  <img
-    src="/images/analyze-purchase-intent-metric.png"
-    alt="Purchase Intent Metric"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+**Data source**: Analysis of recommendation strength in system prompt responses
 
-#### Purchase Intent Factors:
+**Sub-metrics**:
+- Recommendation strength (how strongly AI suggests you)
+- Purchase language (presence of "should buy", "best for", "recommended")
+- Comparison positioning (where you rank vs competitors)
+- Use case matching (alignment with user needs)
 
-<ParamField path="Recommendation Strength" type="number">
-  How strongly AI models recommend your brand (0-100)
-</ParamField>
+**Good score**: 60+
+**Needs work**: Below 40
 
-<ParamField path="Purchase Language" type="array">
-  Presence of purchase-oriented keywords:
-  - "Should buy"
-  - "Best for"
-  - "Top choice"
-  - "Recommended"
-</ParamField>
-
-<ParamField path="Comparison Positioning" type="string">
-  How your brand is positioned in competitive comparisons
-</ParamField>
-
-<ParamField path="Use Case Matching" type="number">
-  Alignment between user needs and your brand's recommended use cases
-</ParamField>
-
-#### Improving Purchase Intent:
-
-<Steps>
-  <Step title="Optimize Product Information">
-    Ensure complete, accurate product details are available on your website and in listings
-  </Step>
-  <Step title="Gather Reviews & Ratings">
-    Accumulate positive reviews on trusted platforms (G2, Capterra, Trustpilot)
-  </Step>
-  <Step title="Clarify Use Cases">
-    Create content explicitly matching your products to specific user needs
-  </Step>
-  <Step title="Highlight Differentiators">
-    Clearly communicate unique value propositions and competitive advantages
-  </Step>
-  <Step title="Show Social Proof">
-    Display customer counts, success metrics, and case studies
-  </Step>
-</Steps>
+<AccordionGroup>
+  <Accordion title="How to Improve Purchase Intent">
+    <Steps>
+      <Step title="Optimize Product Information">
+        Ensure complete, accurate product details on your website
+      </Step>
+      <Step title="Gather Reviews & Ratings">
+        Accumulate positive reviews on G2, Capterra, Trustpilot, Amazon, etc.
+      </Step>
+      <Step title="Clarify Use Cases">
+        Create content explicitly matching products to specific user needs
+      </Step>
+      <Step title="Show Social Proof">
+        Display customer counts, success metrics, testimonials
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
 
 ---
 
-## Trend Analysis
+## Using the Charts
 
-View metric performance over time to identify patterns and track optimization efforts.
+### Metric Trend Chart (Left)
 
-<Frame>
-  <img
-    src="/images/analyze-trend-charts.png"
-    alt="Trend Charts"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+Shows your selected metric's score over time.
 
-### Time Period Selection
+**What you'll see**:
+- Line chart with data points
+- X-axis: Time (dates)
+- Y-axis: Score (0-100)
+- Hover tooltips with exact values
 
-Choose from three period options:
+**Use cases**:
+- Identify upward or downward trends
+- Spot sudden changes
+- Correlate score changes with your marketing activities
 
-<Tabs>
-  <Tab title="7 Days">
-    **Use For**:
-    - Tracking immediate impact of changes
-    - Monitoring A/B experiment results
-    - Short-term campaign analysis
-    - Rapid iteration feedback
+### Subcomponent Trend Chart (Right)
 
-    **Note**: Short-term volatility is normal
-  </Tab>
-  <Tab title="30 Days">
-    **Use For**:
-    - Standard monthly reporting
-    - Balanced trend analysis
-    - Most common use case
-    - Filtering out daily noise
+Shows the individual sub-metrics that combine to create the overall score.
 
-    **Note**: Default and recommended view
-  </Tab>
-  <Tab title="90 Days">
-    **Use For**:
-    - Long-term strategic planning
-    - Seasonal pattern identification
-    - Major initiative impact assessment
-    - Executive reporting
+**What you'll see**:
+- Multiple lines (one per sub-metric)
+- Same time period as left chart
+- Different colored lines for each component
+- Legend showing which line is which
 
-    **Note**: Best for big-picture analysis
-  </Tab>
-</Tabs>
+**Use cases**:
+- Understand what's driving overall score changes
+- Identify which sub-metric needs attention
+- See if improvements in one area are offset by declines in another
 
-### Understanding Trends
-
-<AccordionGroup>
-  <Accordion title="Upward Trends 📈">
-    **Indicates**: Your optimization efforts are working
-
-    **Actions**:
-    - Document what changed to cause the improvement
-    - Double down on successful strategies
-    - Share wins with stakeholders
-    - Plan next optimization phase
-  </Accordion>
-  <Accordion title="Downward Trends 📉">
-    **Indicates**: Performance is declining (needs investigation)
-
-    **Possible Causes**:
-    - Competitor improvements
-    - Negative PR or reviews
-    - AI model updates
-    - Content staleness
-
-    **Actions**:
-    - Investigate root cause
-    - Check competitor activity
-    - Review recent AI model changes
-    - Refresh content and strategy
-  </Accordion>
-  <Accordion title="Flat Trends →">
-    **Indicates**: Stable but stagnant performance
-
-    **Actions**:
-    - Test new optimization strategies
-    - Run A/B experiments
-    - Expand prompt coverage
-    - Consider more aggressive tactics
-  </Accordion>
-</AccordionGroup>
+<Tip>
+  If your overall score is flat but you see diverging sub-metric lines, it means improvements in some areas are being offset by declines in others. Focus on the declining components.
+</Tip>
 
 ---
 
 ## Score Breakdown
 
-Expandable component showing detailed sub-metrics that contribute to each score.
+Click to expand the breakdown and see exactly how your score is calculated.
 
 <Frame>
   <img
-    src="/images/analyze-score-breakdown.png"
-    alt="Score Breakdown"
+    src="/images/analyze-score-breakdown-expanded.png"
+    alt="Expanded score breakdown showing sub-metrics and weights"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
 
-### How Scores Are Calculated
+**What you'll see**:
+- List of all sub-metrics
+- Each sub-metric's individual score
+- Weight percentage (how much it contributes)
+- Weighted contribution to final score
+- Description of what each sub-metric measures
 
-Each metric score (0-100) is calculated from weighted sub-components:
+**Example for Visibility**:
+- Mention Frequency: 85 × 30% weight = 25.5 points
+- Position Quality: 72 × 25% weight = 18.0 points
+- Template Coverage: 68 × 20% weight = 13.6 points
+- Consistency: 90 × 15% weight = 13.5 points
+- Share of Voice: 55 × 10% weight = 5.5 points
 
-<Tabs>
-  <Tab title="Visibility Calculation">
-    ```
-    Visibility Score =
-      (Mention Frequency × 0.30) +
-      (Position Quality × 0.25) +
-      (Template Coverage × 0.20) +
-      (Consistency × 0.15) +
-      (Share of Voice × 0.10)
-    ```
-
-    **Example**:
-    - Mention Frequency: 80
-    - Position Quality: 75
-    - Template Coverage: 70
-    - Consistency: 85
-    - Share of Voice: 60
-
-    **Score**: (80×0.3) + (75×0.25) + (70×0.2) + (85×0.15) + (60×0.1) = **75.5**
-  </Tab>
-  <Tab title="Sentiment Calculation">
-    ```
-    Sentiment Score =
-      (Positive Mentions × 100) +
-      (Neutral Mentions × 50) +
-      (Negative Mentions × 0)
-      ÷ Total Mentions
-    ```
-
-    **Example**:
-    - 70% Positive → 70 points
-    - 25% Neutral → 12.5 points
-    - 5% Negative → 0 points
-
-    **Score**: **82.5**
-  </Tab>
-  <Tab title="Authority Calculation">
-    ```
-    Authority Score =
-      (Source Quality × 0.40) +
-      (Expertise Recognition × 0.30) +
-      (Citation Context × 0.20) +
-      (Category Leadership × 0.10)
-    ```
-  </Tab>
-  <Tab title="Purchase Intent Calculation">
-    ```
-    Purchase Intent Score =
-      (Recommendation Strength × 0.40) +
-      (Purchase Language × 0.30) +
-      (Comparison Positioning × 0.20) +
-      (Use Case Matching × 0.10)
-    ```
-  </Tab>
-</Tabs>
+**Total Visibility Score**: 76.1 / 100
 
 <Info>
-  **Understanding Weighted Components**: Higher-weighted factors have more impact on your final score. Focus optimization efforts on high-weight components for maximum score improvement.
+  Focus optimization efforts on high-weight components for maximum impact. A 10-point improvement in a 30% weighted component adds 3 points to your overall score, while the same improvement in a 10% weighted component only adds 1 point.
 </Info>
 
 ---
 
-## AI Engine Comparison
+## Insights Panel
 
-Compare your brand's performance across different AI models.
+AI-generated recommendations tailored to the selected metric.
 
-<Frame>
-  <img
-    src="/images/analyze-engine-comparison.png"
-    alt="AI Engine Comparison"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+**Insight types**:
 
-### Supported AI Models:
-
-<CardGroup cols={3}>
-  <Card title="OpenAI" icon="robot">
-    - GPT-4
-    - GPT-4 Turbo
-    - GPT-3.5
+<CardGroup cols={2}>
+  <Card title="Quick Wins" icon="bolt">
+    High-impact, low-effort improvements you can implement quickly
   </Card>
-  <Card title="Anthropic" icon="brain">
-    - Claude 3 Opus
-    - Claude 3 Sonnet
-    - Claude 3 Haiku
+  <Card title="Strategic Priorities" icon="target">
+    Longer-term initiatives that address fundamental gaps
   </Card>
-  <Card title="Google" icon="google">
-    - Gemini Pro
-    - Gemini Ultra
-    - PaLM 2
+  <Card title="Competitive Alerts" icon="triangle-exclamation">
+    Where competitors are outperforming you
   </Card>
-  <Card title="Perplexity" icon="magnifying-glass">
-    - Perplexity AI
-  </Card>
-  <Card title="Meta" icon="meta">
-    - Llama 3
-  </Card>
-  <Card title="Others" icon="plus">
-    - Additional models as supported
+  <Card title="Maintenance Tasks" icon="list-check">
+    Routine actions to maintain performance
   </Card>
 </CardGroup>
 
-### Why Model Performance Varies:
-
-<AccordionGroup>
-  <Accordion title="Training Data Differences">
-    Each AI model is trained on different datasets with varying cutoff dates. Your brand may appear more in some training sets than others.
-  </Accordion>
-  <Accordion title="Source Citation Preferences">
-    Different models trust different sources. GPT-4 might cite Wikipedia more, while Claude prefers academic sources.
-  </Accordion>
-  <Accordion title="Response Style Variations">
-    Models have different personalities and response patterns. Some are more likely to make recommendations.
-  </Accordion>
-  <Accordion title="Recency Bias">
-    Models with more recent training data may reflect current brand positioning better than older models.
-  </Accordion>
-</AccordionGroup>
-
-### Optimizing for Specific Models:
-
-<Tip>
-  If a particular AI model is critical for your audience (e.g., enterprise buyers use Claude), prioritize optimizing sources that model trusts.
-</Tip>
+**Example insights**:
+- "Your visibility score dropped 8% this month - competitor X launched a major content campaign"
+- "Authority sub-metric 'source quality' is 15 points below your other components - focus on earning backlinks from tier-1 sources"
+- "Sentiment improved 12% after you addressed customer service issues - maintain this momentum"
 
 ---
 
-## Insights & Recommendations
+## Period Selection Strategy
 
-AI-powered insights panel provides actionable recommendations for each metric.
-
-<Frame>
-  <img
-    src="/images/analyze-insights-panel.png"
-    alt="Insights Panel"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
-### Types of Insights:
+Different periods serve different purposes:
 
 <Tabs>
-  <Tab title="Quick Wins">
-    **Example**: "Your visibility increased 15% when you published guides - create 2 more this month"
+  <Tab title="7 Days">
+    **Best for**:
+    - Tracking immediate impact of changes
+    - Monitoring A/B experiment results
+    - Validating short-term campaigns
 
-    **Characteristics**:
-    - High impact, low effort
-    - Can be executed within 1-2 weeks
-    - Based on proven patterns
+    **Warning**: High volatility - don't overreact to daily fluctuations
   </Tab>
-  <Tab title="Strategic Priorities">
-    **Example**: "Authority score trails competitors by 20 points - invest in backlink campaign"
+  <Tab title="30 Days">
+    **Best for**:
+    - Standard monthly reporting
+    - Balanced trend analysis
+    - Most actionable insights
 
-    **Characteristics**:
-    - High impact, higher effort
-    - Requires 1-3 months
-    - Addresses fundamental gaps
+    **Recommended**: Default view for regular monitoring
   </Tab>
-  <Tab title="Competitive Alerts">
-    **Example**: "Competitor X improved sentiment by 10 points this month - investigate their changes"
+  <Tab title="90 Days">
+    **Best for**:
+    - Quarterly business reviews
+    - Identifying seasonal patterns
+    - Measuring sustained improvements
 
-    **Characteristics**:
-    - Time-sensitive
-    - Requires competitive research
-    - May need defensive action
+    **Use case**: Executive reporting
   </Tab>
-  <Tab title="Maintenance Reminders">
-    **Example**: "18 prompts haven't been executed in 30+ days - refresh analysis"
+  <Tab title="180 Days & 1 Year">
+    **Best for**:
+    - Long-term strategic planning
+    - Year-over-year comparisons
+    - Major initiative impact assessment
 
-    **Characteristics**:
-    - Routine operational tasks
-    - Prevent data staleness
-    - Keep monitoring current
+    **Use case**: Annual planning and board presentations
   </Tab>
 </Tabs>
+
+---
+
+## Understanding Trends
+
+<AccordionGroup>
+  <Accordion title="Upward Trend 📈">
+    **What it means**: Your efforts are working
+
+    **Actions**:
+    1. Document what changed to cause the improvement
+    2. Double down on successful strategies
+    3. Share wins with stakeholders
+    4. Plan next phase of optimization
+  </Accordion>
+
+  <Accordion title="Downward Trend 📉">
+    **What it means**: Performance is declining
+
+    **Possible causes**:
+    - Competitor improvements
+    - Negative PR or reviews
+    - AI model updates (training data changes)
+    - Content becoming stale
+    - Website issues affecting crawlability
+
+    **Actions**:
+    1. Check competitor activity (did they launch new content?)
+    2. Review recent news/reviews about your brand
+    3. Check AI model changelog for updates
+    4. Refresh stale content
+    5. Investigate in Insights panel
+  </Accordion>
+
+  <Accordion title="Flat Trend →">
+    **What it means**: Performance is stable but stagnant
+
+    **Actions**:
+    1. Test new optimization strategies
+    2. Run A/B experiments
+    3. Expand prompt coverage
+    4. Consider more aggressive tactics
+    5. Analyze competitors' tactics
+  </Accordion>
+
+  <Accordion title="Volatile / Erratic">
+    **What it means**: Inconsistent performance, high variance
+
+    **Possible causes**:
+    - Small sample size (not enough prompts)
+    - Recent AI model changes
+    - Seasonal effects
+    - Insufficient data points
+
+    **Actions**:
+    1. Add more prompts to increase sample size
+    2. Use longer time periods (30+ days) to smooth volatility
+    3. Focus on sub-metrics with more stable patterns
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Data Source
+
+<Note>
+  **Important**: The Analyze page shows metrics calculated from **system-generated prompts** (~25 prompts created during onboarding Phase 4).
+
+  These prompts cover standard brand health queries and are different from the user-created prompts you see on the Define page.
+
+  **Why separate?**
+  - System prompts provide consistent, standardized brand health measurement
+  - User prompts track custom queries you specifically care about
+  - Both are valuable but serve different purposes
+</Note>
 
 ---
 
 ## Best Practices
 
-### Monitoring Cadence
+<AccordionGroup>
+  <Accordion title="Monitor Weekly">
+    **Frequency**: Check Analyze page once per week
 
-<Steps>
-  <Step title="Weekly Check-ins">
-    Review trend charts and overall brand health score. Look for sudden changes or anomalies.
-  </Step>
-  <Step title="Monthly Deep Dives">
-    Analyze each metric in detail, review insights, and plan optimization initiatives.
-  </Step>
-  <Step title="Quarterly Strategic Reviews">
-    Assess long-term trends (90-day view), benchmark competitors, and set strategic goals.
-  </Step>
-</Steps>
+    **What to do**:
+    - Review overall brand health score
+    - Scan for significant trend changes (>10% movement)
+    - Read new insights in the panel
+    - Note any competitive alerts
 
-### Setting Realistic Goals
+    **Time required**: 5-10 minutes
+  </Accordion>
 
-<CardGroup cols={2}>
-  <Card title="Short-Term (1-3 months)" icon="calendar">
-    Aim for 5-10 point improvements in individual metrics through tactical optimizations
-  </Card>
-  <Card title="Medium-Term (3-6 months)" icon="calendar-days">
-    Target 15-20 point improvements through sustained content and authority building
-  </Card>
-  <Card title="Long-Term (6-12 months)" icon="calendar-range">
-    Strive for 25+ point improvements with comprehensive AEO strategy
-  </Card>
-  <Card title="Competitive Parity (varies)" icon="users">
-    Match top competitor scores in priority metrics
-  </Card>
-</CardGroup>
+  <Accordion title="Deep Dive Monthly">
+    **Frequency**: Monthly detailed analysis
 
-### Prioritizing Metrics
+    **What to do**:
+    - Review each metric's detailed breakdown
+    - Compare 30-day vs 90-day trends
+    - Identify patterns and correlations
+    - Plan optimization initiatives based on insights
+
+    **Time required**: 30-45 minutes
+  </Accordion>
+
+  <Accordion title="Strategic Review Quarterly">
+    **Frequency**: Quarterly business review
+
+    **What to do**:
+    - Analyze 90-day and 180-day trends
+    - Benchmark against competitors
+    - Assess ROI of AEO initiatives
+    - Set strategic goals for next quarter
+
+    **Time required**: 1-2 hours
+  </Accordion>
+
+  <Accordion title="Focus on One Metric at a Time">
+    **Why**: Diluting efforts across all 4 metrics reduces impact
+
+    **Strategy**:
+    1. Pick your priority metric based on business goals
+    2. Run a focused 30-day improvement campaign
+    3. Measure results
+    4. Move to next priority metric
+
+    **Example**: E-commerce brand focuses on Purchase Intent first, then Sentiment
+  </Accordion>
+
+  <Accordion title="Set Realistic Goals">
+    **Short-term (1-3 months)**: 5-10 point improvements
+    **Medium-term (3-6 months)**: 15-20 point improvements
+    **Long-term (6-12 months)**: 25+ point improvements
+
+    **Note**: Diminishing returns apply - moving from 40 to 60 is easier than 80 to 90
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Metric Priority by Business Type
 
 Not all metrics matter equally for every brand:
 
-<AccordionGroup>
-  <Accordion title="E-Commerce Brands">
-    **Priority**: Purchase Intent > Sentiment > Visibility > Authority
+<Tabs>
+  <Tab title="E-Commerce">
+    **Priority Order**:
+    1. Purchase Intent (drives conversions)
+    2. Sentiment (affects buying decisions)
+    3. Visibility (top-of-funnel awareness)
+    4. Authority (trust factor)
 
-    **Reasoning**: Driving conversions is the primary goal
-  </Accordion>
-  <Accordion title="B2B SaaS">
-    **Priority**: Authority > Purchase Intent > Visibility > Sentiment
+    **Focus**: Conversion optimization
+  </Tab>
+  <Tab title="B2B SaaS">
+    **Priority Order**:
+    1. Authority (trust is critical)
+    2. Purchase Intent (recommendation strength)
+    3. Visibility (category presence)
+    4. Sentiment (reputation)
 
-    **Reasoning**: Trust and expertise drive B2B decisions
-  </Accordion>
-  <Accordion title="Consumer Brands">
-    **Priority**: Sentiment > Visibility > Purchase Intent > Authority
+    **Focus**: Establishing expertise
+  </Tab>
+  <Tab title="Consumer Brands">
+    **Priority Order**:
+    1. Sentiment (brand perception)
+    2. Visibility (brand awareness)
+    3. Purchase Intent (consideration)
+    4. Authority (credibility)
 
-    **Reasoning**: Brand perception and awareness drive consumer choice
-  </Accordion>
-  <Accordion title="Professional Services">
-    **Priority**: Authority > Sentiment > Visibility > Purchase Intent
+    **Focus**: Brand perception and awareness
+  </Tab>
+  <Tab title="Professional Services">
+    **Priority Order**:
+    1. Authority (expertise demonstration)
+    2. Sentiment (reputation)
+    3. Visibility (thought leadership)
+    4. Purchase Intent (less relevant for services)
 
-    **Reasoning**: Expertise and reputation are critical for services
-  </Accordion>
-</AccordionGroup>
+    **Focus**: Establishing expertise and trust
+  </Tab>
+</Tabs>
 
 ---
 
 ## Troubleshooting
 
 <AccordionGroup>
-  <Accordion title="Scores Not Updating">
-    **Cause**: No recent prompt executions or data refresh needed
+  <Accordion title="No data showing / Loading skeleton">
+    **Cause**: Analysis not yet complete for this brand
 
-    **Solution**: Execute prompts from the Define page to generate fresh data
+    **Solution**: Wait 2-5 minutes after completing onboarding. System prompts are analyzed automatically in the background.
   </Accordion>
-  <Accordion title="Missing Data for Specific Metric">
-    **Cause**: Insufficient prompt coverage for that metric type
 
-    **Solution**: Create more prompts targeting that metric (e.g., purchase-focused prompts for Purchase Intent)
+  <Accordion title="Scores seem too low/high">
+    **Cause**: Limited data points or unusual sample
+
+    **Check**:
+    - Are system prompts being analyzed regularly?
+    - Is your brand name spelled correctly in brand settings?
+    - Are competitors set up correctly?
+
+    **Solution**: Contact support if scores seem incorrect after verifying setup
   </Accordion>
-  <Accordion title="Inconsistent Scores Across Models">
-    **Cause**: Different training data and source preferences
 
-    **Solution**: This is normal - optimize for the models most important to your audience
+  <Accordion title="Charts not updating after period change">
+    **Cause**: UI refresh issue
+
+    **Solution**: Refresh the page. If issue persists, clear browser cache.
   </Accordion>
-  <Accordion title="Sudden Score Drop">
-    **Causes**: Competitor improvement, negative PR, AI model update, or technical issue
 
-    **Solution**: Check competitor activity, recent news, AI model changelog, and re-execute prompts
+  <Accordion title="Missing insights for a metric">
+    **Cause**: Not enough data or no actionable patterns detected
+
+    **Solution**: This is normal - insights only appear when AI identifies specific, actionable recommendations
   </Accordion>
 </AccordionGroup>
 
@@ -694,37 +651,31 @@ Not all metrics matter equally for every brand:
 
 <CardGroup cols={2}>
   <Card
-    title="Define More Prompts"
+    title="View Dashboard"
+    icon="gauge"
+    href="/dashboard/overview"
+  >
+    See high-level brand health summary
+  </Card>
+  <Card
+    title="Create Custom Prompts"
     icon="pen-to-square"
     href="/features/define"
   >
-    Expand prompt coverage to improve metric accuracy
+    Add prompts to track specific queries
   </Card>
   <Card
     title="Run Experiments"
     icon="flask"
     href="/features/experiments"
   >
-    Test optimization strategies with A/B experiments
-  </Card>
-  <Card
-    title="View Dashboard"
-    icon="gauge"
-    href="/dashboard/overview"
-  >
-    See high-level brand health and trends
+    A/B test optimization strategies
   </Card>
   <Card
     title="Commerce Tracking"
     icon="cart-shopping"
     href="/features/commerce"
   >
-    Deep dive into purchase intent signals
+    Track purchase intent and e-commerce performance
   </Card>
 </CardGroup>
-
----
-
-<Note>
-  **Pro Tip**: Focus on improving one metric at a time. Trying to optimize all four simultaneously dilutes effort. Pick your priority metric based on business goals and execute a focused 30-day improvement campaign.
-</Note>

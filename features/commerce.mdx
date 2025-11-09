@@ -1,218 +1,327 @@
 ---
 title: 'Commerce Tracking'
-description: 'Monitor e-commerce performance and purchase intent signals across AI platforms'
+description: 'Monitor purchase intent and e-commerce performance across AI platforms'
 icon: 'cart-shopping'
 ---
 
 # Commerce & Purchase Intent Tracking
 
-The Commerce page helps you track how AI models recommend your products for purchase, where they direct users to buy, and how you compare to competitors in e-commerce contexts.
+The Commerce page helps you track how AI models recommend your products for purchase, which e-commerce platforms they suggest, and how you compare to competitors in shopping contexts.
 
 <Frame>
   <img
     src="/images/commerce-page-overview.png"
-    alt="Commerce Page Overview"
+    alt="Commerce page with prompts table, e-commerce sites, and insights"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
 
-## What is Commerce Tracking?
-
-Commerce tracking focuses specifically on purchase-related queries and e-commerce performance:
-
-- **Track purchase intent**: Monitor how often AI models recommend your products
-- **Identify e-commerce channels**: See which platforms AI models recommend for purchases
-- **Analyze shopping queries**: Understand performance in "where to buy" and "best product" queries
-- **Compare shopping platforms**: Benchmark your presence vs. competitors across e-commerce sites
-- **Optimize for conversions**: Get insights to improve purchase recommendations
+## What You Can Do
 
 <CardGroup cols={2}>
-  <Card title="Purchase Prompts" icon="messages-question">
-    Custom prompts focused on buying decisions
+  <Card title="Track Purchase Intent" icon="shopping-cart">
+    Monitor how often AI models recommend buying your products
   </Card>
-  <Card title="Top E-Commerce Sites" icon="store">
-    Platforms where AI models recommend purchases
+  <Card title="Identify E-Commerce Channels" icon="store">
+    See which platforms (Amazon, your site, competitors) AI recommends
   </Card>
-  <Card title="Conversion Insights" icon="chart-line">
-    AI-powered recommendations to improve sales
+  <Card title="Create Commerce Prompts" icon="pen-to-square">
+    Add shopping-focused queries to track purchase recommendations
   </Card>
-  <Card title="Real-Time Execution" icon="play">
-    Run fresh analysis on shopping queries
+  <Card title="Analyze Performance" icon="chart-line">
+    Track commerce scores, purchase readiness, and visibility trends
   </Card>
 </CardGroup>
 
 ---
 
-## Page Overview
+## Page Layout
 
-### Main Components
+The Commerce page has three main sections:
 
-The Commerce page has three primary sections:
+### 1. Commerce Prompts Header & Table
+
+Main table showing all your commerce-focused prompts with:
+
+**Header controls**:
+- Search bar (filter by prompt text or tags)
+- Tag filters
+- Period selector (7/30 days)
+- "Add Commerce Prompts" button
+
+**Table columns**:
 
 <Tabs>
-  <Tab title="Commerce Prompts Table">
-    Manage and analyze purchase-focused prompts:
-    - "Where can I buy [Product]?"
-    - "Best [Product Category] to purchase"
-    - "[Brand] vs [Competitor] for [use case]"
-    - "Is [Product] worth buying?"
+  <Tab title="Core Metrics">
+    - **Prompt Text**: The shopping query
+    - **Commerce Score**: Overall e-commerce performance (0-100)
+    - **Visibility Score**: How often your brand appears
+    - **Purchase Readiness Score**: How close responses are to driving purchases (0-100)
+    - **ACP Signals Score**: AI Commerce Performance signals - strength of buying recommendations (0-100)
   </Tab>
-  <Tab title="Top E-Commerce Websites">
-    See which platforms AI models recommend:
-    - Your own e-commerce site
-    - Amazon, Walmart, Target
-    - Specialized retail platforms
-    - Competitor websites
-  </Tab>
-  <Tab title="Commerce Insights">
-    Get actionable recommendations:
-    - Low-performing prompts
-    - Missing e-commerce channels
-    - Competitor advantages
-    - Optimization opportunities
+  <Tab title="Additional Data">
+    - **Brand Mentions**: Avatar stack showing which brands appear (your brand highlighted)
+    - **Tags**: Custom organization tags
+    - **Last Executed**: Most recent analysis timestamp
+    - **Actions**: Edit or delete prompt
   </Tab>
 </Tabs>
 
 <Frame>
   <img
-    src="/images/commerce-page-sections.png"
-    alt="Commerce Page Sections"
+    src="/images/commerce-prompts-table.png"
+    alt="Commerce prompts table with scores and brand mentions"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
+
+### 2. Top E-Commerce Websites Panel
+
+Sidebar showing which platforms AI models recommend:
+
+<Frame>
+  <img
+    src="/images/commerce-websites-panel.png"
+    alt="E-commerce platforms panel showing Amazon, Walmart, etc."
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+**What you'll see**:
+- **Your site** (highlighted if present)
+- Amazon
+- Walmart
+- Target
+- Competitor sites
+- Specialized platforms (Wayfair, Etsy, etc.)
+
+**Why it matters**: Shows where AI models direct users to buy. If your site isn't listed, you're losing sales to other channels.
+
+### 3. Commerce Insights Panel
+
+AI-generated recommendations to improve commerce performance:
+
+**Insight types**:
+- Low purchase intent alerts
+- Missing platform opportunities
+- Competitor e-commerce advantages
+- Pricing and review gaps
 
 ---
 
 ## Creating Commerce Prompts
 
-### Add New Commerce Prompts
+### Adding New Prompts
 
-Click the **"+ Add Commerce Prompts"** button to create purchase-focused prompts.
+<Steps>
+  <Step title="Click 'Add Commerce Prompts'">
+    Opens the commerce prompt creation interface
+  </Step>
+  <Step title="Enter Prompts">
+    Type or paste shopping-focused prompts (one per line or comma-separated)
+  </Step>
+  <Step title="Add Product URLs (Optional)">
+    Include product page URLs to help AI understand what you're selling
+  </Step>
+  <Step title="Get AI Suggestions">
+    Click "Get Commerce Suggestions" for AI-recommended shopping queries
+  </Step>
+  <Step title="Add Tags">
+    Tag prompts for organization (e.g., "product-comparison", "where-to-buy", "reviews")
+  </Step>
+  <Step title="Save">
+    Click "Add Prompts" - automatic analysis begins
+  </Step>
+</Steps>
 
 <Frame>
   <img
     src="/images/commerce-add-prompts.png"
-    alt="Add Commerce Prompts"
+    alt="Add commerce prompts interface with product URLs"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
 
-<Steps>
-  <Step title="Click Add Commerce Prompts">
-    Opens the commerce prompt creation interface
-  </Step>
-  <Step title="Enter Prompts">
-    Type or paste commerce-focused prompts (one per line)
-  </Step>
-  <Step title="Get AI Suggestions">
-    Click "Get Commerce Suggestions" for AI-generated shopping queries
-  </Step>
-  <Step title="Add Product URLs (Optional)">
-    Include links to product pages or listings
-  </Step>
-  <Step title="Tag Your Prompts">
-    Organize with tags like "purchase", "comparison", "pricing"
-  </Step>
-  <Step title="Save & Analyze">
-    Save prompts and optionally trigger immediate analysis
-  </Step>
-</Steps>
-
-### Commerce Prompt Types
-
-<Tabs>
-  <Tab title="Direct Purchase">
-    Where-to-buy and purchasing queries:
-    ```
-    "Where can I buy [Product Name]?"
-    "How to purchase [Product]"
-    "Best place to buy [Product Category]"
-    "[Product] for sale"
-    "Order [Product] online"
-    ```
-
-    **Optimizes For**: Direct e-commerce platform recommendations
-  </Tab>
-  <Tab title="Product Comparisons">
-    Competitive shopping queries:
-    ```
-    "[Your Brand] vs [Competitor] for [use case]"
-    "Compare [Product A] and [Product B]"
-    "Which is better: [Your Product] or [Competitor Product]?"
-    "Difference between [Product A] and [Product B]"
-    ```
-
-    **Optimizes For**: Positioning in purchase decisions
-  </Tab>
-  <Tab title="Value Assessment">
-    Worth-it and pricing queries:
-    ```
-    "Is [Product] worth buying?"
-    "[Product] worth the price?"
-    "Should I buy [Product]?"
-    "[Product] value for money"
-    "[Product] cost vs benefits"
-    ```
-
-    **Optimizes For**: Purchase intent and recommendation strength
-  </Tab>
-  <Tab title="Best-of Queries">
-    Category leadership and top picks:
-    ```
-    "Best [Product Category] to buy"
-    "Top [Product Category] for [use case]"
-    "[Product Category] recommendations"
-    "What [Product Category] should I get?"
-    ```
-
-    **Optimizes For**: Category leadership and recommendations
-  </Tab>
-  <Tab title="Shopping Research">
-    Pre-purchase research queries:
-    ```
-    "[Product] reviews before buying"
-    "What to know before buying [Product]"
-    "[Product] pros and cons"
-    "[Product] buying guide"
-    "[Product] specifications and features"
-    ```
-
-    **Optimizes For**: Informational needs and trust-building
-  </Tab>
-</Tabs>
-
-### Best Practices for Commerce Prompts
+### Commerce Prompt Types & Examples
 
 <AccordionGroup>
-  <Accordion title="Use Transactional Language">
-    Include purchase-oriented keywords that signal buying intent:
-    - **Good**: "Where can I buy noise-canceling headphones?"
-    - **Bad**: "Tell me about noise-canceling headphones"
+  <Accordion title="Where to Buy">
+    Direct purchase location queries
 
-    AI models recognize transactional intent and provide different responses.
+    **Examples**:
+    - "Where can I buy [Your Product]?"
+    - "Best place to purchase [Product]"
+    - "[Product] retailers near me"
+
+    **Good for**: Tracking platform recommendations
   </Accordion>
-  <Accordion title="Test Platform-Specific Queries">
-    Create prompts mentioning specific e-commerce platforms:
-    ```
-    "Buy [Product] on Amazon"
-    "[Product] available on [Platform]?"
-    "Find [Product] at [Retailer]"
-    ```
+
+  <Accordion title="Product Comparisons">
+    Shopping decision queries
+
+    **Examples**:
+    - "Should I buy [Your Product] or [Competitor Product]?"
+    - "Best [Product Category] to buy in 2024"
+    - "[Your Product] vs [Competitor] for [use case]"
+
+    **Good for**: Competitive positioning in purchase decisions
   </Accordion>
-  <Accordion title="Include Price/Value Prompts">
-    Pricing queries often drive high-intent traffic:
-    ```
-    "[Product] price comparison"
-    "Cheapest [Product]"
-    "Best value [Product Category]"
-    ```
+
+  <Accordion title="Purchase Validation">
+    Pre-purchase research queries
+
+    **Examples**:
+    - "Is [Your Product] worth buying?"
+    - "[Your Product] reviews before buying"
+    - "Should I purchase [Your Product]?"
+
+    **Good for**: Tracking purchase recommendation strength
   </Accordion>
-  <Accordion title="Cover the Purchase Journey">
-    Create prompts for different stages:
-    - Research: "What features does [Product] have?"
-    - Comparison: "[Product A] vs [Product B]"
-    - Decision: "Should I buy [Product]?"
-    - Purchase: "Where to buy [Product]?"
+
+  <Accordion title="Price & Value">
+    Cost-focused queries
+
+    **Examples**:
+    - "Best [Product] under $[price]"
+    - "Affordable [Product Category] options"
+    - "[Your Product] price and value"
+
+    **Good for**: Price-sensitive purchase tracking
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Understanding Commerce Metrics
+
+### Commerce Score
+
+**What it measures**: Overall e-commerce performance combining all commerce-related signals (0-100)
+
+**Factors**:
+- Purchase readiness
+- ACP signals strength
+- Visibility in shopping contexts
+- Platform recommendation frequency
+- Brand mention strength
+
+**Good score**: 65+
+**Needs work**: Below 45
+
+### Purchase Readiness Score
+
+**What it measures**: How close AI responses are to driving an actual purchase (0-100)
+
+**High readiness indicators**:
+- Direct purchase recommendations ("You should buy...")
+- Clear call-to-action language
+- Specific platform mentions
+- Positive product endorsements
+
+**Low readiness indicators**:
+- Vague or non-committal language
+- No platform recommendations
+- Cautionary statements
+- Negative sentiment
+
+### ACP Signals Score
+
+**What it measures**: AI Commerce Performance - strength of buying recommendations from AI models (0-100)
+
+**Strong signals**:
+- "Recommended for purchase"
+- "Best choice for..."
+- "Top pick"
+- High confidence language
+
+**Weak signals**:
+- "Could consider"
+- "Depends on..."
+- Neutral mentions only
+- No endorsement
+
+### Brand Mentions
+
+**Visual**: Avatar stack showing logos
+
+**Categories**:
+- **Your brand** (highlighted with special styling)
+- **Competitors** (known competing brands)
+- **Other brands** (additional mentioned brands)
+
+**Interaction**: Hover to see mention counts and recommendation strength
+
+<Tip>
+  If competitors appear more frequently in brand mentions, they're capturing more of the purchase intent. Focus on creating content that positions your product as the best choice.
+</Tip>
+
+---
+
+## Using Filters & Search
+
+### Search Bar
+
+Filter prompts by:
+- Prompt text
+- Tag names
+
+Real-time filtering as you type.
+
+### Tag Filters
+
+- Click tags to filter (OR logic - shows prompts with ANY selected tag)
+- Click again to deselect
+
+### Period Selector
+
+- **7 Days**: Short-term purchase trends
+- **30 Days**: Standard monthly view (default)
+
+Affects scores and trend indicators.
+
+---
+
+## Commerce Websites Panel
+
+Shows where AI models recommend purchases.
+
+### Understanding Platform Recommendations
+
+<AccordionGroup>
+  <Accordion title="Your Site Appears">
+    **Good sign**: AI models trust your site for direct purchases
+
+    **What to do**:
+    - Maintain strong product information
+    - Keep reviews current
+    - Ensure pricing is competitive
+    - Monitor for any issues
+  </Accordion>
+
+  <Accordion title="Your Site Missing">
+    **Warning**: AI models don't recommend buying directly from you
+
+    **Possible causes**:
+    - Weak product information on your site
+    - No reviews or low ratings
+    - Poor site structure/crawlability
+    - Stronger presence on third-party platforms
+
+    **What to do**:
+    - Optimize product pages
+    - Gather reviews
+    - Improve site technical SEO
+    - Create comprehensive buying guides
+  </Accordion>
+
+  <Accordion title="Competitors Dominate">
+    **Concern**: Other brands capture most platform mentions
+
+    **What to do**:
+    - Analyze competitor product pages
+    - Check their review strategies
+    - Compare pricing
+    - Identify gaps in your content
   </Accordion>
 </AccordionGroup>
 
@@ -220,581 +329,212 @@ Click the **"+ Add Commerce Prompts"** button to create purchase-focused prompts
 
 ## Managing Commerce Prompts
 
-### Prompts Table
+### Editing Prompts
 
-The commerce prompts table displays purchase-focused queries with commerce-specific metrics:
+<Steps>
+  <Step title="Click ⋮ menu">
+    Open actions on prompt row
+  </Step>
+  <Step title="Select Edit">
+    Opens edit dialog
+  </Step>
+  <Step title="Modify">
+    Change prompt text, product URLs, or tags
+  </Step>
+  <Step title="Save">
+    Changes trigger re-analysis
+  </Step>
+</Steps>
 
-<Frame>
-  <img
-    src="/images/commerce-prompts-table.png"
-    alt="Commerce Prompts Table"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+### Deleting Prompts
 
-#### Table Columns:
-
-<ParamField path="Prompt" type="string">
-  The commerce prompt text
-</ParamField>
-
-<ParamField path="Recommended" type="boolean">
-  Whether AI models recommend your product for purchase
-</ParamField>
-
-<ParamField path="Purchase Intent" type="string">
-  Strength of purchase recommendation: Strong, Moderate, Weak, None
-</ParamField>
-
-<ParamField path="E-Commerce Platforms" type="number">
-  Count of platforms where AI directs users to buy
-</ParamField>
-
-<ParamField path="Avg Position" type="number">
-  Average ranking in shopping recommendations (lower is better)
-</ParamField>
-
-<ParamField path="Sentiment" type="string">
-  Sentiment of purchase-related mentions
-</ParamField>
-
-<ParamField path="Last Executed" type="date">
-  When analysis was last run
-</ParamField>
-
-### Search and Filters
-
-#### Search Bar
-
-Search across all commerce prompts:
-
-```
-Examples:
-- "amazon" → Find prompts mentioning Amazon
-- "vs competitor" → Find comparison queries
-- "worth" → Find value assessment prompts
-- "buy" → Find direct purchase queries
-```
-
-#### Time Period Filter
-
-<Tabs>
-  <Tab title="7 Days">
-    Recent commerce performance - useful for tracking campaign impact or seasonal changes
-  </Tab>
-  <Tab title="30 Days">
-    Standard monthly view (default) - best for regular monitoring
-  </Tab>
-</Tabs>
-
-#### Tag Filters
-
-Organize commerce prompts by tags:
-
-<CardGroup cols={3}>
-  <Card title="purchase" icon="cart-shopping">
-    Direct buying queries
-  </Card>
-  <Card title="comparison" icon="scale-balanced">
-    Competitive shopping queries
-  </Card>
-  <Card title="pricing" icon="dollar-sign">
-    Price and value queries
-  </Card>
-  <Card title="review" icon="star">
-    Pre-purchase research
-  </Card>
-  <Card title="platform-specific" icon="store">
-    E-commerce channel queries
-  </Card>
-  <Card title="seasonal" icon="calendar">
-    Holiday/seasonal queries
-  </Card>
-</CardGroup>
-
-### Bulk Actions
-
-Select multiple commerce prompts to:
-
-- **Execute Selected**: Run fresh analysis on shopping queries
-- **Delete Selected**: Remove outdated prompts
-- **Add Tags**: Bulk organize prompts
-- **Export**: Download commerce data for reporting
+Same process as Define page:
+1. Click ⋮ menu
+2. Select Delete
+3. Confirm (permanent deletion)
 
 ---
 
-## E-Commerce Websites Panel
+## Commerce Insights
 
-The Websites panel shows which e-commerce platforms AI models recommend for purchasing your products.
+AI-generated recommendations specific to e-commerce performance.
 
-<Frame>
-  <img
-    src="/images/commerce-websites-panel.png"
-    alt="E-Commerce Websites Panel"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
-### What You'll See:
-
-<ParamField path="Your Website" type="highlight">
-  Your own e-commerce site (if AI models cite it)
-</ParamField>
-
-<ParamField path="Major Platforms" type="list">
-  - Amazon
-  - Walmart
-  - Target
-  - eBay
-  - Shopify stores
-</ParamField>
-
-<ParamField path="Specialized Retailers" type="list">
-  Industry-specific platforms (e.g., B&H Photo, Newegg, Wayfair)
-</ParamField>
-
-<ParamField path="Competitor Websites" type="list">
-  Direct competitor e-commerce sites
-</ParamField>
-
-<ParamField path="Recommendation Frequency" type="percentage">
-  How often each platform is recommended across all commerce prompts
-</ParamField>
-
-### Why E-Commerce Channel Tracking Matters:
+**Insight categories**:
 
 <CardGroup cols={2}>
-  <Card title="Control Traffic Destinations" icon="route">
-    See where AI models send potential customers
+  <Card title="Low Purchase Intent" icon="triangle-exclamation">
+    Prompts where AI rarely recommends buying your product
   </Card>
-  <Card title="Optimize Platform Presence" icon="store">
-    Identify which platforms need better optimization
+  <Card title="Missing Platforms" icon="store">
+    E-commerce channels where you should appear but don't
   </Card>
-  <Card title="Competitive Intelligence" icon="users">
-    See if competitors dominate certain channels
+  <Card title="Competitor Advantages" icon="users">
+    Where competitors outperform you in purchase recommendations
   </Card>
-  <Card title="Revenue Attribution" icon="dollar-sign">
-    Understand which platforms drive AI-referred sales
+  <Card title="Pricing/Review Gaps" icon="star">
+    Issues with pricing visibility or review presence
   </Card>
 </CardGroup>
 
-### Actionable Insights from E-Commerce Data:
-
-<Steps>
-  <Step title="Audit Your Direct Traffic">
-    **Goal**: Get AI models to recommend your website first
-
-    **How**:
-    - Ensure product pages are SEO-optimized
-    - Add rich product schema markup
-    - Gather and display customer reviews
-    - Maintain accurate product information
-  </Step>
-  <Step title="Optimize Marketplace Presence">
-    **Goal**: Improve visibility on Amazon, Walmart, etc.
-
-    **How**:
-    - Complete product listings with all details
-    - Gather platform-specific reviews
-    - Use Enhanced Brand Content (Amazon)
-    - Maintain competitive pricing
-  </Step>
-  <Step title="Address Missing Channels">
-    **Goal**: Appear in AI recommendations for relevant platforms
-
-    **How**:
-    - Expand to platforms AI models recommend for your category
-    - Ensure existing listings are discoverable
-    - Build presence on emerging platforms
-  </Step>
-  <Step title="Monitor Competitor Channels">
-    **Goal**: Compete effectively across all platforms
-
-    **How**:
-    - Match or exceed competitor platform coverage
-    - Differentiate on platforms where you're stronger
-    - Consider exclusive deals or partnerships
-  </Step>
-</Steps>
+**Example insights**:
+- "Your product appears in only 30% of 'where to buy' queries - competitors dominate Amazon mentions"
+- "Purchase Readiness Score is 25 points below Visibility - AI knows your brand but doesn't recommend buying"
+- "No mentions of your e-commerce site in responses - optimize product pages for AI crawling"
 
 ---
 
-## Commerce Insights Panel
+## Empty State
 
-Get AI-powered recommendations to improve e-commerce performance.
+When you first visit Commerce (no commerce prompts created):
 
 <Frame>
   <img
-    src="/images/commerce-insights-panel.png"
-    alt="Commerce Insights Panel"
+    src="/images/commerce-empty-state.png"
+    alt="Empty state with Add Commerce Prompts CTA"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
 
-### Types of Commerce Insights:
-
-<AccordionGroup>
-  <Accordion title="Low Purchase Intent Alerts">
-    **What**: Prompts where AI rarely recommends your product
-
-    **Example**: "Only 15% of responses recommend your product for 'best wireless earbuds' queries"
-
-    **Actions**:
-    - Improve product positioning in that category
-    - Gather more positive reviews
-    - Create targeted content highlighting strengths
-    - Optimize product pages for that use case
-  </Accordion>
-  <Accordion title="Missing Platform Opportunities">
-    **What**: E-commerce platforms recommended by AI but where you're absent
-
-    **Example**: "AI models recommend Walmart 40% of the time, but your product isn't listed there"
-
-    **Actions**:
-    - Expand to recommended platforms
-    - Optimize existing but undiscovered listings
-    - Partner with recommended retailers
-  </Accordion>
-  <Accordion title="Competitor E-Commerce Advantages">
-    **What**: Platforms where competitors dominate recommendations
-
-    **Example**: "Competitor X appears 60% more on Amazon recommendations"
-
-    **Actions**:
-    - Investigate competitor Amazon strategy
-    - Improve your Amazon presence
-    - Differentiate on platforms where you're stronger
-  </Accordion>
-  <Accordion title="Pricing Perception Issues">
-    **What**: AI models cite price as a concern
-
-    **Example**: "30% of responses mention your product is expensive compared to alternatives"
-
-    **Actions**:
-    - Justify pricing with value propositions
-    - Highlight unique features
-    - Create bundles or promotions
-    - Position against premium competitors, not budget options
-  </Accordion>
-  <Accordion title="Review & Rating Gaps">
-    **What**: Competitors have better review signals
-
-    **Example**: "Competitors average 4.5 stars vs your 4.0 - impacting recommendations"
-
-    **Actions**:
-    - Focus on gathering more positive reviews
-    - Address common complaints
-    - Improve product quality
-    - Optimize review solicitation process
-  </Accordion>
-</AccordionGroup>
-
----
-
-## Executing Commerce Analysis
-
-### Running Fresh Analysis
-
-Click the **Execute** button to get updated commerce insights:
-
-<Tabs>
-  <Tab title="Individual Execution">
-    Test a single commerce prompt to see current AI responses
-
-    **Use When**:
-    - Testing new prompts
-    - Validating optimization changes
-    - Investigating anomalies
-  </Tab>
-  <Tab title="Bulk Execution">
-    Refresh multiple commerce prompts at once
-
-    **Use When**:
-    - Monthly commerce reporting
-    - After product launches or updates
-    - Following major price changes
-    - Seasonal analysis (holidays, sales events)
-  </Tab>
-  <Tab title="Full Analysis">
-    Execute entire commerce prompt library
-
-    **Use When**:
-    - Comprehensive quarterly reviews
-    - Major e-commerce strategy changes
-    - Entering new sales channels
-    - Competitor landscape shifts
-  </Tab>
-</Tabs>
-
-### Execution Timing Recommendations:
-
-<Steps>
-  <Step title="Weekly: Key Shopping Queries">
-    Execute 3-5 critical purchase prompts (e.g., "best [product]", "where to buy [product]")
-  </Step>
-  <Step title="After Product Updates">
-    Run analysis within 24-48 hours of:
-    - Product launches
-    - Major feature updates
-    - Price changes
-    - New platform listings
-  </Step>
-  <Step title="Seasonal Campaigns">
-    Execute before and during major shopping periods:
-    - Black Friday / Cyber Monday
-    - Holiday season
-    - Prime Day
-    - Back-to-school
-  </Step>
-  <Step title="Monthly: Full Commerce Review">
-    Complete analysis of all commerce prompts for stakeholder reporting
-  </Step>
-</Steps>
-
----
-
-## Commerce Metrics Explained
-
-### Purchase Intent Strength
-
-<Tabs>
-  <Tab title="Strong (80-100)">
-    **Indicators**:
-    - "Highly recommended"
-    - "Best choice for"
-    - "Top pick"
-    - Explicit purchase recommendations
-
-    **Example**: "For noise cancellation, Sony WH-1000XM5 is the top choice and highly recommended."
-  </Tab>
-  <Tab title="Moderate (50-79)">
-    **Indicators**:
-    - Listed among options
-    - Conditional recommendations
-    - "Good option for"
-    - Included in comparisons
-
-    **Example**: "Sony WH-1000XM5 is a good option for travelers, though also consider Bose QC45."
-  </Tab>
-  <Tab title="Weak (20-49)">
-    **Indicators**:
-    - Mentioned but not recommended
-    - Lower in ranked lists
-    - Qualified with caveats
-    - Alternative suggestions prioritized
-
-    **Example**: "While Sony WH-1000XM5 exists, Bose QC45 offers better value."
-  </Tab>
-  <Tab title="None (0-19)">
-    **Indicators**:
-    - Product not mentioned
-    - Competitors exclusively recommended
-    - Brand mentioned but products not suggested
-
-    **Example**: "For wireless headphones, consider Bose QC45 or Apple AirPods Max."
-  </Tab>
-</Tabs>
-
-### Platform Recommendation Rate
-
-<ParamField path="Definition" type="string">
-  Percentage of commerce prompts where a specific platform is recommended
-</ParamField>
-
-<ParamField path="Calculation" type="formula">
-  (Prompts recommending platform / Total commerce prompts) × 100
-</ParamField>
-
-<ParamField path="Good Score" type="number">
-  - Your own site: 50%+
-  - Major marketplaces: 30%+ (if you sell there)
-  - Specialized retailers: 20%+ (industry-dependent)
-</ParamField>
-
-### Average Position in Recommendations
-
-<ParamField path="Definition" type="string">
-  Average ranking when your product appears in shopping lists
-</ParamField>
-
-<ParamField path="Good Score" type="number">
-  - Position 1-2: Excellent (preferred recommendation)
-  - Position 3-5: Good (solid consideration)
-  - Position 6-10: Fair (needs improvement)
-  - Position 10+: Poor (optimization required)
-</ParamField>
-
----
-
-## Commerce Optimization Strategies
-
-### 1. Own Your Direct Channel
-
-<Steps>
-  <Step title="Optimize Product Pages">
-    - Add comprehensive product descriptions
-    - Include high-quality images and videos
-    - Display customer reviews prominently
-    - Use schema markup for rich snippets
-  </Step>
-  <Step title="Improve Site Authority">
-    - Build backlinks to product pages
-    - Get featured in product review sites
-    - Appear in buying guides
-    - Gather external validation
-  </Step>
-  <Step title="Enhance Trust Signals">
-    - Display security badges
-    - Show money-back guarantees
-    - Highlight shipping/return policies
-    - Feature customer testimonials
-  </Step>
-</Steps>
-
-### 2. Dominate Marketplace Platforms
-
-<CardGroup cols={2}>
-  <Card title="Amazon Optimization" icon="amazon">
-    - Enhanced Brand Content (A+ Content)
-    - Bullet point optimization
-    - Backend keyword targeting
-    - Amazon Vine reviews
-  </Card>
-  <Card title="Walmart Marketplace" icon="store">
-    - Complete Rich Media content
-    - Competitive pricing
-    - Fast fulfillment options
-    - Pro Seller Badge
-  </Card>
-  <Card title="Specialized Platforms" icon="tags">
-    - Industry-specific optimizations
-    - Category expertise demonstration
-    - Platform-specific promotions
-  </Card>
-  <Card title="Shopify/DTC" icon="cart-shopping">
-    - SEO-optimized product pages
-    - Customer review integration
-    - Social proof widgets
-    - Content marketing
-  </Card>
-</CardGroup>
-
-### 3. Build Review Excellence
-
-<Info>
-  Reviews are critical signals AI models use for purchase recommendations. Prioritize gathering high-quality, authentic reviews.
-</Info>
-
-**Review Strategy**:
-- Solicit reviews from happy customers (within platform guidelines)
-- Respond to all reviews (positive and negative)
-- Address common complaints in product improvements
-- Highlight positive reviews in marketing
-- Maintain 4.5+ average rating when possible
-
-### 4. Competitive Pricing Strategy
-
-<Warning>
-  AI models often consider value for money. Being "expensive" without clear justification hurts recommendations.
-</Warning>
-
-**Pricing Options**:
-- **Match competitors**: For parity products
-- **Premium positioning**: Justify with unique features/quality
-- **Value positioning**: Highlight features per dollar
-- **Bundle strategies**: Create favorable comparison points
+**What to do**:
+1. Click "Add Commerce Prompts"
+2. Enter 5-10 purchase-focused prompts
+3. Click "Get Commerce Suggestions" for AI recommendations
+4. Add product URLs for better context
+5. Save and wait 2-5 minutes for analysis
 
 ---
 
 ## Best Practices
 
-### Commerce Prompt Library Size
+<AccordionGroup>
+  <Accordion title="Start with 'Where to Buy' Queries">
+    **Why**: Most direct path to purchase recommendations
 
-<Tabs>
-  <Tab title="Small Catalog (1-10 products)">
-    **Recommended**: 15-30 commerce prompts
+    **Examples**:
+    - "Where can I buy [Product]?"
+    - "Best place to purchase [Product]"
+    - "[Product] online retailers"
 
-    **Focus**: Core purchase queries, comparisons, and platform-specific prompts for each product
-  </Tab>
-  <Tab title="Medium Catalog (10-50 products)">
-    **Recommended**: 40-100 commerce prompts
+    **Outcome**: Understand which platforms AI recommends
+  </Accordion>
 
-    **Focus**: Category-level prompts, key product spotlights, major competitor comparisons
-  </Tab>
-  <Tab title="Large Catalog (50+ products)">
-    **Recommended**: 100-200 commerce prompts
+  <Accordion title="Include Product Comparison Prompts">
+    **Why**: Captures competitive purchase decisions
 
-    **Focus**: Category coverage, top SKUs, brand-level purchase queries, seasonal prompts
-  </Tab>
-</Tabs>
+    **Examples**:
+    - "[Your Product] vs [Competitor A] vs [Competitor B]"
+    - "Should I buy [Your Product] or [Competitor Product]?"
 
-### Analysis Cadence
+    **Outcome**: See how you're positioned against competitors
+  </Accordion>
 
-<CardGroup cols={3}>
-  <Card title="Daily" icon="calendar-day">
-    Top 3-5 revenue-driving prompts
-  </Card>
-  <Card title="Weekly" icon="calendar-week">
-    Product category prompts
-  </Card>
-  <Card title="Monthly" icon="calendar">
-    Full commerce library
-  </Card>
-  <Card title="Seasonal" icon="snowflake">
-    Before major shopping events
-  </Card>
-  <Card title="On-Demand" icon="bolt">
-    After product launches or updates
-  </Card>
-  <Card title="Quarterly" icon="calendar-range">
-    Strategic reviews
-  </Card>
-</CardGroup>
+  <Accordion title="Add Product URLs">
+    **Why**: Helps AI understand exactly what you're selling
+
+    **How**: Include direct product page URLs when creating prompts
+
+    **Outcome**: More accurate commerce analysis
+  </Accordion>
+
+  <Accordion title="Monitor Purchase Readiness Scores">
+    **Why**: Shows if AI is actually recommending purchases
+
+    **Target**: 60+ for strong purchase recommendations
+
+    **Action**: If below 50, focus on improving product content and reviews
+  </Accordion>
+
+  <Accordion title="Track Platform Recommendations Weekly">
+    **Why**: E-commerce landscape changes quickly
+
+    **What to watch**:
+    - Is your site appearing in platform recommendations?
+    - Are new competitors emerging?
+    - Are platform recommendations shifting?
+
+    **Action**: Address platform gaps immediately
+  </Accordion>
+</AccordionGroup>
 
 ---
 
-## Troubleshooting
+## Improving Commerce Performance
+
+### If Your Commerce Score is Low (<45)
+
+<Steps>
+  <Step title="Optimize Product Pages">
+    Ensure complete, accurate product information on your website
+  </Step>
+  <Step title="Gather Reviews">
+    Accumulate reviews on trusted platforms (Amazon, G2, Trustpilot, etc.)
+  </Step>
+  <Step title="Clarify Pricing">
+    Make pricing transparent and competitive
+  </Step>
+  <Step title="Add Buying Guides">
+    Create content explicitly helping users make purchase decisions
+  </Step>
+  <Step title="Improve Site Structure">
+    Ensure product pages are crawlable and well-organized
+  </Step>
+</Steps>
+
+### If Your Site Isn't in Top E-Commerce Platforms
+
+<Steps>
+  <Step title="Check Site Crawlability">
+    Verify AI models can access and understand your product pages
+  </Step>
+  <Step title="Add Schema Markup">
+    Implement Product schema for structured data
+  </Step>
+  <Step title="Create Buying Content">
+    Publish "where to buy" and "how to purchase" content
+  </Step>
+  <Step title="Build Backlinks">
+    Get cited by sites AI models trust
+  </Step>
+</Steps>
+
+---
+
+## FAQs
 
 <AccordionGroup>
-  <Accordion title="Product Not Recommended">
-    **Possible Causes**:
-    - Insufficient reviews/ratings
-    - Poor SEO/discoverability
-    - Price not competitive
-    - Negative sentiment
+  <Accordion title="What's the difference between Commerce and Define pages?">
+    **Commerce**: Purchase-focused prompts and e-commerce platform tracking
+    **Define**: General brand visibility prompts
 
-    **Solutions**:
-    - Focus on review generation
-    - Improve product page optimization
-    - Adjust pricing or justify premium positioning
-    - Address quality/service issues
+    Both track custom prompts you create, but Commerce specializes in shopping queries.
   </Accordion>
-  <Accordion title="Wrong Platform Recommended">
-    **Example**: AI recommends Amazon but you want to drive direct sales
 
-    **Solutions**:
-    - Strengthen direct site presence in search results
-    - Create exclusive direct-only offers
-    - Build brand authority outside marketplaces
-    - Optimize direct site for AI citation
+  <Accordion title="Should I add the same prompts to both Commerce and Define?">
+    **No.** Keep them separate:
+    - Commerce: "Where can I buy X?", "Should I purchase Y?"
+    - Define: "What is X?", "Tell me about Y"
+
+    Different purposes = different tracking
   </Accordion>
-  <Accordion title="Competitor Always Wins Comparisons">
-    **Causes**: Better reviews, lower price, stronger authority, or clearer differentiation
 
-    **Solutions**:
-    - Identify specific advantages competitors have
-    - Match on table-stakes features
-    - Differentiate on unique strengths
-    - Target different use cases or audiences
+  <Accordion title="Why is my Purchase Readiness low but Visibility high?">
+    **Cause**: AI knows your brand but doesn't recommend buying it
+
+    **Common reasons**:
+    - Negative reviews
+    - Lack of product information
+    - Stronger competitors
+    - Pricing concerns
+
+    **Fix**: Address product quality, reviews, and positioning
   </Accordion>
-  <Accordion title="Low Purchase Intent Despite High Visibility">
-    **Cause**: Brand awareness exists but trust/recommendation signals are weak
 
-    **Solutions**:
-    - Focus on review quality and quantity
-    - Build authority through press and recognition
-    - Improve product positioning and messaging
-    - Highlight social proof and credibility signals
+  <Accordion title="How often should I add new commerce prompts?">
+    **Frequency**: Add 3-5 new prompts monthly
+
+    **Strategy**: Cover different product lines, use cases, and shopping scenarios
+
+    **Total**: Aim for 15-25 commerce prompts total
   </Accordion>
 </AccordionGroup>
 
@@ -804,37 +544,31 @@ Click the **Execute** button to get updated commerce insights:
 
 <CardGroup cols={2}>
   <Card
-    title="Analyze Purchase Intent"
+    title="View Dashboard"
+    icon="gauge"
+    href="/dashboard/overview"
+  >
+    See commerce prompts summary on dashboard
+  </Card>
+  <Card
+    title="Define Brand Prompts"
+    icon="pen-to-square"
+    href="/features/define"
+  >
+    Add general brand visibility prompts
+  </Card>
+  <Card
+    title="Analyze Metrics"
     icon="chart-mixed"
     href="/features/analyze"
   >
     Deep dive into Purchase Intent metric
   </Card>
   <Card
-    title="Run Shopping Experiments"
+    title="Run Experiments"
     icon="flask"
     href="/features/experiments"
   >
-    Test product positioning and messaging
-  </Card>
-  <Card
-    title="Define More Prompts"
-    icon="pen-to-square"
-    href="/features/define"
-  >
-    Expand commerce prompt coverage
-  </Card>
-  <Card
-    title="View Dashboard"
-    icon="gauge"
-    href="/dashboard/overview"
-  >
-    See overall commerce performance
+    A/B test different commerce strategies
   </Card>
 </CardGroup>
-
----
-
-<Note>
-  **Pro Tip**: Commerce optimization is iterative. Focus on one high-value product or category, optimize until you see improvement, then expand to others. Trying to optimize all SKUs simultaneously dilutes effort and impact.
-</Note>
