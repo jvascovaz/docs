@@ -40,10 +40,18 @@
             ]
           },
           {
-            "group": "Features",
+            "group": "Core Features",
+            "pages": [
+              "features/define",
+              "features/analyze",
+              "features/commerce",
+              "features/experiments"
+            ]
+          },
+          {
+            "group": "Analytics & Reporting",
             "pages": [
               "features/performance-tracking",
-              "features/experiments",
               "features/reports"
             ]
           }
@@ -56,6 +64,7 @@
             "group": "Getting started",
             "pages": [
               "index",
+              "guides/onboarding",
               "quickstart",
               "development"
             ]

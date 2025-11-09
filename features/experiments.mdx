@@ -1,317 +1,790 @@
 ---
-title: 'Experiments'
-description: 'A/B test your content to optimize AI model responses'
+title: 'A/B Experiments'
+description: 'Test prompt variations to optimize AI visibility and brand performance'
 icon: 'flask'
 ---
 
-# Experiments
+# Run A/B Experiments
 
-Run controlled experiments to improve how AI models represent your brand.
-
-## What are Experiments?
-
-Experiments in Friction allow you to test different content variations to see which performs better in AI-generated responses. By running A/B tests, you can scientifically optimize your brand's AI visibility and sentiment.
-
-<Tip>
-  Experiments typically show results within 48-72 hours, depending on query volume.
-</Tip>
-
-## How Experiments Work
-
-<Steps>
-  <Step title="Create Hypothesis">
-    Define what you want to test and your expected outcome
-  </Step>
-  <Step title="Set Up Variants">
-    Create control and test versions of your content
-  </Step>
-  <Step title="Deploy Test">
-    Friction distributes variants across AI training data sources
-  </Step>
-  <Step title="Monitor Results">
-    Track performance differences between variants
-  </Step>
-  <Step title="Apply Winners">
-    Implement successful variations across your content
-  </Step>
-</Steps>
-
-## Types of Experiments
-
-### Content Experiments
-
-Test different content strategies:
-
-<CardGroup cols={2}>
-  <Card title="Description Testing" icon="text">
-    Compare different ways to describe your product or service
-  </Card>
-  <Card title="Feature Emphasis" icon="star">
-    Test highlighting different product features
-  </Card>
-  <Card title="Tone Variations" icon="message">
-    Experiment with formal vs. conversational tone
-  </Card>
-  <Card title="Length Optimization" icon="ruler">
-    Find the optimal content length for AI comprehension
-  </Card>
-</CardGroup>
-
-### Structural Experiments
-
-Test how information architecture affects AI understanding:
-
-- **Heading Hierarchy**: H1 vs H2 vs H3 for key information
-- **List Formats**: Bullets vs. numbered lists vs. paragraphs
-- **Schema Markup**: Different structured data implementations
-- **FAQ Sections**: Presence and format of Q&A content
-
-### Keyword Experiments
-
-Optimize terminology and phrasing:
-
-```javascript
-// Example keyword experiment configuration
-{
-  "experiment_name": "Product Category Terms",
-  "control": "enterprise software platform",
-  "variants": [
-    "enterprise SaaS solution",
-    "business automation platform",
-    "enterprise cloud software"
-  ],
-  "success_metric": "category_authority_score"
-}
-```
-
-## Setting Up an Experiment
-
-### 1. Define Your Goals
-
-<AccordionGroup>
-  <Accordion title="Visibility Goals">
-    - Increase appearance in top recommendations
-    - Improve ranking in comparison queries
-    - Boost brand mention frequency
-  </Accordion>
-  <Accordion title="Sentiment Goals">
-    - Reduce negative associations
-    - Increase positive descriptors
-    - Improve trust indicators
-  </Accordion>
-  <Accordion title="Authority Goals">
-    - Establish category leadership
-    - Increase expert citations
-    - Improve credibility markers
-  </Accordion>
-</AccordionGroup>
-
-### 2. Create Variants
-
-<Tabs>
-  <Tab title="Simple A/B">
-    Test one variable with two options:
-    - **Control**: Current version
-    - **Variant A**: Modified version
-  </Tab>
-  <Tab title="Multivariate">
-    Test multiple variables simultaneously:
-    - **Control**: Current version
-    - **Variant A**: Change X
-    - **Variant B**: Change Y
-    - **Variant C**: Change X + Y
-  </Tab>
-</Tabs>
-
-### 3. Configure Parameters
-
-<ParamField path="duration" type="string" required>
-  Test duration (minimum 7 days, recommended 14-30 days)
-</ParamField>
-
-<ParamField path="traffic_split" type="object" required>
-  Percentage of queries to include in test (default: 50/50 split)
-</ParamField>
-
-<ParamField path="success_metrics" type="array" required>
-  Which metrics determine the winner
-</ParamField>
-
-<ParamField path="confidence_level" type="number" default="95">
-  Statistical confidence required to declare a winner
-</ParamField>
-
-## Monitoring Experiments
-
-### Real-time Dashboard
-
-Track experiment progress with live metrics:
+The Experiments feature allows you to test different prompt strategies to see which performs better across AI models, helping you optimize your brand's AI presence scientifically.
 
 <Frame>
   <img
-    src="/images/experiment-dashboard.png"
-    alt="Experiment Dashboard"
-    style={{ borderRadius: '8px' }}
+    src="/images/experiments-page-overview.png"
+    alt="Experiments Page Overview"
+    style={{ borderRadius: '12px' }}
   />
 </Frame>
 
-### Key Metrics to Watch
+## What are Experiments?
 
-1. **Conversion Rate**: How often the variant appears vs. control
-2. **Lift**: Percentage improvement over control
-3. **Confidence Score**: Statistical significance of results
-4. **Sample Size**: Number of AI queries analyzed
+Experiments in Friction let you:
 
-### Statistical Significance
-
-<Note>
-  Friction uses Bayesian statistics to determine winners, providing more reliable results than traditional A/B testing.
-</Note>
-
-We calculate significance using:
-- **Bayesian Probability**: Likelihood that variant beats control
-- **Expected Loss**: Risk of choosing the wrong variant
-- **Credible Intervals**: Range of likely true effect sizes
-
-## Experiment Examples
-
-### Case Study 1: E-commerce Product Descriptions
-
-**Challenge**: Low visibility in "best [product]" queries
-
-**Experiment Setup**:
-- **Control**: Technical specifications focus
-- **Variant A**: Benefit-focused descriptions
-- **Variant B**: User testimonial integration
-
-**Results**:
-- Variant B increased visibility by 34%
-- Positive sentiment improved by 28%
-- Purchase intent rose by 41%
-
-### Case Study 2: B2B Software Positioning
-
-**Challenge**: Weak authority score in enterprise software category
-
-**Experiment Setup**:
-- **Control**: Feature-based positioning
-- **Variant**: Problem/solution positioning
-
-**Results**:
-- Authority score increased by 22%
-- Appeared in 45% more "recommended for enterprise" queries
-- Competitive win rate improved by 18%
-
-## Best Practices
-
-<Warning>
-  Always run experiments for at least 7 days to account for AI model caching and update cycles.
-</Warning>
-
-### Do's
-- ✅ Test one major change at a time
-- ✅ Run experiments for statistical significance
-- ✅ Document learnings for future tests
-- ✅ Consider seasonal variations
-- ✅ Test across multiple AI models
-
-### Don'ts
-- ❌ End experiments too early
-- ❌ Test too many variables at once
-- ❌ Ignore negative results
-- ❌ Forget to implement winners
-- ❌ Run conflicting experiments simultaneously
-
-## Advanced Features
-
-### Experiment Templates
-
-Use pre-built templates for common optimization goals:
+- **Test prompt variations**: Compare control vs. test prompts
+- **Measure performance differences**: Track visibility, sentiment, authority, and purchase intent
+- **Make data-driven decisions**: Choose the best-performing prompts based on actual AI responses
+- **Optimize continuously**: Run multiple experiments to improve over time
 
 <CardGroup cols={2}>
-  <Card title="New Product Launch" icon="rocket">
-    Optimize visibility for new offerings
+  <Card title="Control vs Variant Testing" icon="scale-balanced">
+    Compare two sets of prompts head-to-head
   </Card>
-  <Card title="Reputation Recovery" icon="shield">
-    Improve sentiment after negative events
+  <Card title="Multi-Metric Tracking" icon="chart-mixed">
+    Monitor up to 4 target metrics simultaneously
   </Card>
-  <Card title="Competitive Positioning" icon="trophy">
-    Win more comparison queries
+  <Card title="AI Model Selection" icon="brain">
+    Test across specific LLMs and platforms
   </Card>
-  <Card title="Geographic Expansion" icon="globe">
-    Optimize for new markets
+  <Card title="Automated Execution" icon="clock">
+    Nightly job runs experiments automatically
   </Card>
 </CardGroup>
 
-### Auto-optimization
+---
 
-<Badge variant="outline">Beta</Badge>
+## Experiment Lifecycle
 
-Enable machine learning to automatically:
-- Generate variant suggestions
-- Adjust traffic allocation
-- Stop underperforming variants
-- Scale winning variations
+### The 6 Experiment Statuses
 
-### Integration with CI/CD
+<Tabs>
+  <Tab title="Draft">
+    **Status**: Experiment created but not started
 
-```bash
-# Automatically deploy winning variants
-friction experiments apply-winner \
-  --experiment-id=exp_123 \
-  --confidence-threshold=95 \
-  --auto-rollout=true
+    **What You Can Do**:
+    - Edit all experiment details
+    - Add or remove prompts
+    - Delete the experiment
+    - Save changes without starting
+
+    **Next Step**: Click "Save & Start" when ready to begin
+  </Tab>
+  <Tab title="Scheduled">
+    **Status**: Experiment queued for execution
+
+    **What Happens**:
+    - Nightly automation job will execute the experiment
+    - Prompts sent to selected AI models
+    - Results collected and analyzed
+    - Status updates to "Running" during execution
+
+    **Duration**: Remains scheduled until nightly job picks it up
+  </Tab>
+  <Tab title="Running">
+    **Status**: Experiment currently executing
+
+    **What Happens**:
+    - AI models are responding to prompts
+    - Data is being collected
+    - Metrics are being calculated
+    - May take hours depending on prompt count
+
+    **View**: Real-time execution status and partial results
+  </Tab>
+  <Tab title="Completed">
+    **Status**: Experiment finished successfully
+
+    **What You See**:
+    - Final metric scores for control and variant
+    - Statistical significance
+    - Winner recommendation
+    - Full execution timeline
+    - Detailed results breakdown
+
+    **Next Steps**: Review results and apply insights
+  </Tab>
+  <Tab title="Failed">
+    **Status**: Experiment encountered an error
+
+    **What You See**:
+    - Error message explaining failure
+    - Failure timestamp
+    - Failure reason in status badge tooltip
+
+    **Common Causes**:
+    - API timeout or rate limiting
+    - Invalid prompt configuration
+    - System errors
+
+    **Resolution**: Review error, fix issues, create new experiment
+  </Tab>
+  <Tab title="Archived">
+    **Status**: Experiment moved to archive (hidden by default)
+
+    **Purpose**:
+    - Keep experiment history clean
+    - Hide old or irrelevant experiments
+    - Maintain data for reference
+
+    **View**: Toggle "Show archived" to see archived experiments
+
+    **Note**: Can unarchive if needed
+  </Tab>
+</Tabs>
+
+<Frame>
+  <img
+    src="/images/experiments-status-flow.png"
+    alt="Experiment Status Flow"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+---
+
+## Creating an Experiment
+
+### Step 1: Experiment Setup
+
+Click **"+ Create Experiment"** to open the creation form.
+
+<Frame>
+  <img
+    src="/images/experiments-create-form.png"
+    alt="Create Experiment Form"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+#### Required Fields:
+
+<ParamField path="Experiment Name" type="string" required>
+  Descriptive name for your experiment (e.g., "Product Page Prompt Test - Q1 2024")
+</ParamField>
+
+<ParamField path="Hypothesis" type="string" required>
+  Your expected outcome (required for "Save & Start", optional for drafts)
+
+  **Example**: "Benefit-focused prompts will increase purchase intent by 15% compared to feature-focused prompts"
+</ParamField>
+
+<ParamField path="Target Metrics" type="array" required>
+  Select 1-4 metrics to track:
+  - **Visibility**: Frequency and prominence of brand mentions
+  - **Sentiment**: Positive, neutral, or negative tone
+  - **Authority**: Recognition as category leader
+  - **Purchase Intent**: Likelihood of AI recommendation
+
+  **Note**: At least 1 metric must be selected
+</ParamField>
+
+#### Optional Fields:
+
+<ParamField path="LLM Models" type="array">
+  Specific AI models to test (if none selected, uses backend defaults)
+
+  **Options**:
+  - GPT-4, GPT-3.5 (OpenAI)
+  - Claude 3 Opus, Sonnet, Haiku (Anthropic)
+  - Gemini Pro, Ultra (Google)
+  - And more...
+</ParamField>
+
+<ParamField path="AI Platforms" type="array">
+  Specific AI platforms to test (if none selected, uses backend defaults)
+
+  **Examples**: ChatGPT, Claude, Gemini, Perplexity
+</ParamField>
+
+<ParamField path="Date Range" type="object">
+  Optional start and end dates for the experiment
+
+  - **Start Date**: When experiment should begin (optional)
+  - **End Date**: When experiment should conclude (optional)
+  - **Validation**: End date must be after start date
+</ParamField>
+
+### Step 2: Add Prompts
+
+Add prompts to both the **Control** and **Variant** buckets.
+
+<Frame>
+  <img
+    src="/images/experiments-add-prompts.png"
+    alt="Add Prompts to Experiment"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+#### Control Bucket
+
+The baseline prompts representing your current approach.
+
+**Examples**:
+```
+"What is [Brand Name]?"
+"Features of [Product]"
+"How does [Product] work?"
+"[Brand] specifications"
 ```
 
-## Analyzing Results
+#### Variant Bucket
 
-### Success Criteria
+The test prompts representing your new approach.
 
-Determine experiment success based on:
-
-1. **Primary Metrics**: Direct goal achievement
-2. **Secondary Metrics**: Indirect benefits
-3. **Guard Rails**: Ensure no negative impacts
-4. **Long-term Effects**: Sustained improvements
-
-### Report Generation
-
-Generate comprehensive experiment reports:
-
-```python
-# Example experiment report structure
-{
-  "experiment_id": "exp_123",
-  "status": "completed",
-  "winner": "variant_b",
-  "metrics": {
-    "visibility_lift": "+34%",
-    "sentiment_lift": "+28%",
-    "confidence": "98.5%"
-  },
-  "recommendations": [
-    "Implement variant B across all product pages",
-    "Test similar approach for other products",
-    "Monitor for 30 days post-implementation"
-  ]
-}
+**Examples (benefit-focused)**:
 ```
+"How can [Brand Name] help me?"
+"Benefits of [Product]"
+"What problems does [Product] solve?"
+"Why choose [Brand]?"
+```
+
+#### Prompt Requirements:
+
+<Warning>
+  **Minimum**: 5 prompts per bucket (10 total) required before you can "Save & Start"
+
+  **Recommendation**: 10-20 prompts per bucket for statistically significant results
+</Warning>
+
+<Tip>
+  You can save as a draft with fewer than 5 prompts per bucket, but you must add more before starting the experiment.
+</Tip>
+
+### Step 3: Save or Start
+
+<Tabs>
+  <Tab title="Save Draft">
+    **What It Does**:
+    - Saves experiment without starting
+    - Status remains "Draft"
+    - Can edit anytime
+    - No minimum prompt requirement
+
+    **Use When**:
+    - Building experiment incrementally
+    - Not ready to commit
+    - Need approval before running
+  </Tab>
+  <Tab title="Save & Start">
+    **What It Does**:
+    1. Creates draft experiment
+    2. Validates all required fields
+    3. Adds prompts to both buckets
+    4. Starts experiment (status → "Scheduled")
+    5. Queues for nightly execution
+
+    **Requirements**:
+    - Hypothesis must be filled
+    - At least 1 target metric selected
+    - Minimum 5 prompts per bucket (10 total)
+    - Valid date range (if provided)
+
+    **Result**: Experiment moves to "Scheduled" status and will be executed by nightly job
+  </Tab>
+</Tabs>
+
+---
+
+## Viewing Experiment Results
+
+### Experiments List Page
+
+<Frame>
+  <img
+    src="/images/experiments-list.png"
+    alt="Experiments List"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+#### List View Features:
+
+<ParamField path="Filters" type="object">
+  Filter experiments by status:
+  - All Experiments
+  - Draft
+  - Scheduled
+  - Running
+  - Completed
+  - Failed
+  - Show Archived (toggle)
+</ParamField>
+
+<ParamField path="Pagination" type="object">
+  Navigate large experiment lists:
+  - Page size: 10, 25, 50, or 100 experiments
+  - Previous/Next navigation
+  - Page count display
+</ParamField>
+
+<ParamField path="Columns" type="array">
+  Key information at a glance:
+  - Experiment Name
+  - Status (with color-coded badge)
+  - Target Metrics
+  - Created Date
+  - Last Executed
+  - Actions (View, Edit, Archive)
+</ParamField>
+
+### Experiment Detail Page
+
+Click any experiment to view detailed results and timeline.
+
+<Frame>
+  <img
+    src="/images/experiments-detail-page.png"
+    alt="Experiment Detail Page"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+#### What You'll See:
+
+<Tabs>
+  <Tab title="Overview">
+    - Experiment name and hypothesis
+    - Current status
+    - Target metrics
+    - LLM models and platforms
+    - Date range
+    - Creation and last updated timestamps
+  </Tab>
+  <Tab title="Results">
+    - **Control Bucket Scores**: Metrics for baseline prompts
+    - **Variant Bucket Scores**: Metrics for test prompts
+    - **Comparison**: Side-by-side metric comparison
+    - **Winner**: AI recommendation based on performance
+    - **Statistical Significance**: Confidence level in results
+  </Tab>
+  <Tab title="Prompt Lists">
+    - Control prompts with individual results
+    - Variant prompts with individual results
+    - Per-prompt metric breakdowns
+  </Tab>
+  <Tab title="Execution Timeline">
+    - Experiment created
+    - Scheduled timestamp
+    - Execution started
+    - Execution completed (or failed)
+    - Total execution time
+  </Tab>
+</Tabs>
+
+---
+
+## Understanding Results
+
+### Metric Comparison
+
+Results show scores for each target metric in both buckets:
+
+<Frame>
+  <img
+    src="/images/experiments-results-comparison.png"
+    alt="Results Comparison"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+#### How to Read Results:
+
+<Tabs>
+  <Tab title="Visibility">
+    **Control**: 68/100
+    **Variant**: 82/100
+    **Lift**: +14 points (+20.6%)
+
+    **Interpretation**: Variant prompts resulted in significantly better brand visibility
+
+    **Action**: Adopt variant prompt style for visibility improvement
+  </Tab>
+  <Tab title="Sentiment">
+    **Control**: 75/100
+    **Variant**: 73/100
+    **Lift**: -2 points (-2.7%)
+
+    **Interpretation**: Variant slightly decreased sentiment (not statistically significant)
+
+    **Action**: Monitor sentiment if adopting variant
+  </Tab>
+  <Tab title="Authority">
+    **Control**: 55/100
+    **Variant**: 62/100
+    **Lift**: +7 points (+12.7%)
+
+    **Interpretation**: Variant improved authority perception
+
+    **Action**: Variant helps establish category leadership
+  </Tab>
+  <Tab title="Purchase Intent">
+    **Control**: 60/100
+    **Variant**: 78/100
+    **Lift**: +18 points (+30%)
+
+    **Interpretation**: Variant dramatically increased purchase recommendations
+
+    **Action**: Strong win - adopt variant for commerce optimization
+  </Tab>
+</Tabs>
+
+### Statistical Significance
+
+<Info>
+  **Confidence Level**: Results are considered statistically significant if the confidence level exceeds 95%.
+
+  **Sample Size**: Larger prompt sets (20+ per bucket) yield more reliable results.
+</Info>
+
+#### Interpreting Significance:
+
+<AccordionGroup>
+  <Accordion title="High Confidence (95%+)">
+    **Meaning**: Very likely the observed difference is real, not random chance
+
+    **Action**: Confidently implement the winning variant
+  </Accordion>
+  <Accordion title="Medium Confidence (80-95%)">
+    **Meaning**: Likely a real difference, but some uncertainty remains
+
+    **Action**: Consider running a larger follow-up experiment or implement cautiously
+  </Accordion>
+  <Accordion title="Low Confidence (<80%)">
+    **Meaning**: Observed differences may be due to chance
+
+    **Action**: Run longer experiment with more prompts, or interpret results as inconclusive
+  </Accordion>
+</AccordionGroup>
+
+### Winner Determination
+
+Friction automatically recommends a winner based on:
+
+1. **Primary Metric Performance**: Largest improvement in target metrics
+2. **Statistical Significance**: Confidence level of results
+3. **No Negative Impacts**: Guard rail metrics don't decline significantly
+4. **Consistency**: Performance across different AI models
+
+<Frame>
+  <img
+    src="/images/experiments-winner-badge.png"
+    alt="Winner Badge"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
+
+---
+
+## Best Practices
+
+### Designing Good Experiments
+
+<Steps>
+  <Step title="Test One Variable">
+    Change one thing between control and variant for clear causality
+
+    **Good**: Control uses features, Variant uses benefits
+
+    **Bad**: Control uses features + formal tone, Variant uses benefits + casual tone (which caused the difference?)
+  </Step>
+  <Step title="Use Sufficient Sample Size">
+    Aim for 10-20 prompts per bucket minimum
+
+    **Why**: Larger samples reduce noise and increase confidence
+  </Step>
+  <Step title="Run for Appropriate Duration">
+    Allow nightly job to execute multiple times if needed
+
+    **Recommendation**: Let experiments run for at least 7 days for AI model caching to settle
+  </Step>
+  <Step title="Align with Business Goals">
+    Choose target metrics that matter to your business
+
+    **E-Commerce**: Prioritize Purchase Intent
+
+    **B2B SaaS**: Prioritize Authority
+
+    **Consumer Brand**: Prioritize Sentiment
+  </Step>
+</Steps>
+
+### Experiment Ideas
+
+<Tabs>
+  <Tab title="Prompt Framing">
+    **Control**: "What is [Product]?"
+
+    **Variant**: "How can [Product] help me?"
+
+    **Tests**: Question framing impact on recommendations
+  </Tab>
+  <Tab title="Feature vs Benefit">
+    **Control**: "Features of [Product]"
+
+    **Variant**: "Benefits of using [Product]"
+
+    **Tests**: Whether benefits drive better sentiment/purchase intent
+  </Tab>
+  <Tab title="Comparison Positioning">
+    **Control**: "[Brand] vs [Competitor]"
+
+    **Variant**: "Why choose [Brand] over [Competitor]?"
+
+    **Tests**: Assertive positioning impact
+  </Tab>
+  <Tab title="Specificity">
+    **Control**: "Best project management software"
+
+    **Variant**: "Best project management software for remote teams"
+
+    **Tests**: Niche targeting vs broad queries
+  </Tab>
+  <Tab title="Problem-Solution">
+    **Control**: "What does [Product] do?"
+
+    **Variant**: "How does [Product] solve [problem]?"
+
+    **Tests**: Problem-solution framing effectiveness
+  </Tab>
+</Tabs>
+
+### Common Mistakes to Avoid
+
+<Warning>
+  **Don't end experiments prematurely**. Wait for full execution and statistical significance before drawing conclusions.
+</Warning>
+
+<AccordionGroup>
+  <Accordion title="Testing Too Many Variables">
+    **Problem**: Can't identify which change caused the difference
+
+    **Solution**: Test one major variable at a time
+  </Accordion>
+  <Accordion title="Insufficient Prompts">
+    **Problem**: Results lack statistical power
+
+    **Solution**: Use 10-20 prompts per bucket minimum
+  </Accordion>
+  <Accordion title="Ignoring Negative Results">
+    **Problem**: Only implementing winning experiments misses learnings
+
+    **Solution**: Document why variants failed - equally valuable insight
+  </Accordion>
+  <Accordion title="Not Aligning with Strategy">
+    **Problem**: Running random experiments without clear goals
+
+    **Solution**: Tie experiments to specific business objectives
+  </Accordion>
+  <Accordion title="Forgetting to Implement Winners">
+    **Problem**: Running experiments but not applying insights
+
+    **Solution**: Create action plan to implement winning prompts across Define page
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Managing Experiments
+
+### Editing Experiments
+
+<Tabs>
+  <Tab title="Draft Experiments">
+    **Can Edit**: Everything
+    - Name, hypothesis
+    - Target metrics
+    - LLM models, platforms
+    - Date range
+    - Add/remove/edit prompts
+
+    **How**: Click "Edit" on experiments list or detail page
+  </Tab>
+  <Tab title="Scheduled/Running">
+    **Can Edit**: Limited
+    - Cannot edit experiment details
+    - Cannot change prompts
+    - Can archive or delete (if needed)
+
+    **Note**: Create new experiment if you need changes
+  </Tab>
+  <Tab title="Completed">
+    **Can Edit**: Metadata only
+    - Can update name or hypothesis for documentation
+    - Cannot change prompts or metrics (would invalidate results)
+    - Can archive if no longer relevant
+  </Tab>
+</Tabs>
+
+### Archiving Experiments
+
+Archive old or irrelevant experiments to keep your list clean:
+
+<Steps>
+  <Step title="Select Experiment">
+    Click the archive icon on experiments list or detail page
+  </Step>
+  <Step title="Confirm Archive">
+    Experiment moves to archived status
+  </Step>
+  <Step title="View Archived">
+    Toggle "Show archived" filter to see archived experiments
+  </Step>
+  <Step title="Unarchive (if needed)">
+    Click unarchive icon to restore experiment to active list
+  </Step>
+</Steps>
+
+<Info>
+  **Archiving vs Deleting**: Archiving preserves experiment data for future reference. Deleting permanently removes the experiment.
+</Info>
+
+### Deleting Experiments
+
+<Warning>
+  Deleting an experiment is permanent and cannot be undone. All data will be lost.
+</Warning>
+
+**When to Delete**:
+- Test experiments during onboarding
+- Duplicate experiments created by mistake
+- Experiments with critical errors in setup
+- Data you're certain you'll never need
+
+**When to Archive Instead**:
+- Completed experiments (preserve historical data)
+- Experiments with learnings to reference later
+- Anything you might want to review in the future
+
+---
+
+## Experiment Workflow Example
+
+### Real-World Scenario: E-Commerce Brand
+
+**Goal**: Increase purchase intent for flagship product
+
+<Steps>
+  <Step title="Hypothesis Formation">
+    **Hypothesis**: "Benefit-focused prompts emphasizing problem-solving will increase purchase intent by 20% compared to feature-focused prompts"
+
+    **Reasoning**: Customers care more about outcomes than specifications
+  </Step>
+  <Step title="Create Experiment">
+    - Name: "Product Page Prompts - Benefit vs Feature Test"
+    - Target Metrics: Purchase Intent (primary), Sentiment (secondary)
+    - LLM Models: GPT-4, Claude 3, Gemini Pro
+  </Step>
+  <Step title="Build Control Bucket (Feature-Focused)">
+    ```
+    "What are the features of [Product]?"
+    "Specifications of [Product]"
+    "Technical details of [Product]"
+    "[Product] capabilities"
+    "What does [Product] include?"
+    ... (10 total feature-focused prompts)
+    ```
+  </Step>
+  <Step title="Build Variant Bucket (Benefit-Focused)">
+    ```
+    "How can [Product] help me save time?"
+    "What problems does [Product] solve?"
+    "Benefits of using [Product]"
+    "Why should I choose [Product]?"
+    "How does [Product] make life easier?"
+    ... (10 total benefit-focused prompts)
+    ```
+  </Step>
+  <Step title="Save & Start">
+    Experiment moves to "Scheduled" status, queued for nightly execution
+  </Step>
+  <Step title="Monitor Results">
+    After execution completes:
+    - **Control Purchase Intent**: 62/100
+    - **Variant Purchase Intent**: 79/100
+    - **Lift**: +17 points (+27.4%)
+    - **Confidence**: 96%
+
+    **Winner**: Variant (benefit-focused prompts)
+  </Step>
+  <Step title="Apply Insights">
+    - Update Define page prompts to use benefit-focused language
+    - Apply benefit framing to product pages
+    - Run follow-up experiment testing different benefit themes
+  </Step>
+</Steps>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Experiment Stuck in Scheduled">
+    **Possible Causes**:
+    - Nightly job hasn't run yet (wait 24 hours)
+    - Queue backlog (multiple experiments scheduled)
+    - System issue
+
+    **Solution**: Wait for next nightly execution window. Contact support if stuck >48 hours.
+  </Accordion>
+  <Accordion title="Experiment Failed">
+    **Check**: Failure reason in status badge tooltip or detail page
+
+    **Common Causes**:
+    - Invalid prompts (empty, malformed)
+    - API rate limiting
+    - Timeout due to too many prompts
+
+    **Solution**: Fix issue, create new experiment
+  </Accordion>
+  <Accordion title="Results Show No Difference">
+    **Interpretation**: Control and variant performed similarly
+
+    **Possible Reasons**:
+    - Tested variable doesn't matter for this metric
+    - Change was too subtle
+    - Sample size too small
+
+    **Next Steps**: Try more dramatic variation or different test variable
+  </Accordion>
+  <Accordion title="Can't Start Experiment">
+    **Check**:
+    - Hypothesis filled in
+    - At least 1 target metric selected
+    - Minimum 5 prompts per bucket
+    - Valid date range (end > start)
+
+    **Solution**: Address missing requirements
+  </Accordion>
+</AccordionGroup>
+
+---
 
 ## Next Steps
 
 <CardGroup cols={2}>
   <Card
-    title="View Templates"
-    icon="rectangle-list"
-    href="/features/experiment-templates"
+    title="Define Prompts"
+    icon="pen-to-square"
+    href="/features/define"
   >
-    Browse pre-built experiment templates
+    Apply experiment insights to your prompt library
   </Card>
   <Card
-    title="API Documentation"
-    icon="code"
-    href="/api-reference/experiments"
+    title="Analyze Results"
+    icon="chart-mixed"
+    href="/features/analyze"
   >
-    Programmatically manage experiments
+    See how experiments impact overall brand health
+  </Card>
+  <Card
+    title="View Dashboard"
+    icon="gauge"
+    href="/dashboard/overview"
+  >
+    Monitor impact of implemented changes
+  </Card>
+  <Card
+    title="Commerce Tracking"
+    icon="cart-shopping"
+    href="/features/commerce"
+  >
+    Run commerce-specific experiments
   </Card>
 </CardGroup>
+
+---
+
+<Note>
+  **Pro Tip**: Start with high-impact, low-effort experiments. Test prompt framing or feature vs. benefit messaging first - these often show significant results with minimal effort. Save complex multivariate tests for later when you have more experience.
+</Note>
