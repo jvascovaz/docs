@@ -1,215 +1,262 @@
 ---
-title: 'Dashboard Overview'
-description: 'Your command center for AI-powered brand performance'
-icon: 'chart-line'
+title: "Dashboard Overview"
+description: "Your command center for AI performance monitoring"
 ---
 
-# Friction Dashboard
+# Dashboard Overview
 
-Welcome to your Friction dashboard - the central hub for monitoring and optimizing your brand's AI performance across all major language models.
+The Friction dashboard provides a comprehensive view of your brand's performance across AI platforms, divided into two main sections: **Your Custom Analyses** (user-created content) and **Brand Health** (Friction-generated insights).
 
-## What is Friction?
+<Frame>
+  <img
+    src="/images/dashboard-overview-sections.png"
+    alt="Dashboard with two main sections"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
 
-Friction is an AI-powered platform that helps you understand and improve how your brand appears in AI-generated responses. As AI becomes the primary interface for information discovery, Friction ensures your brand maintains strong visibility and positive sentiment.
+## Two-Section Layout
+
+### Section 1: Your Custom Analyses
+
+**Manually-Defined** content from prompts you create in the Define and Commerce pages.
 
 <CardGroup cols={2}>
-  <Card
-    title="Real-time Monitoring"
-    icon="gauge"
-    href="#real-time-monitoring"
-  >
-    Track your brand's AI performance across GPT-4, Claude, Gemini, and more
+  <Card title="Top Prompts & Search Queries" icon="list">
+    Shows your highest-performing user-created prompts from the Define page, ranked by visibility score.
   </Card>
-  <Card
-    title="Competitive Analysis"
-    icon="chart-mixed"
-    href="#competitive-analysis"
-  >
-    Compare your brand's AI presence against competitors
+  <Card title="Commerce Prompts" icon="cart-shopping">
+    Displays your commerce-specific prompts with purchase intent metrics and e-commerce platform visibility.
   </Card>
-  <Card
-    title="Performance Metrics"
-    icon="chart-line"
-    href="#key-metrics"
-  >
-    Monitor visibility, sentiment, and purchase intent scores
+  <Card title="Top Sources" icon="link">
+    Lists the most frequently cited domains across your prompts (e.g., your website, competitor sites, industry publications).
   </Card>
-  <Card
-    title="AI Optimization"
-    icon="sparkles"
-    href="#optimization"
-  >
-    Get actionable insights to improve your AI rankings
+  <Card title="Experiments" icon="flask">
+    Preview of your active and recent A/B experiments testing different prompt strategies.
   </Card>
 </CardGroup>
 
-## Getting Started
+### Section 2: Brand Health
 
-<Steps>
-  <Step title="Access Your Dashboard">
-    Log in to your Friction account at [app.friction.com](https://app.friction.com)
-  </Step>
-  <Step title="Connect Your Brand">
-    Add your brand name and relevant keywords to start tracking
-  </Step>
-  <Step title="Set Up Competitors">
-    Add competitor brands to benchmark your performance
-  </Step>
-  <Step title="Review Initial Data">
-    Within minutes, you'll see your first AI performance metrics
-  </Step>
-</Steps>
+**Friction-Generated** metrics based on system prompts automatically created during onboarding.
 
-## Dashboard Layout
+<CardGroup cols={2}>
+  <Card title="4 Quick Metrics" icon="gauge">
+    Visibility, Authority, Sentiment, and Purchase Intent scores with trend indicators
+  </Card>
+  <Card title="Performance Trends" icon="chart-line">
+    Historical chart showing how all 4 metrics have changed over the selected time period
+  </Card>
+  <Card title="LLM Performance" icon="brain">
+    Comparison of your brand's performance across different AI models (GPT-4, Claude, Gemini, etc.)
+  </Card>
+  <Card title="Industry Ranking" icon="trophy">
+    Leaderboard showing your brand's position vs. competitors in your industry
+  </Card>
+  <Card title="Strategic Recommendations" icon="lightbulb">
+    AI-generated actionable insights to improve your brand's AI presence
+  </Card>
+</CardGroup>
 
-The Friction dashboard is organized into several key sections:
+## Time Period Filters
 
-### Navigation Sidebar
+Both sections have independent time period filters:
 
-Located on the left side of your screen, the sidebar provides quick access to:
+- 7 Days
+- 14 Days
+- 30 Days (default)
 
-- **Overview**: Your main dashboard with key metrics
-- **Performance**: Detailed performance analytics
-- **Competitors**: Competitive analysis and benchmarking
-- **Experiments**: A/B testing for content optimization
-- **Reports**: Custom reports and exports
-- **Settings**: Account and configuration options
+Changing the period updates all metrics, charts, and trends within that section.
 
-### Main Dashboard Area
-
-The central area displays your selected view with interactive charts and metrics:
+## Understanding the Data Split
 
 <Tabs>
-  <Tab title="Metrics View">
-    Real-time performance indicators showing:
-    - Overall AI Score (0-100)
-    - Brand Visibility percentage
-    - Sentiment Analysis (Positive/Neutral/Negative)
-    - Purchase Intent score
-    - Brand Authority rating
+  <Tab title="Custom Analyses">
+    **Source**: Your manually created prompts
+
+    **Purpose**: Track specific queries you care about
+
+    **Control**: You decide what to track
+
+    **Examples**:
+    - "What is [Your Brand]?"
+    - "Best [product] for [use case]"
+    - "[Product name] reviews"
+
+    **Use Cases**:
+    - Monitor specific product queries
+    - Track brand awareness questions
+    - Measure commerce intent
   </Tab>
-  <Tab title="Trend Analysis">
-    Historical performance charts displaying:
-    - 30-day rolling averages
-    - Week-over-week comparisons
-    - Anomaly detection alerts
-    - Seasonal patterns
-  </Tab>
-  <Tab title="LLM Breakdown">
-    Performance across different AI models:
-    - GPT-4 and GPT-3.5
-    - Claude 3 (Opus, Sonnet, Haiku)
-    - Google Gemini
-    - Perplexity
-    - Custom models
+  <Tab title="Brand Health">
+    **Source**: System-generated prompts (~25 prompts created during onboarding)
+
+    **Purpose**: Measure overall brand health across 4 key metrics
+
+    **Control**: Automatically managed by Friction
+
+    **Metrics**:
+    1. **Visibility** - How often your brand appears
+    2. **Authority** - Trust and credibility signals
+    3. **Sentiment** - Positive/neutral/negative perception
+    4. **Purchase Intent** - Recommendation strength
+
+    **Use Cases**:
+    - Executive reporting
+    - Competitive benchmarking
+    - Trend analysis
   </Tab>
 </Tabs>
 
-## Key Metrics
+## Key Components
 
-### AI Performance Score
-A composite score (0-100) that measures your overall brand performance in AI responses.
+### 4 Quick Metrics Cards
 
-<AccordionGroup>
-  <Accordion title="How is it calculated?">
-    The AI Performance Score combines multiple factors:
-    - **Visibility (40%)**: How often your brand appears in relevant queries
-    - **Sentiment (25%)**: The tone and context of brand mentions
-    - **Authority (20%)**: Recognition as a category leader
-    - **Intent (15%)**: Likelihood of recommendation or purchase suggestion
-  </Accordion>
-  <Accordion title="What's a good score?">
-    - **80-100**: Excellent - Strong AI presence and positive sentiment
-    - **60-79**: Good - Above average visibility with room for improvement
-    - **40-59**: Average - Moderate presence, optimization needed
-    - **Below 40**: Needs Attention - Significant optimization required
-  </Accordion>
-</AccordionGroup>
+Large metric cards showing:
+- Current score (0-100)
+- Trend direction (up/down/neutral)
+- Change amount over the selected period
 
-### Brand Visibility
-Measures how frequently your brand appears in AI-generated responses for relevant queries.
+<Frame>
+  <img
+    src="/images/quick-metrics-cards.png"
+    alt="Four metric cards showing Visibility, Authority, Sentiment, Purchase Intent"
+  />
+</Frame>
 
-### Sentiment Analysis
-Tracks the emotional tone and context surrounding your brand mentions:
-- **Positive**: Recommendations, praise, preferred choices
-- **Neutral**: Factual mentions, listings, comparisons
-- **Negative**: Criticisms, warnings, or unfavorable comparisons
+### Performance Trends Chart
 
-### Purchase Intent
-Analyzes whether AI models recommend your brand for purchase decisions.
+Interactive line chart with:
+- All 4 metrics plotted over time
+- Click-to-filter: Click a metric name in the legend to show/hide it
+- Hover tooltips showing exact values
+- Period selection (7/14/30 days)
 
-## Real-time Monitoring
+<Frame>
+  <img
+    src="/images/performance-trends-chart.png"
+    alt="Multi-line chart showing metric trends"
+  />
+</Frame>
 
-The dashboard updates every 15 minutes with fresh data from ongoing AI interactions.
+### LLM Performance Chart
 
-<Note>
-  Real-time monitoring covers the top 1,000 queries relevant to your industry and brand keywords.
-</Note>
+Comparison across AI models:
+- GPT-4 / GPT-4o Mini
+- Claude Haiku / Claude Sonnet
+- Gemini Flash / Gemini Pro
+- Perplexity
+- Google AI Search
 
-### Alert System
+Shows which models rate your brand highest/lowest.
 
-Configure alerts for:
-- Sudden drops in visibility (>20% decrease)
-- Negative sentiment spikes
-- Competitor surges
-- New AI model deployments affecting your brand
+### Industry Ranking
 
-## Competitive Analysis
+Compact leaderboard showing:
+- Your brand's position (highlighted)
+- Top 5 brands in your industry
+- Scores for each brand
+- Your market position
 
-Track up to 10 competitor brands simultaneously to:
-- Benchmark your AI performance
-- Identify competitive advantages
-- Discover content gaps
-- Monitor industry trends
+<Frame>
+  <img
+    src="/images/industry-ranking.png"
+    alt="Industry leaderboard with brand rankings"
+  />
+</Frame>
+
+### Strategic Recommendations
+
+AI-generated insights categorized by:
+- **Quick Wins**: Easy improvements with high impact
+- **Strategic Priorities**: Longer-term initiatives
+- **Competitive Alerts**: Where competitors are outperforming you
+- **Maintenance Reminders**: Regular tasks to maintain performance
+
+## Empty States
+
+### First-Time User Experience
+
+After completing onboarding, you'll see:
+
+1. **Custom Analyses Section**:
+   - Empty state prompts to "Add Prompts" or "Get Prompt Recommendations"
+   - Top Sources and Experiments cards are collapsed (no data yet)
+
+2. **Brand Health Section**:
+   - Loading skeleton while initial analysis runs
+   - Full metrics appear within a few minutes
 
 <Info>
-  Competitive data is normalized to ensure fair comparisons across brands of different sizes.
+  **Pro Tip**: Start by adding 5-10 custom prompts in the Define page to populate your Custom Analyses section, then let the Brand Health metrics run automatically.
 </Info>
 
-## Optimization
+## Quick Actions
 
-Based on your dashboard insights, Friction provides:
+From the dashboard, you can:
 
-1. **Content Recommendations**: Specific content types that improve AI visibility
-2. **Keyword Opportunities**: Terms that boost brand appearance
-3. **Sentiment Improvements**: Strategies to enhance positive mentions
-4. **Technical Optimizations**: Website and data structure improvements
+- **Add Brand Prompts**: Click any "Add Prompts" button → redirects to `/define/add`
+- **Add Commerce Prompts**: Click "Get Recommendations" → redirects to `/commerce/add`
+- **View Full Analyze Page**: Click any metric card to see detailed breakdown
+- **Manage Experiments**: Click experiment cards to view/edit
+
+## Refresh Behavior
+
+The dashboard refreshes automatically when:
+- You switch brands via the sidebar
+- Analysis completes in the background
+- You return from adding new prompts
+
+<Note>
+  Analysis typically takes 2-5 minutes to complete. The dashboard shows loading skeletons while fetching data, then smoothly transitions to showing results.
+</Note>
+
+## Best Practices
+
+<Steps>
+  <Step title="Monitor Weekly">
+    Check your dashboard weekly to catch trends early
+  </Step>
+  <Step title="Focus on Trends">
+    The direction of change matters more than absolute scores
+  </Step>
+  <Step title="Compare Metrics">
+    Low visibility but high sentiment? You need more content. High visibility but low purchase intent? Improve conversion messaging.
+  </Step>
+  <Step title="Act on Recommendations">
+    The Strategic Recommendations panel provides specific, actionable steps
+  </Step>
+</Steps>
 
 ## Next Steps
 
 <CardGroup cols={2}>
   <Card
-    title="Explore Features"
-    icon="compass"
-    href="/features/performance-tracking"
+    title="Add Brand Prompts"
+    icon="pen-to-square"
+    href="/features/define"
   >
-    Deep dive into each dashboard feature
+    Create custom prompts to track specific queries
+  </Card>
+  <Card
+    title="Analyze Metrics"
+    icon="chart-mixed"
+    href="/features/analyze"
+  >
+    Deep dive into each metric's breakdown
+  </Card>
+  <Card
+    title="Commerce Tracking"
+    icon="cart-shopping"
+    href="/features/commerce"
+  >
+    Add commerce prompts to track purchase intent
   </Card>
   <Card
     title="Run Experiments"
     icon="flask"
     href="/features/experiments"
   >
-    Test content variations to improve AI performance
-  </Card>
-  <Card
-    title="Generate Reports"
-    icon="file-chart-line"
-    href="/features/reports"
-  >
-    Create custom reports for stakeholders
-  </Card>
-  <Card
-    title="API Integration"
-    icon="code"
-    href="/api-reference/introduction"
-  >
-    Connect Friction data to your tools
+    Test different prompt strategies
   </Card>
 </CardGroup>
-
----
-
-<Note>
-  Need help? Contact our support team at [support@friction.com](mailto:support@friction.com) or use the in-app chat.
-</Note>

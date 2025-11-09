@@ -6,692 +6,524 @@ icon: 'pen-to-square'
 
 # Define Your Brand Visibility
 
-The Define page is where you create, manage, and analyze custom prompts that track how AI models respond to queries about your brand, products, and industry.
+The Define page is where you create and manage custom prompts to track how AI models respond to queries about your brand, products, and industry.
 
 <Frame>
   <img
     src="/images/define-page-overview.png"
-    alt="Define Page Overview"
+    alt="Define Page Overview showing prompts table, sources, and insights"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
 
-## What is Define?
-
-Define allows you to:
-
-- **Create custom prompts** tailored to your brand and industry
-- **Track AI responses** across GPT-4, Claude, Gemini, Perplexity, and more
-- **Analyze brand visibility** with detailed metrics and insights
-- **Compare performance** across different prompt types
-- **Execute analysis** on-demand to get fresh results
+## What You Can Do
 
 <CardGroup cols={2}>
-  <Card title="User-Created Prompts" icon="user">
-    Create custom prompts specific to your brand needs
+  <Card title="Create Custom Prompts" icon="pen-to-square">
+    Add your own prompts and search queries to track specific brand questions
   </Card>
-  <Card title="System Prompts" icon="robot">
-    AI-generated prompts from onboarding (25+ prompts)
+  <Card title="AI-Powered Suggestions" icon="sparkles">
+    Get intelligent prompt recommendations based on your industry
   </Card>
-  <Card title="Real-Time Execution" icon="play">
-    Run analysis on selected prompts anytime
+  <Card title="Analyze Performance" icon="chart-line">
+    See visibility scores, sentiment, and brand mentions for each prompt
   </Card>
-  <Card title="Performance Insights" icon="chart-line">
-    See which prompts drive the most visibility
+  <Card title="Track Sources" icon="link">
+    Monitor which domains AI models cite when mentioning your brand
   </Card>
 </CardGroup>
 
 ---
 
-## Page Overview
+## Page Layout
 
-### Main Components
+The Define page has three main sections:
 
-The Define page consists of four main sections:
+### 1. Prompts Header & Filters
 
-1. **Prompts Header** - Search, filter, and actions
-2. **Prompts Table** - View and manage all your prompts
-3. **Sources Panel** - See which sources AI models cite
-4. **Insights Panel** - Get actionable recommendations
+Controls for managing and filtering your prompts:
+
+- **Search bar**: Filter prompts by text or tags
+- **Tag filters**: Show only prompts with specific tags (OR logic - matches ANY selected tag)
+- **Brand mention filter**: Show prompts with/without your brand name
+- **Period selector**: View metrics for 7-day or 30-day periods
+- **Add Prompts button**: Create new prompts
+
+### 2. Prompts Table
+
+Interactive table showing all your user-created prompts with:
+
+<Tabs>
+  <Tab title="Table Columns">
+    - **Prompt Text**: The query or search phrase
+    - **Visibility Score**: How often your brand appears (0-100)
+    - **Sentiment Score**: Positive/neutral/negative perception (0-100)
+    - **Brand Mentions**: Avatars showing which brands appear in responses
+    - **Share of Voice**: Your brand's percentage of total mentions
+    - **Tags**: Custom tags for organization
+    - **Trends**: 7-day or 30-day trend indicators (up/down/neutral)
+    - **Actions**: Edit or delete prompt
+  </Tab>
+  <Tab title="Data Source">
+    **User-Created Prompts Only**
+
+    This table shows prompts YOU created via:
+    - The "Add Prompts" button on this page
+    - Phase 5 of onboarding (optional brand prompts)
+
+    System-generated prompts (created during onboarding Phase 4) are used for Brand Health metrics on the Dashboard but don't appear here.
+  </Tab>
+  <Tab title="Analysis">
+    **Automatic Background Analysis**
+
+    When you add prompts, Friction automatically:
+    1. Sends prompts to multiple AI models (GPT-4, Claude, Gemini, Perplexity)
+    2. Analyzes responses for brand mentions, sentiment, sources
+    3. Calculates visibility and sentiment scores
+    4. Tracks trends over time
+
+    Analysis results appear in the table within 2-5 minutes.
+  </Tab>
+</Tabs>
 
 <Frame>
   <img
-    src="/images/define-page-sections.png"
-    alt="Define Page Sections"
+    src="/images/define-prompts-table.png"
+    alt="Prompts table showing visibility scores, sentiment, brand mentions, and trends"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
+
+### 3. Sources & Insights Panels
+
+Two sidebar panels providing context:
+
+- **Sources Panel**: Top domains cited by AI models (your site, competitors, publications)
+- **Insights Panel**: AI-generated recommendations to improve visibility
 
 ---
 
 ## Creating Prompts
 
-### Add New Prompts
-
-Click the **"+ Add Brand Prompts"** button to create new prompts.
+### Adding New Prompts
 
 <Steps>
-  <Step title="Click Add Brand Prompts">
-    Opens the prompt creation interface
+  <Step title="Click 'Add Prompts'">
+    Opens the prompt creation interface at `/define/add`
   </Step>
-  <Step title="Enter Your Prompts">
-    Type or paste prompts (one per line or comma-separated)
+  <Step title="Enter Prompts">
+    Type or paste prompts - one per line or comma-separated
+
+    Supports both:
+    - **LLM Prompts**: Questions for AI models ("What is [brand]?")
+    - **Search Queries**: Search engine queries ("best [product] for [use case]")
   </Step>
-  <Step title="Get AI Suggestions">
-    Click "Get Friction Suggestions" for AI-generated recommendations
+  <Step title="Get AI Suggestions (Optional)">
+    Click "Get Friction Suggestions" to load AI-recommended prompts based on your brand and industry
   </Step>
   <Step title="Add Tags (Optional)">
-    Organize prompts with custom tags like "product", "comparison", "general"
+    Add tags like "product", "comparison", "brand-awareness" for organization
   </Step>
-  <Step title="Save Prompts">
-    Click "Add Prompts" to save to your library
+  <Step title="Save">
+    Click "Add Prompts" - analysis begins automatically
   </Step>
 </Steps>
 
 <Frame>
   <img
     src="/images/define-add-prompts.png"
-    alt="Add Prompts Interface"
+    alt="Add prompts interface with text area and suggestions"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
 
 ### Prompt Types & Examples
 
-<Tabs>
-  <Tab title="Brand Awareness">
-    Track general brand recognition:
-    ```
-    "What is [Your Brand]?"
-    "Tell me about [Your Brand]"
-    "Who owns [Your Brand]?"
-    "What does [Your Brand] do?"
-    ```
-  </Tab>
-  <Tab title="Product Queries">
-    Monitor product-specific mentions:
-    ```
-    "What products does [Your Brand] offer?"
-    "Features of [Product Name]"
-    "How does [Product] work?"
-    "[Product Name] specifications"
-    ```
-  </Tab>
-  <Tab title="Competitive Comparisons">
-    Track competitive positioning:
-    ```
-    "Compare [Your Brand] vs [Competitor]"
-    "[Your Brand] or [Competitor]?"
-    "Difference between [Your Brand] and [Competitor]"
-    "Best alternative to [Competitor]"
-    ```
-  </Tab>
-  <Tab title="Purchase Intent">
-    Measure recommendation likelihood:
-    ```
-    "Should I buy [Your Brand]?"
-    "Is [Your Brand] worth it?"
-    "Best [product category]"
-    "Top [product category] for [use case]"
-    ```
-  </Tab>
-  <Tab title="Problem-Solving">
-    Track solution-oriented queries:
-    ```
-    "How to [task] with [product type]"
-    "Best tool for [use case]"
-    "Solution for [problem]"
-    "[Your Brand] for [specific need]"
-    ```
-  </Tab>
-</Tabs>
-
-### Best Practices for Prompts
-
 <AccordionGroup>
-  <Accordion title="Keep Prompts Natural">
-    Write prompts as real users would ask them. Avoid overly promotional or keyword-stuffed prompts.
+  <Accordion title="Brand Awareness Prompts">
+    Questions that test if AI knows your brand exists
 
-    **Good**: "What are the best project management tools for remote teams?"
+    **Examples**:
+    - "What is [Your Brand]?"
+    - "Tell me about [Your Brand]"
+    - "Who makes [Your Product]?"
 
-    **Bad**: "Best project management software tool solution collaboration"
+    **Good for**: Measuring basic brand recognition
   </Accordion>
-  <Accordion title="Cover Different Intent Types">
-    Create a mix of informational, navigational, and transactional prompts to get a complete picture.
+
+  <Accordion title="Product Comparison Prompts">
+    Queries where your brand competes with others
+
+    **Examples**:
+    - "Best [product category] for [use case]"
+    - "[Your Product] vs [Competitor Product]"
+    - "Compare [Product A], [Product B], and [Product C]"
+
+    **Good for**: Tracking competitive positioning
   </Accordion>
-  <Accordion title="Use Variations">
-    Create slight variations of important prompts to see how AI models handle different phrasings:
-    - "What is [Brand]?"
-    - "Tell me about [Brand]"
-    - "Explain [Brand] to me"
+
+  <Accordion title="Problem-Solution Prompts">
+    Questions about solving specific problems
+
+    **Examples**:
+    - "How to [solve problem]"
+    - "Best tool for [specific task]"
+    - "What's the best way to [achieve goal]"
+
+    **Good for**: Capturing discovery moments
   </Accordion>
-  <Accordion title="Include Competitor Names">
-    Explicitly mention competitors in comparison prompts to track relative positioning.
-  </Accordion>
-  <Accordion title="Start with 10-15 Core Prompts">
-    Don't overwhelm yourself. Start with 10-15 critical prompts and expand based on results.
+
+  <Accordion title="Review & Recommendation Prompts">
+    Queries seeking opinions or suggestions
+
+    **Examples**:
+    - "[Your Product] reviews"
+    - "Is [Your Brand] worth it?"
+    - "Should I buy [Your Product]?"
+
+    **Good for**: Monitoring sentiment and purchase intent
   </Accordion>
 </AccordionGroup>
+
+---
+
+## Using Filters & Search
+
+### Search Bar
+
+Type to filter prompts by:
+- Prompt text content
+- Tag names
+
+Results update in real-time as you type.
+
+### Tag Filters
+
+Click tags to filter:
+- **Multiple tags**: Shows prompts matching ANY selected tag (OR logic)
+- **Clear filters**: Click tag again to deselect
+
+<Info>
+  Tag filtering uses OR logic. If you select "product" and "comparison", you'll see prompts that have EITHER tag, not necessarily both.
+</Info>
+
+### Brand Mention Filter
+
+Three options:
+- **All**: Show all prompts (default)
+- **With Brand**: Only prompts where your brand name appears in AI responses
+- **Without Brand**: Only prompts where your brand is NOT mentioned
+
+<Warning>
+  Prompts "without brand" indicate visibility gaps - your brand isn't appearing in responses where it should.
+</Warning>
+
+### Period Selector
+
+Choose analysis window:
+- **7 Days**: Recent short-term trends
+- **30 Days**: Longer-term patterns (default)
+
+Affects trend indicators and score calculations in the table.
+
+---
+
+## Understanding the Data
+
+### Visibility Score
+
+**What it measures**: How often your brand appears in AI responses to this prompt (0-100)
+
+**Calculation**:
+- Runs the prompt across multiple AI models
+- Counts how many responses mention your brand
+- Normalizes to 0-100 scale
+
+**Interpretation**:
+- **80-100**: Excellent - Brand appears in almost all responses
+- **60-79**: Good - Strong presence, some room for improvement
+- **40-59**: Moderate - Brand mentioned in about half of responses
+- **0-39**: Low - Significant visibility gap
+
+### Sentiment Score
+
+**What it measures**: How positively/negatively AI models discuss your brand (0-100)
+
+**Scale**:
+- **70-100**: Positive sentiment
+- **40-69**: Neutral/Mixed sentiment
+- **0-39**: Negative sentiment
+
+### Brand Mentions
+
+**Visual**: Avatar stack showing logos of brands mentioned
+
+**Categories**:
+- **Your brand** (highlighted with special badge)
+- **Competitors** (known brands in your industry)
+- **Other brands** (other mentioned brands)
+
+**Hover**: See mention counts for each brand
+
+### Share of Voice
+
+**What it measures**: Your brand's percentage of total brand mentions in responses
+
+**Example**: If a response mentions 3 brands, and your brand is mentioned twice, your share of voice is 66%.
+
+**Use case**: Track competitive positioning in multi-brand responses
+
+### Trends
+
+**Visual**: Up/down/neutral arrows with percentage change
+
+**Periods**:
+- 7-day trend (short-term changes)
+- 30-day trend (longer-term patterns)
+
+**Changes shown in**:
+- Visibility score
+- Sentiment score
+- Share of voice
 
 ---
 
 ## Managing Prompts
 
-### Prompts Table
-
-The main table displays all your prompts with key metrics:
-
-<Frame>
-  <img
-    src="/images/define-prompts-table.png"
-    alt="Prompts Table"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
-#### Table Columns:
-
-<ParamField path="Prompt" type="string">
-  The actual prompt text. Click to expand and see full details.
-</ParamField>
-
-<ParamField path="Brand Mentioned" type="boolean">
-  Whether AI responses mention your brand. Shows checkmark if yes.
-</ParamField>
-
-<ParamField path="Sentiment" type="string">
-  Overall sentiment across AI responses: Positive, Neutral, or Negative
-</ParamField>
-
-<ParamField path="Avg Position" type="number">
-  Average position where your brand appears in responses (lower is better)
-</ParamField>
-
-<ParamField path="Last Executed" type="date">
-  When this prompt was last analyzed. Shows "Not executed" if never run.
-</ParamField>
-
-<ParamField path="Tags" type="array">
-  Custom tags for organization and filtering
-</ParamField>
-
-<ParamField path="Actions" type="menu">
-  Edit, Delete, or Execute individual prompts
-</ParamField>
-
-### Search and Filters
-
-#### Search Bar
-
-Search prompts by text, tags, or any table column content:
-
-<Frame>
-  <img
-    src="/images/define-search.png"
-    alt="Search Functionality"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
-```
-Examples:
-- "compare" → finds all comparison prompts
-- "product" → finds prompts tagged with "product"
-- "positive" → finds prompts with positive sentiment
-```
-
-#### Time Period Filter
-
-Toggle between **7 days** and **30 days** to see recent or historical data:
-
-<Tabs>
-  <Tab title="7 Days">
-    Shows prompts executed in the last week. Best for tracking recent changes or A/B test results.
-  </Tab>
-  <Tab title="30 Days">
-    Shows prompts executed in the last month. Default view for comprehensive analysis.
-  </Tab>
-</Tabs>
-
-#### Brand Mention Filter
-
-Filter prompts based on whether your brand was mentioned:
-
-- **All**: Show all prompts (default)
-- **With Brand Mention**: Only show prompts where AI mentioned your brand
-- **Without Brand Mention**: Only show prompts where AI didn't mention your brand (⚠️ needs attention)
-
-<Warning>
-  Prompts with no brand mention indicate visibility gaps. These are high-priority for optimization.
-</Warning>
-
-#### Tag Filters
-
-Click on tag chips to filter by multiple tags simultaneously:
-
-<Frame>
-  <img
-    src="/images/define-tag-filters.png"
-    alt="Tag Filters"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
-```
-Examples:
-- Filter by "comparison" + "product" to see competitive product queries
-- Filter by "brand-awareness" to audit general visibility
-- Filter by "commerce" to review purchase-related prompts
-```
-
-### Bulk Actions
-
-Select multiple prompts to perform bulk operations:
+### Editing a Prompt
 
 <Steps>
-  <Step title="Select Prompts">
-    Click checkboxes next to prompts or use "Select All" in the header
+  <Step title="Click ⋮ menu">
+    Open actions menu on the prompt row
   </Step>
-  <Step title="Choose Action">
-    - **Execute Selected**: Run analysis on all selected prompts
-    - **Delete Selected**: Remove multiple prompts at once
-    - **Add Tags**: Bulk tag organization
+  <Step title="Select Edit">
+    Opens edit dialog
   </Step>
-  <Step title="Confirm Action">
-    Review and confirm bulk operation
+  <Step title="Modify prompt">
+    Change prompt text or tags
+
+    **Note**: Changing text triggers re-analysis
+  </Step>
+  <Step title="Save">
+    Changes save immediately
   </Step>
 </Steps>
 
-<Info>
-  Bulk execution is useful for refreshing analysis on a category of prompts (e.g., all "product" prompts).
-</Info>
+<Note>
+  Editing prompt text marks it for re-analysis. Changing only tags preserves existing analysis data.
+</Note>
 
----
-
-## Executing Prompts
-
-### Running Analysis
-
-Click the **"Execute"** button (play icon) to run fresh analysis on prompts.
-
-<Frame>
-  <img
-    src="/images/define-execute.png"
-    alt="Execute Prompts"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
-#### Execution Options:
-
-<Tabs>
-  <Tab title="Execute Individual">
-    Click the play icon on any single prompt to analyze just that prompt across all AI models.
-
-    **Use When**:
-    - Testing a new prompt
-    - Getting fresh data on a specific query
-    - Troubleshooting unexpected results
-  </Tab>
-  <Tab title="Execute Selected">
-    Select multiple prompts and click "Execute Selected" to batch analyze.
-
-    **Use When**:
-    - Refreshing a category of prompts
-    - Weekly/monthly analysis updates
-    - Preparing for reports or presentations
-  </Tab>
-  <Tab title="Execute All">
-    Click "Execute All" to re-analyze your entire prompt library.
-
-    **Use When**:
-    - Major content updates on your website
-    - Competitor landscape changes
-    - AI model updates (new GPT/Claude versions)
-    - Monthly comprehensive analysis
-  </Tab>
-</Tabs>
-
-### What Happens During Execution
+### Deleting Prompts
 
 <Steps>
-  <Step title="Querying AI Models">
-    Friction sends your prompts to GPT-4, Claude, Gemini, Perplexity, and other configured models
+  <Step title="Click ⋮ menu">
+    Open actions menu
   </Step>
-  <Step title="Analyzing Responses">
-    AI responses are analyzed for:
-    - Brand mentions
-    - Sentiment (positive/neutral/negative)
-    - Position of mention
-    - Source citations
-    - Competitor mentions
+  <Step title="Select Delete">
+    Opens confirmation dialog
   </Step>
-  <Step title="Updating Metrics">
-    Results are stored and metrics are updated:
-    - Visibility score
-    - Sentiment analysis
-    - Average position
-    - Last executed timestamp
-  </Step>
-  <Step title="Dashboard Refresh">
-    Dashboard metrics automatically update to reflect new analysis
+  <Step title="Confirm">
+    Permanently removes prompt and analysis data
   </Step>
 </Steps>
 
-<Info>
-  **Execution Time**: Individual prompts take 10-20 seconds. Bulk execution processes prompts in parallel (typically 2-3 minutes for 50 prompts).
-</Info>
-
-### Execution Best Practices
-
-<AccordionGroup>
-  <Accordion title="Don't Over-Execute">
-    AI model responses don't change minute-by-minute. Execute prompts:
-    - **Daily**: For critical, high-value prompts
-    - **Weekly**: For standard monitoring
-    - **Monthly**: For comprehensive brand health checks
-  </Accordion>
-  <Accordion title="Execute After Content Updates">
-    Run fresh analysis within 24-48 hours after:
-    - Publishing new blog posts or content
-    - Updating product pages
-    - Launching marketing campaigns
-    - Getting press coverage
-  </Accordion>
-  <Accordion title="Use Bulk Execution Wisely">
-    Bulk execution consumes API quota. Plan bulk runs during:
-    - Off-peak hours
-    - Monthly reporting cycles
-    - After significant brand events
-  </Accordion>
-</AccordionGroup>
-
----
-
-## Editing and Deleting Prompts
-
-### Edit Prompt
-
-Click the **Edit** icon to modify existing prompts:
-
-<Frame>
-  <img
-    src="/images/define-edit-prompt.png"
-    alt="Edit Prompt Dialog"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
-**What You Can Edit**:
-- Prompt text
-- Tags
-- Notes/description
-
-<Tip>
-  Editing a prompt preserves historical data. The next execution will use the updated prompt text.
-</Tip>
-
-### Delete Prompt
-
-Click the **Delete** icon to remove prompts:
-
 <Warning>
-  Deleting a prompt removes all historical analysis data. This action cannot be undone.
+  **Deletion is permanent.** Analysis history for this prompt cannot be recovered.
 </Warning>
-
-**When to Delete**:
-- Prompts no longer relevant to your business
-- Duplicate or test prompts
-- Prompts with consistently zero value
-
-**Alternative to Deleting**:
-- Add a "deprecated" or "archived" tag and filter them out instead
 
 ---
 
 ## Sources Panel
 
-The Sources panel shows which websites AI models cite when responding to your prompts.
+Shows the top domains cited when AI models mention your brand.
+
+### What You'll See
+
+- **Your domain** (highlighted if present)
+- **Competitor domains**
+- **Industry publications**
+- **News sources**
+- **Review sites**
+
+### Why It Matters
+
+Sources indicate:
+- **Authority**: Which sites AI trusts for your category
+- **Gaps**: Missing sources you should target
+- **Competitors**: Where they're getting cited
+
+<Tip>
+  If your domain isn't in the top sources, focus on creating more authoritative content AI models can reference.
+</Tip>
 
 <Frame>
   <img
     src="/images/define-sources-panel.png"
-    alt="Sources Panel"
+    alt="Sources panel showing top cited domains"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
-
-### What You'll See:
-
-<ParamField path="Top Sources" type="list">
-  Most frequently cited sources across all AI responses to your prompts
-</ParamField>
-
-<ParamField path="Your Domain" type="highlight">
-  Your own website appears highlighted if AI models cite it
-</ParamField>
-
-<ParamField path="Competitor Sources" type="list">
-  Competitor websites being cited more than yours (⚠️ opportunity)
-</ParamField>
-
-<ParamField path="Authority Sources" type="list">
-  High-authority third-party sources (news, review sites, industry publications)
-</ParamField>
-
-### Why Sources Matter:
-
-<CardGroup cols={2}>
-  <Card title="Citation = Trust" icon="badge-check">
-    AI models citing your website indicates trust and authority
-  </Card>
-  <Card title="Source Optimization" icon="target">
-    Identify which sources to get mentioned on for better AI visibility
-  </Card>
-  <Card title="Content Gaps" icon="circle-exclamation">
-    See which topics competitors "own" in AI citations
-  </Card>
-  <Card title="PR Opportunities" icon="newspaper">
-    Discover high-value publications to target for coverage
-  </Card>
-</CardGroup>
-
-### Actionable Insights from Sources:
-
-<Steps>
-  <Step title="Audit Your Own Citations">
-    If your website appears rarely in sources, improve:
-    - SEO and technical structure
-    - Content depth and quality
-    - Backlink profile
-  </Step>
-  <Step title="Analyze Competitor Sources">
-    Study which sites cite competitors and:
-    - Pitch similar publications
-    - Create comparable content
-    - Build relationships with those sources
-  </Step>
-  <Step title="Target Authority Sites">
-    Get mentioned on high-authority sources that AI models trust:
-    - Industry publications
-    - News websites
-    - Review platforms
-    - Wikipedia
-  </Step>
-</Steps>
 
 ---
 
 ## Insights Panel
 
-The Insights panel provides AI-powered recommendations based on your prompt performance.
+AI-generated recommendations to improve your brand's visibility.
+
+### Insight Types
+
+<CardGroup cols={2}>
+  <Card title="Low Visibility Alerts" icon="triangle-exclamation">
+    Prompts where your brand barely appears
+  </Card>
+  <Card title="Sentiment Warnings" icon="face-frown">
+    Prompts with concerning negative sentiment
+  </Card>
+  <Card title="Competitive Gaps" icon="users">
+    Where competitors outperform you
+  </Card>
+  <Card title="Optimization Opportunities" icon="lightbulb">
+    Quick wins to improve scores
+  </Card>
+</CardGroup>
+
+### Acting on Insights
+
+Each insight includes:
+- **Problem description**
+- **Impact assessment**
+- **Recommended action**
+- **Priority level**
 
 <Frame>
   <img
     src="/images/define-insights-panel.png"
-    alt="Insights Panel"
+    alt="Insights panel with recommendations"
     style={{ borderRadius: '12px' }}
   />
 </Frame>
 
-### Types of Insights:
-
-<AccordionGroup>
-  <Accordion title="Low Visibility Alerts">
-    **What**: Prompts where your brand is rarely mentioned
-
-    **Recommendation**: Create targeted content, improve SEO, increase brand mentions in sources AI trusts
-
-    **Example**: "Your brand appears in only 20% of responses to 'best project management tools'"
-  </Accordion>
-  <Accordion title="Sentiment Warnings">
-    **What**: Prompts generating negative or neutral sentiment
-
-    **Recommendation**: Address concerns in content, improve product positioning, gather positive reviews
-
-    **Example**: "Negative sentiment detected in comparison queries with Competitor X"
-  </Accordion>
-  <Accordion title="Position Opportunities">
-    **What**: Your brand mentioned but appearing late in responses
-
-    **Recommendation**: Strengthen category leadership, improve authority signals, optimize content
-
-    **Example**: "Your brand averages position 5 in responses. Top competitors appear at position 1-2."
-  </Accordion>
-  <Accordion title="Trending Prompts">
-    **What**: Prompts showing improving or declining performance over time
-
-    **Recommendation**: Double down on what's working, investigate declines
-
-    **Example**: "Visibility increased 30% for 'enterprise security tools' - capitalize on this momentum"
-  </Accordion>
-</AccordionGroup>
-
 ---
 
-## Data and Metrics
+## Empty State
 
-### Key Metrics Explained
+When you first visit Define (or have no user-created prompts), you'll see:
 
-<Tabs>
-  <Tab title="Brand Mention Rate">
-    **Definition**: Percentage of AI responses that mention your brand
+<Frame>
+  <img
+    src="/images/define-empty-state.png"
+    alt="Empty state with Add Prompts CTA"
+    style={{ borderRadius: '12px' }}
+  />
+</Frame>
 
-    **Calculation**: (Responses mentioning brand / Total responses) × 100
-
-    **Good Score**: 60%+ for direct brand queries, 30%+ for category queries
-
-    **Improve By**: Creating more brand-focused content, building authority, getting press mentions
-  </Tab>
-  <Tab title="Average Position">
-    **Definition**: Average position where your brand appears in AI responses (1 = first)
-
-    **Calculation**: Sum of all positions / Number of mentions
-
-    **Good Score**: 1-3 for direct queries, 1-5 for category queries
-
-    **Improve By**: Strengthening category leadership, improving content quality, building authority
-  </Tab>
-  <Tab title="Sentiment Score">
-    **Definition**: Overall tone of brand mentions
-
-    **Categories**: Positive (70-100), Neutral (40-69), Negative (0-39)
-
-    **Good Score**: 70+ (majority positive mentions)
-
-    **Improve By**: Gathering positive reviews, addressing negative feedback, improving product quality
-  </Tab>
-  <Tab title="Source Citations">
-    **Definition**: Number and quality of sources citing your brand
-
-    **Calculation**: Count of unique sources + authority weighting
-
-    **Good Score**: Your domain cited 40%+ of the time
-
-    **Improve By**: Building backlinks, getting press coverage, creating authoritative content
-  </Tab>
-</Tabs>
+**What to do**:
+1. Click "Add Prompts"
+2. Enter 5-10 prompts relevant to your brand
+3. Get AI suggestions for more ideas
+4. Save and wait 2-5 minutes for analysis
 
 ---
 
 ## Best Practices
 
-### Prompt Library Strategy
+<AccordionGroup>
+  <Accordion title="Start with 10-20 Prompts">
+    **Why**: Gives you enough data to identify patterns
 
-<Steps>
-  <Step title="Start with Core Prompts (10-15)">
-    Begin with essential brand and product queries. Don't overwhelm yourself.
-  </Step>
-  <Step title="Expand Gradually (30-50)">
-    Add category queries, comparisons, and problem-solving prompts as you learn what matters.
-  </Step>
-  <Step title="Maintain Regularly (50-100)">
-    Mature brands maintain 50-100 prompts covering all brand touchpoints and use cases.
-  </Step>
-  <Step title="Optimize Continuously">
-    Review performance monthly, archive low-value prompts, create new ones based on insights.
-  </Step>
-</Steps>
+    **How**: Mix different prompt types (awareness, comparison, problem-solving)
 
-### Tagging Strategy
+    **Tip**: Use "Get Friction Suggestions" to bootstrap your library
+  </Accordion>
 
-Organize prompts with consistent tags:
+  <Accordion title="Use Tags Consistently">
+    **Why**: Makes filtering and analysis easier
 
-```
-Recommended Tag Categories:
-- Type: brand-awareness, product, comparison, purchase-intent, problem-solving
-- Priority: critical, high, medium, low
-- Department: marketing, sales, product, support
-- Campaign: Q1-2024, product-launch, rebrand
-- Status: active, testing, deprecated
-```
+    **Suggested tags**:
+    - "brand-awareness"
+    - "product-comparison"
+    - "problem-solving"
+    - "reviews"
+    - "buying-intent"
 
-### Analysis Cadence
+    **Tip**: Keep tag names lowercase and hyphenated
+  </Accordion>
 
-<CardGroup cols={3}>
-  <Card title="Daily" icon="calendar-day">
-    Execute 3-5 critical prompts for real-time monitoring
-  </Card>
-  <Card title="Weekly" icon="calendar-week">
-    Bulk execute tagged categories (e.g., all "product" prompts)
-  </Card>
-  <Card title="Monthly" icon="calendar">
-    Full library execution for comprehensive reporting
-  </Card>
-</CardGroup>
+  <Accordion title="Monitor Trends Weekly">
+    **Why**: Catch changes before they become problems
+
+    **What to watch**:
+    - Downward visibility trends
+    - Sentiment drops
+    - Competitor share of voice increases
+
+    **Action**: Address issues flagged in Insights panel
+  </Accordion>
+
+  <Accordion title="Focus on Low-Visibility Prompts">
+    **Why**: Biggest opportunity for improvement
+
+    **Strategy**:
+    1. Filter for prompts with visibility < 40
+    2. Check if your brand SHOULD appear for these queries
+    3. Create content that answers these questions
+    4. Monitor improvement over time
+  </Accordion>
+
+  <Accordion title="Compare 7-day vs 30-day Trends">
+    **Why**: Distinguish noise from real changes
+
+    **Interpretation**:
+    - 7-day spike, 30-day stable = Temporary fluctuation
+    - Both trending up = Real improvement
+    - 7-day stable, 30-day down = Gradual decline
+  </Accordion>
+</AccordionGroup>
 
 ---
 
-## Troubleshooting
+## FAQs
 
 <AccordionGroup>
-  <Accordion title="Prompt Never Executed">
-    **Cause**: Prompt was created but never analyzed
+  <Accordion title="How long does analysis take?">
+    **Typical**: 2-5 minutes for up to 10 prompts
 
-    **Solution**: Click the Execute icon or include in next bulk execution
+    **Large batches** (20+ prompts): 5-10 minutes
+
+    Analysis runs in the background. You can navigate away and results will be there when you return.
   </Accordion>
-  <Accordion title="No Brand Mentions">
-    **Cause**: Your brand isn't visible for this query type
 
-    **Solutions**:
-    - Create targeted content for this query
-    - Build authority in this category
-    - Get mentioned in sources AI models trust
-    - May indicate a competitive gap to address
+  <Accordion title="Can I analyze the same prompt multiple times?">
+    **No need!** Analysis runs automatically on a schedule (daily for active brands).
+
+    Fresh data appears without manual re-execution.
   </Accordion>
-  <Accordion title="Negative Sentiment">
-    **Cause**: AI models find negative information about your brand
 
-    **Solutions**:
-    - Address root cause (product issues, bad reviews)
-    - Create positive content to balance narrative
-    - Gather and promote positive customer stories
-    - Improve product/service quality
+  <Accordion title="What's the difference between user prompts and system prompts?">
+    **User prompts** (shown on Define page):
+    - Created by you
+    - Track specific questions you care about
+    - Fully customizable
+
+    **System prompts** (NOT shown on Define page):
+    - Auto-generated during onboarding (~25 prompts)
+    - Used for Brand Health metrics on Dashboard
+    - Cover standard brand assessment queries
   </Accordion>
-  <Accordion title="Execution Failed">
-    **Cause**: API timeout, rate limiting, or technical error
 
-    **Solution**: Wait 5 minutes and try again. Contact support if persistent.
+  <Accordion title="Why don't I see analysis data yet?">
+    **Possible reasons**:
+    1. Analysis still running (wait 2-5 minutes)
+    2. Prompt just created (background job queued)
+    3. API error (check Insights panel for alerts)
+
+    **What to do**: Refresh page after a few minutes. If still missing, contact support.
+  </Accordion>
+
+  <Accordion title="Can I export my prompts?">
+    Export feature coming soon.
+
+    For now, you can view all prompts in the table and manually copy what you need.
   </Accordion>
 </AccordionGroup>
 
@@ -701,37 +533,31 @@ Recommended Tag Categories:
 
 <CardGroup cols={2}>
   <Card
-    title="Analyze Performance"
+    title="Analyze Metrics"
     icon="chart-mixed"
     href="/features/analyze"
   >
-    Compare your prompt performance against competitors
-  </Card>
-  <Card
-    title="Run Experiments"
-    icon="flask"
-    href="/features/experiments"
-  >
-    Test different prompt variations to optimize visibility
+    Deep dive into the 4 brand health metrics
   </Card>
   <Card
     title="Commerce Tracking"
     icon="cart-shopping"
     href="/features/commerce"
   >
-    Track e-commerce and purchase intent signals
+    Add commerce-specific prompts
   </Card>
   <Card
-    title="View Dashboard"
+    title="Run Experiments"
+    icon="flask"
+    href="/features/experiments"
+  >
+    A/B test different prompt strategies
+  </Card>
+  <Card
+    title="Dashboard Overview"
     icon="gauge"
     href="/dashboard/overview"
   >
-    See how prompts contribute to overall brand health
+    See your prompts on the dashboard
   </Card>
 </CardGroup>
-
----
-
-<Note>
-  **Pro Tip**: The most effective prompt libraries are focused, well-organized, and regularly updated. Quality over quantity - 20 high-value prompts beat 100 generic ones.
-</Note>
