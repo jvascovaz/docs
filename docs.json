@@ -1,19 +1,25 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
-  "name": "Friction",
+  "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "favicon": "/favicon.svg",
+  "name": "Friction",
   "colors": {
     "primary": "#00C4FF",
     "light": "#3668FF",
     "dark": "#0A054B"
   },
-  "topbar": {
-    "style": "default"
+  "favicon": "/favicon.svg",
+  "font": {
+    "headings": {
+      "family": "Montserrat"
+    },
+    "body": {
+      "family": "Inter"
+    }
+  },
+  "topbarCtaButton": {
+    "type": "link",
+    "name": "Dashboard",
+    "url": "https://app.friction.com"
   },
   "navigation": [
     {
@@ -34,9 +40,22 @@
       ]
     }
   ],
-  "footerSocials": {
-    "x": "https://x.com/friction",
-    "github": "https://github.com/friction",
-    "linkedin": "https://linkedin.com/company/friction"
+  "anchors": [
+    {
+      "name": "Dashboard",
+      "url": "https://app.friction.com",
+      "icon": "chart-line"
+    }
+  ],
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/friction",
+      "github": "https://github.com/friction",
+      "linkedin": "https://linkedin.com/company/friction"
+    }
   }
 }
