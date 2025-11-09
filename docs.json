@@ -42,13 +42,6 @@
         "features/commerce",
         "features/experiments"
       ]
-    },
-    {
-      "group": "Analytics & Reporting",
-      "pages": [
-        "features/performance-tracking",
-        "features/reports"
-      ]
     }
   ],
   "anchors": [
