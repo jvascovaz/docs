@@ -5,11 +5,11 @@
   "colors": {
     "primary": "#0A054B",
     "light": "#3668FF",
-    "dark": "#0A054B"
-  },
-  "anchors": {
-    "from": "#0A054B",
-    "to": "#3668FF"
+    "dark": "#0A054B",
+    "anchors": {
+      "from": "#0A054B",
+      "to": "#3668FF"
+    }
   },
   "favicon": "/favicon.svg",
   "font": {
@@ -25,107 +25,39 @@
     "name": "Dashboard",
     "url": "https://app.friction.com"
   },
-  "tabs": {
-    "style": "underline"
-  },
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Dashboard",
-        "groups": [
-          {
-            "group": "Overview",
-            "pages": [
-              "dashboard/overview"
-            ]
-          },
-          {
-            "group": "Core Features",
-            "pages": [
-              "features/define",
-              "features/analyze",
-              "features/commerce",
-              "features/experiments"
-            ]
-          },
-          {
-            "group": "Analytics & Reporting",
-            "pages": [
-              "features/performance-tracking",
-              "features/reports"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "guides/onboarding",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Dashboard",
-          "href": "https://app.friction.com",
-          "icon": "chart-line"
-        }
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "index",
+        "guides/onboarding"
+      ]
+    },
+    {
+      "group": "Core Features",
+      "pages": [
+        "dashboard/overview",
+        "features/define",
+        "features/analyze",
+        "features/commerce",
+        "features/experiments"
+      ]
+    },
+    {
+      "group": "Analytics & Reporting",
+      "pages": [
+        "features/performance-tracking",
+        "features/reports"
       ]
     }
-  },
+  ],
+  "anchors": [
+    {
+      "name": "Dashboard",
+      "url": "https://app.friction.com",
+      "icon": "chart-line"
+    }
+  ],
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
