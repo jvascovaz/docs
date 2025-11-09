@@ -21,25 +21,33 @@
     "name": "Dashboard",
     "url": "https://app.friction.com"
   },
-  "navigation": [
+  "tabs": [
     {
-      "group": "Getting Started",
-      "pages": [
-        "index",
-        "guides/onboarding"
-      ]
-    },
-    {
-      "group": "Core Features",
-      "pages": [
-        "dashboard/overview",
-        "features/define",
-        "features/analyze",
-        "features/commerce",
-        "features/experiments"
-      ]
+      "name": "Documentation",
+      "url": "/"
     }
   ],
+  "navigation": {
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "guides/onboarding"
+        ]
+      },
+      {
+        "group": "Core Features",
+        "pages": [
+          "dashboard/overview",
+          "features/define",
+          "features/analyze",
+          "features/commerce",
+          "features/experiments"
+        ]
+      }
+    ]
+  },
   "anchors": [
     {
       "name": "Dashboard",
@@ -51,11 +59,9 @@
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/friction",
-      "github": "https://github.com/friction",
-      "linkedin": "https://linkedin.com/company/friction"
-    }
+  "footerSocials": {
+    "x": "https://x.com/friction",
+    "github": "https://github.com/friction",
+    "linkedin": "https://linkedin.com/company/friction"
   }
 }
