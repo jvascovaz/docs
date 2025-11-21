@@ -8,13 +8,59 @@ icon: 'cart-shopping'
 
 The Commerce page helps you track how AI models recommend your products for purchase, which e-commerce platforms they suggest, and how you compare to competitors in shopping contexts.
 
-<Frame>
-  <img
-    src="/images/commerce-page-overview.png"
-    alt="Commerce page with prompts table, e-commerce sites, and insights"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '24px', border: '1px solid #e5e5e5', marginTop: '24px', marginBottom: '24px' }}>
+  <div style={{ fontSize: '10px', fontWeight: '600', color: '#525252', marginBottom: '16px' }}>COMMERCE PROMPTS</div>
+
+  {/* Table Header */}
+  <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1.5fr', gap: '12px', paddingBottom: '12px', borderBottom: '1px solid #e5e5e5', fontSize: '10px', fontWeight: '600', color: '#737373', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+    <div>Prompt</div>
+    <div style={{ textAlign: 'center' }}>Commerce</div>
+    <div style={{ textAlign: 'center' }}>Purchase Ready</div>
+    <div style={{ textAlign: 'center' }}>ACP Signals</div>
+    <div style={{ textAlign: 'center' }}>Platforms</div>
+  </div>
+
+  {/* Table Rows */}
+  <div style={{ borderBottom: '1px solid #f5f5f5' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1.5fr', gap: '12px', padding: '12px 0', alignItems: 'center' }}>
+      <div style={{ fontSize: '12px', color: '#262626' }}>Where can I buy project management software?</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '600', color: '#22c55e' }}>82</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '600', color: '#22c55e' }}>78</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '600', color: '#22c55e' }}>85</div>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '6px', fontSize: '10px', color: '#737373' }}>
+        <span>friction.com</span>
+        <span>•</span>
+        <span>Amazon</span>
+      </div>
+    </div>
+  </div>
+
+  <div style={{ borderBottom: '1px solid #f5f5f5' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1.5fr', gap: '12px', padding: '12px 0', alignItems: 'center' }}>
+      <div style={{ fontSize: '12px', color: '#262626' }}>Best productivity tool to purchase</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>68</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>65</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>72</div>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '6px', fontSize: '10px', color: '#737373' }}>
+        <span>friction.com</span>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1.5fr', gap: '12px', padding: '12px 0', alignItems: 'center' }}>
+      <div style={{ fontSize: '12px', color: '#262626' }}>Should I buy friction or competitor software?</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#f59e0b' }}>45</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#f59e0b' }}>42</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#f59e0b' }}>48</div>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '6px', fontSize: '10px', color: '#737373' }}>
+        <span>Amazon</span>
+        <span>•</span>
+        <span>Competitor</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## What You Can Do
 
@@ -67,25 +113,40 @@ Main table showing all your commerce-focused prompts with:
   </Tab>
 </Tabs>
 
-<Frame>
-  <img
-    src="/images/commerce-prompts-table.png"
-    alt="Commerce prompts table with scores and brand mentions"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
 ### 2. Top E-Commerce Websites Panel
 
 Sidebar showing which platforms AI models recommend:
 
-<Frame>
-  <img
-    src="/images/commerce-websites-panel.png"
-    alt="E-commerce platforms panel showing Amazon, Walmart, etc."
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5', marginTop: '16px', marginBottom: '24px', maxWidth: '320px' }}>
+  <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Top E-Commerce Platforms</div>
+
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #f5f5f5' }}>
+      <div style={{ fontSize: '12px', color: '#00C4FF', fontWeight: '600' }}>friction.com</div>
+      <div style={{ fontSize: '11px', color: '#737373' }}>18 mentions</div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #f5f5f5' }}>
+      <div style={{ fontSize: '12px', color: '#525252' }}>Amazon</div>
+      <div style={{ fontSize: '11px', color: '#737373' }}>24 mentions</div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #f5f5f5' }}>
+      <div style={{ fontSize: '12px', color: '#525252' }}>Walmart</div>
+      <div style={{ fontSize: '11px', color: '#737373' }}>12 mentions</div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #f5f5f5' }}>
+      <div style={{ fontSize: '12px', color: '#525252' }}>competitor.com</div>
+      <div style={{ fontSize: '11px', color: '#737373' }}>15 mentions</div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0' }}>
+      <div style={{ fontSize: '12px', color: '#525252' }}>Target</div>
+      <div style={{ fontSize: '11px', color: '#737373' }}>8 mentions</div>
+    </div>
+  </div>
+</div>
 
 **What you'll see**:
 - **Your site** (highlighted if present)
@@ -134,13 +195,54 @@ AI-generated recommendations to improve commerce performance:
   </Step>
 </Steps>
 
-<Frame>
-  <img
-    src="/images/commerce-add-prompts.png"
-    alt="Add commerce prompts interface with product URLs"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '24px', border: '1px solid #e5e5e5', marginTop: '24px', marginBottom: '24px' }}>
+  <div style={{ fontSize: '12px', fontWeight: '600', color: '#262626', marginBottom: '16px' }}>Add Commerce Prompts</div>
+
+  {/* Text area */}
+  <div style={{ backgroundColor: '#fafafa', borderRadius: '8px', padding: '16px', border: '1px solid #e5e5e5', marginBottom: '16px', minHeight: '120px' }}>
+    <div style={{ fontSize: '12px', color: '#737373', lineHeight: '1.6' }}>
+      Where can I buy project management software?<br/>
+      Best productivity tool to purchase<br/>
+      Should I buy friction or competitor software?<br/>
+      friction reviews before buying
+    </div>
+  </div>
+
+  {/* Product URLs */}
+  <div style={{ marginBottom: '16px' }}>
+    <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Product URLs (optional)</div>
+    <div style={{ backgroundColor: '#fafafa', borderRadius: '8px', padding: '12px', border: '1px solid #e5e5e5' }}>
+      <div style={{ fontSize: '11px', color: '#737373' }}>
+        https://friction.com/products/pro<br/>
+        https://friction.com/pricing
+      </div>
+    </div>
+  </div>
+
+  {/* Buttons */}
+  <div style={{ display: 'flex', gap: '12px', marginBottom: '16px' }}>
+    <div style={{ backgroundColor: '#00C4FF', color: 'white', padding: '8px 16px', borderRadius: '6px', fontSize: '12px', fontWeight: '600' }}>
+      Get Commerce Suggestions
+    </div>
+    <div style={{ backgroundColor: '#ffffff', color: '#525252', padding: '8px 16px', borderRadius: '6px', fontSize: '12px', fontWeight: '500', border: '1px solid #e5e5e5' }}>
+      Clear
+    </div>
+  </div>
+
+  {/* Tags */}
+  <div style={{ marginBottom: '16px' }}>
+    <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Tags (optional)</div>
+    <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+      <div style={{ backgroundColor: '#f5f5f5', padding: '4px 10px', borderRadius: '4px', fontSize: '11px', color: '#525252' }}>where-to-buy</div>
+      <div style={{ backgroundColor: '#f5f5f5', padding: '4px 10px', borderRadius: '4px', fontSize: '11px', color: '#525252' }}>product-comparison</div>
+    </div>
+  </div>
+
+  {/* Add button */}
+  <div style={{ backgroundColor: '#3668FF', color: 'white', padding: '10px 20px', borderRadius: '6px', fontSize: '13px', fontWeight: '600', display: 'inline-block' }}>
+    Add Commerce Prompts
+  </div>
+</div>
 
 ### Commerce Prompt Types & Examples
 
@@ -387,13 +489,16 @@ AI-generated recommendations specific to e-commerce performance.
 
 When you first visit Commerce (no commerce prompts created):
 
-<Frame>
-  <img
-    src="/images/commerce-empty-state.png"
-    alt="Empty state with Add Commerce Prompts CTA"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#fafafa', borderRadius: '12px', padding: '48px 24px', border: '1px solid #e5e5e5', marginTop: '16px', marginBottom: '24px', textAlign: 'center' }}>
+  <div style={{ fontSize: '48px', marginBottom: '16px' }}>🛒</div>
+  <div style={{ fontSize: '18px', fontWeight: '600', color: '#262626', marginBottom: '8px' }}>No commerce prompts yet</div>
+  <div style={{ fontSize: '13px', color: '#737373', marginBottom: '24px', maxWidth: '400px', margin: '0 auto 24px' }}>
+    Create your first commerce prompt to start tracking how AI models recommend your products for purchase.
+  </div>
+  <div style={{ backgroundColor: '#3668FF', color: 'white', padding: '12px 24px', borderRadius: '6px', fontSize: '13px', fontWeight: '600', display: 'inline-block' }}>
+    Add Your First Commerce Prompt
+  </div>
+</div>
 
 **What to do**:
 1. Click "Add Commerce Prompts"
@@ -460,7 +565,7 @@ When you first visit Commerce (no commerce prompts created):
 
 ## Improving Commerce Performance
 
-### If Your Commerce Score is Low (<45)
+### If Your Commerce Score is Low (Below 45)
 
 <Steps>
   <Step title="Optimize Product Pages">

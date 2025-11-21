@@ -8,13 +8,79 @@ icon: 'pen-to-square'
 
 The Define page is where you create and manage custom prompts to track how AI models respond to queries about your brand, products, and industry.
 
-<Frame>
-  <img
-    src="/images/define-page-overview.png"
-    alt="Define Page Overview showing prompts table, sources, and insights"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '24px', border: '1px solid #e5e5e5', marginTop: '24px', marginBottom: '24px' }}>
+  <div style={{ fontSize: '10px', fontWeight: '600', color: '#525252', marginBottom: '16px' }}>PROMPTS TABLE</div>
+
+  {/* Table Header */}
+  <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1.5fr 1fr 0.5fr', gap: '12px', paddingBottom: '12px', borderBottom: '1px solid #e5e5e5', fontSize: '10px', fontWeight: '600', color: '#737373', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+    <div>Prompt</div>
+    <div style={{ textAlign: 'center' }}>Visibility</div>
+    <div style={{ textAlign: 'center' }}>Sentiment</div>
+    <div style={{ textAlign: 'center' }}>Brand Mentions</div>
+    <div style={{ textAlign: 'center' }}>Share of Voice</div>
+    <div></div>
+  </div>
+
+  {/* Table Rows */}
+  <div style={{ borderBottom: '1px solid #f5f5f5' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1.5fr 1fr 0.5fr', gap: '12px', padding: '12px 0', alignItems: 'center' }}>
+      <div style={{ fontSize: '12px', color: '#262626' }}>What is the best project management tool?</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '600', color: '#22c55e' }}>85%</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>72</div>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '4px' }}>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#00C4FF', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>F</div>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#a3a3a3', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>A</div>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#a3a3a3', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>M</div>
+      </div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>45%</div>
+      <div style={{ textAlign: 'right', fontSize: '16px', color: '#22c55e' }}>↑</div>
+    </div>
+  </div>
+
+  <div style={{ borderBottom: '1px solid #f5f5f5' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1.5fr 1fr 0.5fr', gap: '12px', padding: '12px 0', alignItems: 'center' }}>
+      <div style={{ fontSize: '12px', color: '#262626' }}>Best tools for remote team collaboration</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '600', color: '#22c55e' }}>78%</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>68</div>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '4px' }}>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#00C4FF', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>F</div>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#a3a3a3', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>S</div>
+      </div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>62%</div>
+      <div style={{ textAlign: 'right', fontSize: '16px', color: '#525252' }}>→</div>
+    </div>
+  </div>
+
+  <div style={{ borderBottom: '1px solid #f5f5f5' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1.5fr 1fr 0.5fr', gap: '12px', padding: '12px 0', alignItems: 'center' }}>
+      <div style={{ fontSize: '12px', color: '#262626' }}>Top productivity software in 2025</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>45%</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>65</div>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '4px' }}>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#a3a3a3', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>N</div>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#00C4FF', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>F</div>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#a3a3a3', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>A</div>
+      </div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>33%</div>
+      <div style={{ textAlign: 'right', fontSize: '16px', color: '#ef4444' }}>↓</div>
+    </div>
+  </div>
+
+  <div>
+    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1.5fr 1fr 0.5fr', gap: '12px', padding: '12px 0', alignItems: 'center' }}>
+      <div style={{ fontSize: '12px', color: '#262626' }}>Compare project management solutions</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '600', color: '#22c55e' }}>91%</div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>75</div>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '4px' }}>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#00C4FF', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>F</div>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#a3a3a3', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>A</div>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#a3a3a3', border: '2px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: '700', color: 'white' }}>C</div>
+      </div>
+      <div style={{ textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#525252' }}>55%</div>
+      <div style={{ textAlign: 'right', fontSize: '16px', color: '#22c55e' }}>↑</div>
+    </div>
+  </div>
+</div>
 
 ## What You Can Do
 
@@ -76,7 +142,7 @@ Interactive table showing all your user-created prompts with:
   <Tab title="Analysis">
     **Automatic Background Analysis**
 
-    When you add prompts, Friction automatically:
+    When you add prompts, friction automatically:
     1. Sends prompts to multiple AI models (GPT-4, Claude, Gemini, Perplexity)
     2. Analyzes responses for brand mentions, sentiment, sources
     3. Calculates visibility and sentiment scores
@@ -85,14 +151,6 @@ Interactive table showing all your user-created prompts with:
     Analysis results appear in the table within 2-5 minutes.
   </Tab>
 </Tabs>
-
-<Frame>
-  <img
-    src="/images/define-prompts-table.png"
-    alt="Prompts table showing visibility scores, sentiment, brand mentions, and trends"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
 
 ### 3. Sources & Insights Panels
 
@@ -119,7 +177,7 @@ Two sidebar panels providing context:
     - **Search Queries**: Search engine queries ("best [product] for [use case]")
   </Step>
   <Step title="Get AI Suggestions (Optional)">
-    Click "Get Friction Suggestions" to load AI-recommended prompts based on your brand and industry
+    Click "Get friction Suggestions" to load AI-recommended prompts based on your brand and industry
   </Step>
   <Step title="Add Tags (Optional)">
     Add tags like "product", "comparison", "brand-awareness" for organization
@@ -129,13 +187,43 @@ Two sidebar panels providing context:
   </Step>
 </Steps>
 
-<Frame>
-  <img
-    src="/images/define-add-prompts.png"
-    alt="Add prompts interface with text area and suggestions"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '24px', border: '1px solid #e5e5e5', marginTop: '24px', marginBottom: '24px' }}>
+  <div style={{ fontSize: '12px', fontWeight: '600', color: '#262626', marginBottom: '16px' }}>Add Prompts</div>
+
+  {/* Text area representation */}
+  <div style={{ backgroundColor: '#fafafa', borderRadius: '8px', padding: '16px', border: '1px solid #e5e5e5', marginBottom: '16px', minHeight: '120px' }}>
+    <div style={{ fontSize: '12px', color: '#737373', lineHeight: '1.6' }}>
+      What is the best project management tool?<br/>
+      Best tools for remote team collaboration<br/>
+      Top productivity software for startups<br/>
+      Compare Asana vs Monday vs Friction
+    </div>
+  </div>
+
+  {/* Buttons row */}
+  <div style={{ display: 'flex', gap: '12px', marginBottom: '16px' }}>
+    <div style={{ backgroundColor: '#00C4FF', color: 'white', padding: '8px 16px', borderRadius: '6px', fontSize: '12px', fontWeight: '600' }}>
+      Get friction Suggestions
+    </div>
+    <div style={{ backgroundColor: '#ffffff', color: '#525252', padding: '8px 16px', borderRadius: '6px', fontSize: '12px', fontWeight: '500', border: '1px solid #e5e5e5' }}>
+      Clear
+    </div>
+  </div>
+
+  {/* Tags input */}
+  <div style={{ marginBottom: '16px' }}>
+    <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Tags (optional)</div>
+    <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+      <div style={{ backgroundColor: '#f5f5f5', padding: '4px 10px', borderRadius: '4px', fontSize: '11px', color: '#525252' }}>product-comparison</div>
+      <div style={{ backgroundColor: '#f5f5f5', padding: '4px 10px', borderRadius: '4px', fontSize: '11px', color: '#525252' }}>brand-awareness</div>
+    </div>
+  </div>
+
+  {/* Add button */}
+  <div style={{ backgroundColor: '#3668FF', color: 'white', padding: '10px 20px', borderRadius: '6px', fontSize: '13px', fontWeight: '600', display: 'inline-block' }}>
+    Add Prompts
+  </div>
+</div>
 
 ### Prompt Types & Examples
 
@@ -259,7 +347,7 @@ Affects trend indicators and score calculations in the table.
 **Visual**: Avatar stack showing logos of brands mentioned
 
 **Categories**:
-- **Your brand** (highlighted with special badge)
+- **Your brand** (highlighted with brand color)
 - **Competitors** (known brands in your industry)
 - **Other brands** (other mentioned brands)
 
@@ -337,6 +425,37 @@ Affects trend indicators and score calculations in the table.
 
 Shows the top domains cited when AI models mention your brand.
 
+<div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5', marginTop: '16px', marginBottom: '24px', maxWidth: '320px' }}>
+  <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Top Sources</div>
+
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #f5f5f5' }}>
+      <div style={{ fontSize: '12px', color: '#00C4FF', fontWeight: '600' }}>friction.com</div>
+      <div style={{ fontSize: '11px', color: '#737373' }}>24 citations</div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #f5f5f5' }}>
+      <div style={{ fontSize: '12px', color: '#525252' }}>techcrunch.com</div>
+      <div style={{ fontSize: '11px', color: '#737373' }}>18 citations</div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #f5f5f5' }}>
+      <div style={{ fontSize: '12px', color: '#525252' }}>producthunt.com</div>
+      <div style={{ fontSize: '11px', color: '#737373' }}>15 citations</div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #f5f5f5' }}>
+      <div style={{ fontSize: '12px', color: '#525252' }}>competitor.com</div>
+      <div style={{ fontSize: '11px', color: '#737373' }}>12 citations</div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0' }}>
+      <div style={{ fontSize: '12px', color: '#525252' }}>forbes.com</div>
+      <div style={{ fontSize: '11px', color: '#737373' }}>9 citations</div>
+    </div>
+  </div>
+</div>
+
 ### What You'll See
 
 - **Your domain** (highlighted if present)
@@ -356,19 +475,38 @@ Sources indicate:
   If your domain isn't in the top sources, focus on creating more authoritative content AI models can reference.
 </Tip>
 
-<Frame>
-  <img
-    src="/images/define-sources-panel.png"
-    alt="Sources panel showing top cited domains"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
 ---
 
 ## Insights Panel
 
 AI-generated recommendations to improve your brand's visibility.
+
+<div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5', marginTop: '16px', marginBottom: '24px', maxWidth: '360px' }}>
+  <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Insights</div>
+
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    <div style={{ backgroundColor: '#fef2f2', borderRadius: '8px', padding: '12px', borderLeft: '3px solid #ef4444' }}>
+      <div style={{ fontSize: '11px', fontWeight: '600', color: '#ef4444', marginBottom: '4px' }}>Low Visibility Alert</div>
+      <div style={{ fontSize: '11px', color: '#525252', lineHeight: '1.5' }}>
+        "Top productivity software" shows 45% visibility. Create comparison content targeting this query.
+      </div>
+    </div>
+
+    <div style={{ backgroundColor: '#fffbeb', borderRadius: '8px', padding: '12px', borderLeft: '3px solid #f59e0b' }}>
+      <div style={{ fontSize: '11px', fontWeight: '600', color: '#f59e0b', marginBottom: '4px' }}>Competitive Gap</div>
+      <div style={{ fontSize: '11px', color: '#525252', lineHeight: '1.5' }}>
+        Competitors have 67% share of voice in "remote collaboration" queries. Increase content authority.
+      </div>
+    </div>
+
+    <div style={{ backgroundColor: '#f0fdf4', borderRadius: '8px', padding: '12px', borderLeft: '3px solid #22c55e' }}>
+      <div style={{ fontSize: '11px', fontWeight: '600', color: '#22c55e', marginBottom: '4px' }}>Optimization Opportunity</div>
+      <div style={{ fontSize: '11px', color: '#525252', lineHeight: '1.5' }}>
+        "Project management tool" performing well (85%). Consider expanding to related queries.
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Insight Types
 
@@ -395,27 +533,22 @@ Each insight includes:
 - **Recommended action**
 - **Priority level**
 
-<Frame>
-  <img
-    src="/images/define-insights-panel.png"
-    alt="Insights panel with recommendations"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
 ---
 
 ## Empty State
 
 When you first visit Define (or have no user-created prompts), you'll see:
 
-<Frame>
-  <img
-    src="/images/define-empty-state.png"
-    alt="Empty state with Add Prompts CTA"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#fafafa', borderRadius: '12px', padding: '48px 24px', border: '1px solid #e5e5e5', marginTop: '16px', marginBottom: '24px', textAlign: 'center' }}>
+  <div style={{ fontSize: '48px', marginBottom: '16px' }}>📝</div>
+  <div style={{ fontSize: '18px', fontWeight: '600', color: '#262626', marginBottom: '8px' }}>No prompts yet</div>
+  <div style={{ fontSize: '13px', color: '#737373', marginBottom: '24px', maxWidth: '400px', margin: '0 auto 24px' }}>
+    Create your first prompt to start tracking how AI models respond to questions about your brand.
+  </div>
+  <div style={{ backgroundColor: '#3668FF', color: 'white', padding: '12px 24px', borderRadius: '6px', fontSize: '13px', fontWeight: '600', display: 'inline-block' }}>
+    Add Your First Prompt
+  </div>
+</div>
 
 **What to do**:
 1. Click "Add Prompts"
@@ -433,7 +566,7 @@ When you first visit Define (or have no user-created prompts), you'll see:
 
     **How**: Mix different prompt types (awareness, comparison, problem-solving)
 
-    **Tip**: Use "Get Friction Suggestions" to bootstrap your library
+    **Tip**: Use "Get friction Suggestions" to bootstrap your library
   </Accordion>
 
   <Accordion title="Use Tags Consistently">

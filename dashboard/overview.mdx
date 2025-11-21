@@ -7,13 +7,6 @@ description: "Your command center for AI performance monitoring"
 
 The Friction dashboard provides a comprehensive view of your brand's performance across AI platforms, divided into two main sections: **Your Custom Analyses** (user-created content) and **Brand Health** (Friction-generated insights).
 
-<Frame>
-  <img
-    src="/images/dashboard-overview-sections.png"
-    alt="Dashboard with two main sections"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
 
 ## Two-Section Layout
 
@@ -117,12 +110,28 @@ Large metric cards showing:
 - Trend direction (up/down/neutral)
 - Change amount over the selected period
 
-<Frame>
-  <img
-    src="/images/quick-metrics-cards.png"
-    alt="Four metric cards showing Visibility, Authority, Sentiment, Purchase Intent"
-  />
-</Frame>
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginTop: '16px', marginBottom: '24px' }}>
+  <div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5' }}>
+    <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Visibility</div>
+    <div style={{ fontSize: '32px', fontWeight: '700', color: '#262626', marginBottom: '4px' }}>80</div>
+    <div style={{ fontSize: '12px', color: '#22c55e' }}>↑ 5% from last period</div>
+  </div>
+  <div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5' }}>
+    <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Authority</div>
+    <div style={{ fontSize: '32px', fontWeight: '700', color: '#262626', marginBottom: '4px' }}>70</div>
+    <div style={{ fontSize: '12px', color: '#525252' }}>→ No change</div>
+  </div>
+  <div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5' }}>
+    <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Sentiment</div>
+    <div style={{ fontSize: '32px', fontWeight: '700', color: '#262626', marginBottom: '4px' }}>80</div>
+    <div style={{ fontSize: '12px', color: '#22c55e' }}>↑ 12% from last period</div>
+  </div>
+  <div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5' }}>
+    <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Purchase Intent</div>
+    <div style={{ fontSize: '32px', fontWeight: '700', color: '#262626', marginBottom: '4px' }}>65</div>
+    <div style={{ fontSize: '12px', color: '#22c55e' }}>↑ 8% from last period</div>
+  </div>
+</div>
 
 ### Performance Trends Chart
 
@@ -132,12 +141,6 @@ Interactive line chart with:
 - Hover tooltips showing exact values
 - Period selection (7/14/30 days)
 
-<Frame>
-  <img
-    src="/images/performance-trends-chart.png"
-    alt="Multi-line chart showing metric trends"
-  />
-</Frame>
 
 ### LLM Performance Chart
 
@@ -158,12 +161,6 @@ Compact leaderboard showing:
 - Scores for each brand
 - Your market position
 
-<Frame>
-  <img
-    src="/images/industry-ranking.png"
-    alt="Industry leaderboard with brand rankings"
-  />
-</Frame>
 
 ### Strategic Recommendations
 

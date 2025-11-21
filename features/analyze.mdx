@@ -8,13 +8,92 @@ icon: 'chart-mixed'
 
 The Analyze page provides detailed insights into your brand's performance across AI platforms, with metric-specific breakdowns, trend analysis, and actionable recommendations.
 
-<Frame>
-  <img
-    src="/images/analyze-page-overview.png"
-    alt="Analyze page showing brand health metrics and trends"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '32px 24px', border: '1px solid #e5e5e5', marginTop: '24px', marginBottom: '24px' }}>
+  <div style={{ fontSize: '10px', fontWeight: '600', color: '#737373', marginBottom: '24px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>BRAND HEALTH SUMMARY</div>
+
+  {/* Score Cards Grid */}
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '20px' }}>
+    {/* Overall Score */}
+    <div style={{ textAlign: 'center', padding: '16px' }}>
+      <div style={{ position: 'relative', width: '100px', height: '100px', margin: '0 auto 12px' }}>
+        <svg viewBox="0 0 100 100" style={{ transform: 'rotate(-90deg)' }}>
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#f5f5f5" strokeWidth="8" />
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#00C4FF" strokeWidth="8"
+            strokeDasharray="251.2" strokeDashoffset="62.8" strokeLinecap="round" />
+        </svg>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+          <div style={{ fontSize: '24px', fontWeight: '700', color: '#262626' }}>75</div>
+        </div>
+      </div>
+      <div style={{ fontSize: '11px', fontWeight: '600', color: '#00C4FF', marginBottom: '4px' }}>OVERALL</div>
+      <div style={{ fontSize: '14px', color: '#22c55e' }}>↑ 8%</div>
+    </div>
+
+    {/* Visibility */}
+    <div style={{ textAlign: 'center', padding: '16px' }}>
+      <div style={{ position: 'relative', width: '80px', height: '80px', margin: '0 auto 12px' }}>
+        <svg viewBox="0 0 100 100" style={{ transform: 'rotate(-90deg)' }}>
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#f5f5f5" strokeWidth="6" />
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#0A054B" strokeWidth="6"
+            strokeDasharray="251.2" strokeDashoffset="50.2" strokeLinecap="round" />
+        </svg>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+          <div style={{ fontSize: '18px', fontWeight: '700', color: '#262626' }}>80</div>
+        </div>
+      </div>
+      <div style={{ fontSize: '10px', fontWeight: '500', color: '#737373', marginBottom: '4px' }}>Visibility</div>
+      <div style={{ fontSize: '12px', color: '#22c55e' }}>↑ 5%</div>
+    </div>
+
+    {/* Authority */}
+    <div style={{ textAlign: 'center', padding: '16px' }}>
+      <div style={{ position: 'relative', width: '80px', height: '80px', margin: '0 auto 12px' }}>
+        <svg viewBox="0 0 100 100" style={{ transform: 'rotate(-90deg)' }}>
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#f5f5f5" strokeWidth="6" />
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#0A054B" strokeWidth="6"
+            strokeDasharray="251.2" strokeDashoffset="75.4" strokeLinecap="round" />
+        </svg>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+          <div style={{ fontSize: '18px', fontWeight: '700', color: '#262626' }}>70</div>
+        </div>
+      </div>
+      <div style={{ fontSize: '10px', fontWeight: '500', color: '#737373', marginBottom: '4px' }}>Authority</div>
+      <div style={{ fontSize: '12px', color: '#525252' }}>→ 0%</div>
+    </div>
+
+    {/* Sentiment */}
+    <div style={{ textAlign: 'center', padding: '16px' }}>
+      <div style={{ position: 'relative', width: '80px', height: '80px', margin: '0 auto 12px' }}>
+        <svg viewBox="0 0 100 100" style={{ transform: 'rotate(-90deg)' }}>
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#f5f5f5" strokeWidth="6" />
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#0A054B" strokeWidth="6"
+            strokeDasharray="251.2" strokeDashoffset="50.2" strokeLinecap="round" />
+        </svg>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+          <div style={{ fontSize: '18px', fontWeight: '700', color: '#262626' }}>80</div>
+        </div>
+      </div>
+      <div style={{ fontSize: '10px', fontWeight: '500', color: '#737373', marginBottom: '4px' }}>Sentiment</div>
+      <div style={{ fontSize: '12px', color: '#22c55e' }}>↑ 12%</div>
+    </div>
+
+    {/* Purchase Intent */}
+    <div style={{ textAlign: 'center', padding: '16px' }}>
+      <div style={{ position: 'relative', width: '80px', height: '80px', margin: '0 auto 12px' }}>
+        <svg viewBox="0 0 100 100" style={{ transform: 'rotate(-90deg)' }}>
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#f5f5f5" strokeWidth="6" />
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#0A054B" strokeWidth="6"
+            strokeDasharray="251.2" strokeDashoffset="87.9" strokeLinecap="round" />
+        </svg>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+          <div style={{ fontSize: '18px', fontWeight: '700', color: '#262626' }}>65</div>
+        </div>
+      </div>
+      <div style={{ fontSize: '10px', fontWeight: '500', color: '#737373', marginBottom: '4px' }}>Purchase Intent</div>
+      <div style={{ fontSize: '12px', color: '#22c55e' }}>↑ 8%</div>
+    </div>
+  </div>
+</div>
 
 ## What You Can Do
 
@@ -51,14 +130,6 @@ Select timeframe for all data on the page:
 
 Executive summary showing all scores at once:
 
-<Frame>
-  <img
-    src="/images/analyze-brand-health-summary.png"
-    alt="Brand Health Summary with 5 radial scores"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
 **Layout**:
 - **Overall Score** (large radial chart, cyan color)
 - **4 Metric Scores** (smaller radial charts, navy blue)
@@ -78,13 +149,12 @@ Each metric shows:
 
 Sticky tab bar for switching between metrics:
 
-<Frame>
-  <img
-    src="/images/analyze-metric-tabs.png"
-    alt="Metric tabs: Visibility, Authority, Sentiment, Purchase Intent"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#ffffff', borderRadius: '8px', padding: '4px', border: '1px solid #e5e5e5', display: 'inline-flex', gap: '4px', marginTop: '16px', marginBottom: '24px' }}>
+  <div style={{ padding: '8px 16px', borderRadius: '6px', backgroundColor: '#00C4FF', color: 'white', fontSize: '12px', fontWeight: '600' }}>Visibility</div>
+  <div style={{ padding: '8px 16px', borderRadius: '6px', backgroundColor: 'transparent', color: '#525252', fontSize: '12px', fontWeight: '500' }}>Authority</div>
+  <div style={{ padding: '8px 16px', borderRadius: '6px', backgroundColor: 'transparent', color: '#525252', fontSize: '12px', fontWeight: '500' }}>Sentiment</div>
+  <div style={{ padding: '8px 16px', borderRadius: '6px', backgroundColor: 'transparent', color: '#525252', fontSize: '12px', fontWeight: '500' }}>Purchase Intent</div>
+</div>
 
 Clicking a tab updates everything below:
 - Trend charts
@@ -96,32 +166,176 @@ Clicking a tab updates everything below:
 **Left Chart**: Metric Trend Chart
 - Shows selected metric's score over time
 - Period-dependent data points
-- Interactive tooltips
+- Hover for exact values
 
 **Right Chart**: Subcomponent Trend Chart
 - Shows the sub-metrics that make up the overall score
 - Multiple lines for different components
 - Same time period as left chart
 
-<Frame>
-  <img
-    src="/images/analyze-two-charts.png"
-    alt="Metric trend and subcomponent trend charts side by side"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '24px', marginBottom: '24px' }}>
+  {/* Left Chart - Visibility Trend */}
+  <div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5' }}>
+    <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Visibility Trend</div>
+    <div style={{ position: 'relative', height: '200px', padding: '16px 0' }}>
+      <div style={{ position: 'absolute', left: '0', top: '0', bottom: '0', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', fontSize: '10px', color: '#737373' }}>
+        <span>100</span>
+        <span>75</span>
+        <span>50</span>
+        <span>25</span>
+        <span>0</span>
+      </div>
+      <div style={{ marginLeft: '32px', height: '100%', position: 'relative' }}>
+        <div style={{ position: 'absolute', inset: '0', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div style={{ borderTop: '1px solid rgba(229, 229, 229, 0.5)' }}></div>
+          <div style={{ borderTop: '1px solid rgba(229, 229, 229, 0.5)' }}></div>
+          <div style={{ borderTop: '1px solid rgba(229, 229, 229, 0.5)' }}></div>
+          <div style={{ borderTop: '1px solid rgba(229, 229, 229, 0.5)' }}></div>
+          <div style={{ borderTop: '1px solid rgba(229, 229, 229, 0.5)' }}></div>
+        </div>
+        <svg className="w-full h-full" viewBox="0 0 400 200" preserveAspectRatio="none">
+          <polyline
+            points="0,140 50,135 100,125 150,115 200,108 250,100 300,95 350,88 400,80"
+            fill="none"
+            stroke="#00C4FF"
+            strokeWidth="2.5"
+          />
+        </svg>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#737373', marginTop: '8px', marginLeft: '32px' }}>
+        <span>Jan</span>
+        <span>Feb</span>
+        <span>Mar</span>
+        <span>Apr</span>
+        <span>May</span>
+        <span>Jun</span>
+      </div>
+    </div>
+  </div>
+
+  {/* Right Chart - Subcomponents */}
+  <div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5' }}>
+    <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Sub-Metrics</div>
+    <div style={{ position: 'relative', height: '200px', padding: '16px 0' }}>
+      <div style={{ position: 'absolute', left: '0', top: '0', bottom: '0', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', fontSize: '10px', color: '#737373' }}>
+        <span>100</span>
+        <span>75</span>
+        <span>50</span>
+        <span>25</span>
+        <span>0</span>
+      </div>
+      <div style={{ marginLeft: '32px', height: '100%', position: 'relative' }}>
+        <div style={{ position: 'absolute', inset: '0', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div style={{ borderTop: '1px solid rgba(229, 229, 229, 0.5)' }}></div>
+          <div style={{ borderTop: '1px solid rgba(229, 229, 229, 0.5)' }}></div>
+          <div style={{ borderTop: '1px solid rgba(229, 229, 229, 0.5)' }}></div>
+          <div style={{ borderTop: '1px solid rgba(229, 229, 229, 0.5)' }}></div>
+          <div style={{ borderTop: '1px solid rgba(229, 229, 229, 0.5)' }}></div>
+        </div>
+        <svg className="w-full h-full" viewBox="0 0 400 200" preserveAspectRatio="none">
+          <polyline points="0,130 50,125 100,118 150,110 200,105 250,98 300,92 350,87 400,75" fill="none" stroke="#3668FF" strokeWidth="2" opacity="0.8" />
+          <polyline points="0,150 50,145 100,140 150,132 200,128 250,122 300,115 350,110 400,100" fill="none" stroke="#06B6D4" strokeWidth="2" opacity="0.8" />
+          <polyline points="0,160 50,158 100,155 150,150 200,145 250,140 300,135 350,130 400,120" fill="none" stroke="#94A3B8" strokeWidth="2" opacity="0.8" />
+        </svg>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#737373', marginTop: '8px', marginLeft: '32px' }}>
+        <span>Jan</span>
+        <span>Feb</span>
+        <span>Mar</span>
+        <span>Apr</span>
+        <span>May</span>
+        <span>Jun</span>
+      </div>
+    </div>
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', marginTop: '12px', fontSize: '10px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+        <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#3668FF' }}></div>
+        <span style={{ color: '#737373' }}>Mention Frequency</span>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+        <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#06B6D4' }}></div>
+        <span style={{ color: '#737373' }}>Position Quality</span>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+        <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#94A3B8' }}></div>
+        <span style={{ color: '#737373' }}>Share of Voice</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### 5. Expandable Score Breakdown
 
 Shows how the score is calculated from sub-metrics:
 
-<Frame>
-  <img
-    src="/images/analyze-score-breakdown.png"
-    alt="Expandable score breakdown component"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5', marginTop: '24px', marginBottom: '24px', maxWidth: '600px' }}>
+  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', cursor: 'pointer' }}>
+    <div style={{ fontSize: '13px', fontWeight: '600', color: '#262626' }}>Score Breakdown</div>
+    <div style={{ fontSize: '12px', color: '#737373' }}>▼</div>
+  </div>
+
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px', backgroundColor: '#fafafa', borderRadius: '6px' }}>
+      <div>
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#262626', marginBottom: '2px' }}>Mention Frequency</div>
+        <div style={{ fontSize: '10px', color: '#737373' }}>30% weight</div>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ fontSize: '14px', fontWeight: '600', color: '#525252' }}>85</div>
+        <div style={{ fontSize: '11px', color: '#737373' }}>= 25.5 pts</div>
+      </div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px', backgroundColor: '#fafafa', borderRadius: '6px' }}>
+      <div>
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#262626', marginBottom: '2px' }}>Position Quality</div>
+        <div style={{ fontSize: '10px', color: '#737373' }}>25% weight</div>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ fontSize: '14px', fontWeight: '600', color: '#525252' }}>72</div>
+        <div style={{ fontSize: '11px', color: '#737373' }}>= 18.0 pts</div>
+      </div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px', backgroundColor: '#fafafa', borderRadius: '6px' }}>
+      <div>
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#262626', marginBottom: '2px' }}>Template Coverage</div>
+        <div style={{ fontSize: '10px', color: '#737373' }}>20% weight</div>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ fontSize: '14px', fontWeight: '600', color: '#525252' }}>68</div>
+        <div style={{ fontSize: '11px', color: '#737373' }}>= 13.6 pts</div>
+      </div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px', backgroundColor: '#fafafa', borderRadius: '6px' }}>
+      <div>
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#262626', marginBottom: '2px' }}>Consistency</div>
+        <div style={{ fontSize: '10px', color: '#737373' }}>15% weight</div>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ fontSize: '14px', fontWeight: '600', color: '#525252' }}>90</div>
+        <div style={{ fontSize: '11px', color: '#737373' }}>= 13.5 pts</div>
+      </div>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px', backgroundColor: '#fafafa', borderRadius: '6px' }}>
+      <div>
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#262626', marginBottom: '2px' }}>Share of Voice</div>
+        <div style={{ fontSize: '10px', color: '#737373' }}>10% weight</div>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ fontSize: '14px', fontWeight: '600', color: '#525252' }}>55</div>
+        <div style={{ fontSize: '11px', color: '#737373' }}>= 5.5 pts</div>
+      </div>
+    </div>
+
+    <div style={{ borderTop: '2px solid #e5e5e5', marginTop: '8px', paddingTop: '12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div style={{ fontSize: '13px', fontWeight: '600', color: '#262626' }}>Total Visibility Score</div>
+      <div style={{ fontSize: '20px', fontWeight: '700', color: '#00C4FF' }}>76</div>
+    </div>
+  </div>
+</div>
 
 **Features**:
 - Click to expand/collapse
@@ -133,13 +347,32 @@ Shows how the score is calculated from sub-metrics:
 
 AI-generated recommendations specific to the selected metric:
 
-<Frame>
-  <img
-    src="/images/analyze-insights-card.png"
-    alt="Metric-specific insights and recommendations"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
+<div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '20px', border: '1px solid #e5e5e5', marginTop: '16px', marginBottom: '24px', maxWidth: '500px' }}>
+  <div style={{ fontSize: '11px', fontWeight: '600', color: '#737373', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Visibility Insights</div>
+
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    <div style={{ backgroundColor: '#f0fdf4', borderRadius: '8px', padding: '12px', borderLeft: '3px solid #22c55e' }}>
+      <div style={{ fontSize: '11px', fontWeight: '600', color: '#22c55e', marginBottom: '4px' }}>Quick Win</div>
+      <div style={{ fontSize: '11px', color: '#525252', lineHeight: '1.5' }}>
+        Your mention frequency is excellent (85) but share of voice is lower (55). Focus on increasing brand mentions relative to competitors.
+      </div>
+    </div>
+
+    <div style={{ backgroundColor: '#eff6ff', borderRadius: '8px', padding: '12px', borderLeft: '3px solid #3b82f6' }}>
+      <div style={{ fontSize: '11px', fontWeight: '600', color: '#3b82f6', marginBottom: '4px' }}>Strategic Priority</div>
+      <div style={{ fontSize: '11px', color: '#525252', lineHeight: '1.5' }}>
+        Template coverage at 68 suggests gaps in certain prompt categories. Expand content to cover more use cases.
+      </div>
+    </div>
+
+    <div style={{ backgroundColor: '#fefce8', borderRadius: '8px', padding: '12px', borderLeft: '3px solid #eab308' }}>
+      <div style={{ fontSize: '11px', fontWeight: '600', color: '#eab308', marginBottom: '4px' }}>Maintenance Task</div>
+      <div style={{ fontSize: '11px', color: '#525252', lineHeight: '1.5' }}>
+        Consistency score is strong (90). Keep publishing fresh content regularly to maintain this performance.
+      </div>
+    </div>
+  </div>
+</div>
 
 **Insight categories**:
 - Quick Wins
@@ -331,14 +564,6 @@ Shows the individual sub-metrics that combine to create the overall score.
 
 Click to expand the breakdown and see exactly how your score is calculated.
 
-<Frame>
-  <img
-    src="/images/analyze-score-breakdown-expanded.png"
-    alt="Expanded score breakdown showing sub-metrics and weights"
-    style={{ borderRadius: '12px' }}
-  />
-</Frame>
-
 **What you'll see**:
 - List of all sub-metrics
 - Each sub-metric's individual score
@@ -353,7 +578,7 @@ Click to expand the breakdown and see exactly how your score is calculated.
 - Consistency: 90 × 15% weight = 13.5 points
 - Share of Voice: 55 × 10% weight = 5.5 points
 
-**Total Visibility Score**: 76.1 / 100
+**Total Visibility Score**: 76 / 100
 
 <Info>
   Focus optimization efforts on high-weight components for maximum impact. A 10-point improvement in a 30% weighted component adds 3 points to your overall score, while the same improvement in a 10% weighted component only adds 1 point.
