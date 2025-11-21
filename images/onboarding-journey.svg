@@ -1,0 +1,62 @@
+<svg width="900" height="120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00C4FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3668FF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="120" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Progress line -->
+  <line x1="75" y1="40" x2="825" y2="40" stroke="url(#lineGradient)" stroke-width="2"/>
+
+  <!-- Phase 1: Brand Discovery -->
+  <g transform="translate(75, 40)">
+    <circle r="24" fill="#00C4FF"/>
+    <text y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">1</text>
+    <text y="60" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Brand</text>
+    <text y="75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Discovery</text>
+  </g>
+
+  <!-- Phase 2: Industry -->
+  <g transform="translate(225, 40)">
+    <circle r="24" fill="#00C4FF"/>
+    <text y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">2</text>
+    <text y="60" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Industry</text>
+    <text y="75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Detection</text>
+  </g>
+
+  <!-- Phase 3: Subcategories -->
+  <g transform="translate(375, 40)">
+    <circle r="24" fill="#1fa8d8"/>
+    <text y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">3</text>
+    <text y="60" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Sub-</text>
+    <text y="75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">categories</text>
+  </g>
+
+  <!-- Phase 4: Competitors -->
+  <g transform="translate(525, 40)">
+    <circle r="24" fill="#2b7fb8"/>
+    <text y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">4</text>
+    <text y="60" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Competitor</text>
+    <text y="75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Collection</text>
+  </g>
+
+  <!-- Phase 5: Brand Prompts -->
+  <g transform="translate(675, 40)">
+    <circle r="24" fill="#335599"/>
+    <text y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">5</text>
+    <text y="60" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Brand</text>
+    <text y="75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Prompts</text>
+  </g>
+
+  <!-- Phase 6: Commerce -->
+  <g transform="translate(825, 40)">
+    <circle r="24" fill="#3668FF"/>
+    <text y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">6</text>
+    <text y="60" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Commerce</text>
+    <text y="75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Prompts</text>
+  </g>
+</svg>
