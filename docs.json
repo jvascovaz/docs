@@ -7,7 +7,7 @@
     "light": "#3668FF",
     "dark": "#0A054B"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "font": {
     "headings": {
       "family": "Montserrat"
