@@ -33,7 +33,8 @@
         "group": "Getting Started",
         "pages": [
           "index",
-          "guides/onboarding"
+          "guides/onboarding",
+          "guides/ai-recommendation-score"
         ]
       },
       {
