@@ -6,7 +6,7 @@ icon: "gauge-high"
 
 # AI Recommendation Score
 
-AI Recommendation Score is friction AI's top-level metric for AI-driven discovery. It summarizes how strongly AI assistants recommend your brand across tracked prompts through four key drivers: Visibility, Sentiment, Purchase Intent, and Brand Recognition.
+AI Recommendation Score is friction AI's top-level metric for AI-driven discovery. It summarizes how strongly AI assistants recommend your brand across tracked prompts through three key drivers: Visibility, Sentiment, and Purchase Intent.
 
 ---
 
@@ -22,9 +22,9 @@ AI Recommendation Score is a composite score that summarizes how strongly AI ass
 
 ## What It's Made Of
 
-The AI Recommendation Score is built from four components that together capture both presence (are you in the answer?) and preference (are you the recommended choice?).
+The AI Recommendation Score is built from three components that together capture both presence (are you in the answer?) and preference (are you the recommended choice?).
 
-<CardGroup cols={2}>
+<CardGroup cols={3}>
   <Card title="Visibility" icon="eye">
     How often your brand is mentioned in AI responses
   </Card>
@@ -34,26 +34,22 @@ The AI Recommendation Score is built from four components that together capture 
   <Card title="Purchase Intent" icon="cart-shopping">
     How often your brand is suggested as an option to buy or choose
   </Card>
-  <Card title="Brand Recognition" icon="building">
-    How well AI understands and accurately represents your brand
-  </Card>
 </CardGroup>
 
 ### Why These Components
 
-These four dimensions cover the full spectrum of what makes a recommendation compelling:
+These three dimensions cover the full spectrum of what makes a recommendation compelling:
 
 - **Visibility** ensures you're part of the conversation
 - **Sentiment** ensures you're portrayed positively
 - **Purchase Intent** measures direct recommendation strength
-- **Brand Recognition** ensures AI understands who you are and what you do
 
 ---
 
 ## How It's Calculated
 
 <Note>
-  The AI Recommendation Score is computed as a weighted combination of the four components above. Weighting is optimized to reflect recommendation outcomes, not raw mentions.
+  The AI Recommendation Score is computed as a weighted combination of the three components above. Weighting is optimized to reflect recommendation outcomes, not raw mentions.
 </Note>
 
 The exact weighting prioritizes signals that correlate with actual recommendations over simple visibility metrics. A brand that appears rarely but is consistently recommended will score higher than one that's mentioned often but never suggested as a choice.
@@ -201,7 +197,7 @@ Your AI Recommendation Score can be viewed at multiple levels:
     icon="chart-mixed"
     href="/features/analyze"
   >
-    Deep dive into the four score components
+    Deep dive into the three score components
   </Card>
   <Card
     title="Track Custom Prompts"

@@ -36,6 +36,10 @@
     <!-- Purchase Intent - Blue -->
     <polyline points="0,220 87.5,216 175,210 262.5,206 350,200 437.5,196 525,190 612.5,186 700,180"
       fill="none" stroke="hsl(217 91% 60%)" stroke-width="2.5"/>
+
+    <!-- Brand Recognition - Teal -->
+    <polyline points="0,200 87.5,190 175,180 262.5,176 350,170 437.5,166 525,160 612.5,156 700,150"
+      fill="none" stroke="hsl(173 58% 39%)" stroke-width="2.5"/>
   </g>
 
   <!-- X-axis labels -->
@@ -46,14 +50,17 @@
   </g>
 
   <!-- Legend -->
-  <g transform="translate(220, 285)">
+  <g transform="translate(150, 285)">
     <circle cx="0" cy="-3" r="6" fill="hsl(188 94% 43%)"/>
     <text x="12" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Visibility</text>
 
-    <circle cx="120" cy="-3" r="6" fill="hsl(262 83% 58%)"/>
-    <text x="132" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Sentiment</text>
+    <circle cx="100" cy="-3" r="6" fill="hsl(262 83% 58%)"/>
+    <text x="112" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Sentiment</text>
 
-    <circle cx="240" cy="-3" r="6" fill="hsl(217 91% 60%)"/>
-    <text x="252" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Purchase Intent</text>
+    <circle cx="210" cy="-3" r="6" fill="hsl(217 91% 60%)"/>
+    <text x="222" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Purchase Intent</text>
+
+    <circle cx="360" cy="-3" r="6" fill="hsl(173 58% 39%)"/>
+    <text x="372" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Brand Recognition</text>
   </g>
 </svg>

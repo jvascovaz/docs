@@ -1,9 +1,9 @@
-<svg width="680" height="180" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="180" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="680" height="180" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <rect width="800" height="180" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
 
   <!-- Title -->
-  <text x="340" y="32" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0A054B">Brand Health Summary</text>
+  <text x="400" y="32" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0A054B">Brand Health Summary</text>
 
   <!-- AI Recommendation Score (larger) -->
   <g transform="translate(80, 90)">
@@ -17,7 +17,7 @@
   </g>
 
   <!-- Visibility -->
-  <g transform="translate(220, 90)">
+  <g transform="translate(200, 90)">
     <circle cx="0" cy="0" r="32" fill="none" stroke="#f3f4f6" stroke-width="6"/>
     <circle cx="0" cy="0" r="32" fill="none" stroke="#0A054B" stroke-width="6"
       stroke-dasharray="201" stroke-dashoffset="40.2" transform="rotate(-90)" stroke-linecap="round"/>
@@ -27,7 +27,7 @@
   </g>
 
   <!-- Sentiment -->
-  <g transform="translate(380, 90)">
+  <g transform="translate(320, 90)">
     <circle cx="0" cy="0" r="32" fill="none" stroke="#f3f4f6" stroke-width="6"/>
     <circle cx="0" cy="0" r="32" fill="none" stroke="#0A054B" stroke-width="6"
       stroke-dasharray="201" stroke-dashoffset="30.15" transform="rotate(-90)" stroke-linecap="round"/>
@@ -37,12 +37,22 @@
   </g>
 
   <!-- Purchase Intent -->
-  <g transform="translate(540, 90)">
+  <g transform="translate(440, 90)">
     <circle cx="0" cy="0" r="32" fill="none" stroke="#f3f4f6" stroke-width="6"/>
     <circle cx="0" cy="0" r="32" fill="none" stroke="#0A054B" stroke-width="6"
       stroke-dasharray="201" stroke-dashoffset="60.3" transform="rotate(-90)" stroke-linecap="round"/>
     <text y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#0A054B">70</text>
     <text y="26" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#64748b">Purchase Int.</text>
     <text y="42" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#f59e0b">↓ -3%</text>
+  </g>
+
+  <!-- Brand Recognition -->
+  <g transform="translate(560, 90)">
+    <circle cx="0" cy="0" r="32" fill="none" stroke="#f3f4f6" stroke-width="6"/>
+    <circle cx="0" cy="0" r="32" fill="none" stroke="#0A054B" stroke-width="6"
+      stroke-dasharray="201" stroke-dashoffset="56.28" transform="rotate(-90)" stroke-linecap="round"/>
+    <text y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#0A054B">72</text>
+    <text y="26" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#64748b">Brand Rec.</text>
+    <text y="42" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#10b981">↑ +8%</text>
   </g>
 </svg>

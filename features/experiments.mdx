@@ -17,7 +17,7 @@ The Experiments feature allows you to test different prompt strategies to see wh
 Experiments in friction let you:
 
 - **Test prompt variations**: Compare control vs. test prompts
-- **Measure performance differences**: Track visibility, sentiment, and purchase intent
+- **Measure visibility performance**: Track how prompt changes affect brand visibility
 - **Make data-driven decisions**: Choose the best-performing prompts based on actual AI responses
 - **Optimize continuously**: Run multiple experiments to improve over time
 
@@ -25,8 +25,8 @@ Experiments in friction let you:
   <Card title="Control vs Variant Testing" icon="scale-balanced">
     Compare two sets of prompts head-to-head
   </Card>
-  <Card title="Multi-Metric Tracking" icon="chart-mixed">
-    Monitor up to 4 target metrics simultaneously
+  <Card title="Visibility Tracking" icon="chart-mixed">
+    Monitor visibility performance across AI models
   </Card>
   <Card title="AI Model Selection" icon="brain">
     Test across specific LLMs and platforms
@@ -143,13 +143,10 @@ Click **"+ Create Experiment"** to open the creation form.
   **Example**: "Benefit-focused prompts will increase purchase intent by 15% compared to feature-focused prompts"
 </ParamField>
 
-<ParamField path="Target Metrics" type="array" required>
-  Select 1-3 metrics to track:
-  - **Visibility**: Frequency and prominence of brand mentions
-  - **Sentiment**: Positive, neutral, or negative tone
-  - **Purchase Intent**: Likelihood of AI recommendation
+<ParamField path="Target Metric" type="string" required>
+  Experiments track **Visibility**: Frequency and prominence of brand mentions across AI responses.
 
-  **Note**: At least 1 metric must be selected
+  **Note**: Visibility is the primary metric for A/B experiments, measuring how often your brand appears in AI-generated responses.
 </ParamField>
 
 #### Optional Fields:
@@ -244,7 +241,6 @@ The test prompts representing your new approach.
 
     **Requirements**:
     - Hypothesis must be filled
-    - At least 1 target metric selected
     - Minimum 5 prompts per bucket (10 total)
     - Valid date range (if provided)
 
@@ -337,35 +333,14 @@ Results show scores for each target metric in both buckets:
 
 #### How to Read Results:
 
-<Tabs>
-  <Tab title="Visibility">
-    **Control**: 68/100
-    **Variant**: 82/100
-    **Lift**: +14 points (+20.6%)
+**Visibility Comparison**:
+- **Control**: 68/100
+- **Variant**: 82/100
+- **Lift**: +14 points (+20.6%)
 
-    **Interpretation**: Variant prompts resulted in significantly better brand visibility
+**Interpretation**: Variant prompts resulted in significantly better brand visibility across AI models.
 
-    **Action**: Adopt variant prompt style for visibility improvement
-  </Tab>
-  <Tab title="Sentiment">
-    **Control**: 75/100
-    **Variant**: 73/100
-    **Lift**: -2 points (-2.7%)
-
-    **Interpretation**: Variant slightly decreased sentiment (not statistically significant)
-
-    **Action**: Monitor sentiment if adopting variant
-  </Tab>
-  <Tab title="Purchase Intent">
-    **Control**: 60/100
-    **Variant**: 78/100
-    **Lift**: +18 points (+30%)
-
-    **Interpretation**: Variant dramatically increased purchase recommendations
-
-    **Action**: Strong win - adopt variant for commerce optimization
-  </Tab>
-</Tabs>
+**Action**: Adopt variant prompt style for visibility improvement. The experiment shows that the new prompt approach leads to your brand appearing more frequently and prominently in AI responses.
 
 ### Statistical Significance
 
@@ -430,13 +405,11 @@ friction automatically recommends a winner based on:
     **Recommendation**: Let experiments run for at least 7 days for AI model caching to settle
   </Step>
   <Step title="Align with Business Goals">
-    Choose target metrics that matter to your business
+    Focus on prompt strategies that improve visibility for your business context
 
-    **E-Commerce**: Prioritize Purchase Intent
-
-    **B2B SaaS**: Prioritize Visibility
-
-    **Consumer Brand**: Prioritize Sentiment
+    **E-Commerce**: Test product-focused prompts
+    **B2B SaaS**: Test expertise and solution prompts
+    **Consumer Brand**: Test brand awareness prompts
   </Step>
 </Steps>
 
@@ -603,7 +576,7 @@ Archive old or irrelevant experiments to keep your list clean:
   </Step>
   <Step title="Create Experiment">
     - Name: "Product Page Prompts - Benefit vs Feature Test"
-    - Target Metrics: Purchase Intent (primary), Sentiment (secondary)
+    - Target Metric: Visibility
     - LLM Models: GPT-4, Claude 3, Gemini Pro
   </Step>
   <Step title="Build Control Bucket (Feature-Focused)">
@@ -631,8 +604,8 @@ Archive old or irrelevant experiments to keep your list clean:
   </Step>
   <Step title="Monitor Results">
     After execution completes:
-    - **Control Purchase Intent**: 62/100
-    - **Variant Purchase Intent**: 79/100
+    - **Control Visibility**: 62/100
+    - **Variant Visibility**: 79/100
     - **Lift**: +17 points (+27.4%)
     - **Confidence**: 96%
 
@@ -681,7 +654,6 @@ Archive old or irrelevant experiments to keep your list clean:
   <Accordion title="Can't Start Experiment">
     **Check**:
     - Hypothesis filled in
-    - At least 1 target metric selected
     - Minimum 5 prompts per bucket
     - Valid date range (end > start)
 

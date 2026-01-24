@@ -12,8 +12,8 @@ The Analyze page provides detailed insights into your brand's performance across
 ## What You Can Do
 
 <CardGroup cols={2}>
-  <Card title="Track 3 Core Metrics" icon="gauge">
-    Monitor Visibility, Sentiment, and Purchase Intent scores
+  <Card title="Track 4 Core Metrics" icon="gauge">
+    Monitor Visibility, Sentiment, Purchase Intent, and Brand Recognition scores
   </Card>
   <Card title="View Detailed Breakdowns" icon="chart-pie">
     See sub-metric components and how scores are calculated
@@ -27,7 +27,7 @@ The Analyze page provides detailed insights into your brand's performance across
 </CardGroup>
 
 <Frame>
-  <img src="/images/analyze-brand-health.svg" alt="Brand health summary with AI Recommendation Score of 75 and individual metrics: Visibility (80), Sentiment (85), Purchase Intent (70)" />
+  <img src="/images/analyze-brand-health.svg" alt="Brand health summary with AI Recommendation Score of 75 and individual metrics: Visibility (80), Sentiment (85), Purchase Intent (70), Brand Recognition (72)" />
 </Frame>
 
 <Frame>
@@ -55,10 +55,11 @@ Executive summary showing all scores at once:
 
 **Layout**:
 - **AI Recommendation Score** (large radial chart, cyan color)
-- **3 Metric Scores** (smaller radial charts, navy blue)
+- **4 Metric Scores** (smaller radial charts, navy blue)
   - Visibility
   - Sentiment
   - Purchase Intent
+  - Brand Recognition
 
 Each metric shows:
 - Current score (0-100)
@@ -114,7 +115,7 @@ AI-generated recommendations specific to the selected metric:
 
 ---
 
-## The Three Core Metrics
+## The Four Core Metrics
 
 ### 1. Visibility
 
@@ -213,6 +214,40 @@ AI-generated recommendations specific to the selected metric:
       </Step>
       <Step title="Show Social Proof">
         Display customer counts, success metrics, testimonials
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
+
+### 4. Brand Recognition
+
+**What it measures**: How well AI models understand and accurately represent your brand
+
+**Data source**: Analysis of brand accuracy and representation in system prompt responses
+
+**Sub-metrics**:
+- Brand accuracy (correct information about your brand)
+- Entity recognition (how well AI identifies your brand)
+- Brand attributes (alignment with your brand messaging)
+- Competitive distinction (differentiation from competitors)
+
+**Good score**: 65+
+**Needs work**: Below 50
+
+<AccordionGroup>
+  <Accordion title="How to Improve Brand Recognition">
+    <Steps>
+      <Step title="Ensure Consistent Brand Information">
+        Make sure your brand information is consistent across all online sources
+      </Step>
+      <Step title="Build Strong Entity Signals">
+        Create clear, structured data about your brand (Wikipedia, Wikidata, schema markup)
+      </Step>
+      <Step title="Clarify Brand Positioning">
+        Publish content that clearly articulates what makes your brand unique
+      </Step>
+      <Step title="Monitor Brand Accuracy">
+        Regularly check AI responses for incorrect information and address at the source
       </Step>
     </Steps>
   </Accordion>
@@ -469,7 +504,7 @@ Different periods serve different purposes:
   </Accordion>
 
   <Accordion title="Focus on One Metric at a Time">
-    **Why**: Diluting efforts across all 3 metrics reduces impact
+    **Why**: Diluting efforts across all 4 metrics reduces impact
 
     **Strategy**:
     1. Pick your priority metric based on business goals
@@ -501,30 +536,34 @@ Not all metrics matter equally for every brand:
     1. Purchase Intent (drives conversions)
     2. Sentiment (affects buying decisions)
     3. Visibility (top-of-funnel awareness)
+    4. Brand Recognition (accurate representation)
 
     **Focus**: Conversion optimization
   </Tab>
   <Tab title="B2B SaaS">
     **Priority Order**:
     1. Purchase Intent (recommendation strength)
-    2. Visibility (category presence)
-    3. Sentiment (reputation)
+    2. Brand Recognition (accurate positioning)
+    3. Visibility (category presence)
+    4. Sentiment (reputation)
 
     **Focus**: Establishing expertise
   </Tab>
   <Tab title="Consumer Brands">
     **Priority Order**:
     1. Sentiment (brand perception)
-    2. Visibility (brand awareness)
-    3. Purchase Intent (consideration)
+    2. Brand Recognition (brand accuracy)
+    3. Visibility (brand awareness)
+    4. Purchase Intent (consideration)
 
     **Focus**: Brand perception and awareness
   </Tab>
   <Tab title="Professional Services">
     **Priority Order**:
-    1. Sentiment (reputation)
-    2. Visibility (thought leadership)
-    3. Purchase Intent (recommendation strength)
+    1. Brand Recognition (expertise representation)
+    2. Sentiment (reputation)
+    3. Visibility (thought leadership)
+    4. Purchase Intent (recommendation strength)
 
     **Focus**: Establishing expertise and trust
   </Tab>
