@@ -17,7 +17,7 @@ The Experiments feature allows you to test different prompt strategies to see wh
 Experiments in friction let you:
 
 - **Test prompt variations**: Compare control vs. test prompts
-- **Measure performance differences**: Track visibility, sentiment, authority, and purchase intent
+- **Measure performance differences**: Track visibility, sentiment, and purchase intent
 - **Make data-driven decisions**: Choose the best-performing prompts based on actual AI responses
 - **Optimize continuously**: Run multiple experiments to improve over time
 
@@ -144,10 +144,9 @@ Click **"+ Create Experiment"** to open the creation form.
 </ParamField>
 
 <ParamField path="Target Metrics" type="array" required>
-  Select 1-4 metrics to track:
+  Select 1-3 metrics to track:
   - **Visibility**: Frequency and prominence of brand mentions
   - **Sentiment**: Positive, neutral, or negative tone
-  - **Authority**: Recognition as category leader
   - **Purchase Intent**: Likelihood of AI recommendation
 
   **Note**: At least 1 metric must be selected
@@ -357,15 +356,6 @@ Results show scores for each target metric in both buckets:
 
     **Action**: Monitor sentiment if adopting variant
   </Tab>
-  <Tab title="Authority">
-    **Control**: 55/100
-    **Variant**: 62/100
-    **Lift**: +7 points (+12.7%)
-
-    **Interpretation**: Variant improved authority perception
-
-    **Action**: Variant helps establish category leadership
-  </Tab>
   <Tab title="Purchase Intent">
     **Control**: 60/100
     **Variant**: 78/100
@@ -444,7 +434,7 @@ friction automatically recommends a winner based on:
 
     **E-Commerce**: Prioritize Purchase Intent
 
-    **B2B SaaS**: Prioritize Authority
+    **B2B SaaS**: Prioritize Visibility
 
     **Consumer Brand**: Prioritize Sentiment
   </Step>

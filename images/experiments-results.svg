@@ -49,14 +49,14 @@
     <line x1="0" y1="30" x2="652" y2="30" stroke="#f3f4f6" stroke-width="1"/>
   </g>
 
-  <!-- Row 4: Authority -->
+  <!-- Row 4: Sentiment -->
   <g transform="translate(24, 225)">
     <circle cx="8" cy="12" r="4" fill="none" stroke="#e5e7eb" stroke-width="2"/>
-    <text x="24" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Authority</text>
+    <text x="24" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">Sentiment</text>
 
-    <text x="250" y="16" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">5.20</text>
-    <text x="400" y="16" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0A054B">5.50</text>
-    <text x="630" y="16" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#10b981">+5.8%</text>
+    <text x="250" y="16" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0A054B">7.20</text>
+    <text x="400" y="16" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0A054B">7.80</text>
+    <text x="630" y="16" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#10b981">+8.3%</text>
   </g>
 
   <!-- Result Note -->
