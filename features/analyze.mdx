@@ -1,10 +1,10 @@
 ---
-title: "Brand Health Analysis"
+title: "Brand Audit"
 description: "Deep dive into your brand's AI performance across four core metrics"
 icon: "chart-mixed"
 ---
 
-# Analyze Your Brand Health
+# Analyze Your Brand
 
 The Analyze page provides detailed insights into your brand's performance across AI platforms, with metric-specific breakdowns, trend analysis, and actionable recommendations.
 
@@ -27,11 +27,11 @@ The Analyze page provides detailed insights into your brand's performance across
 </CardGroup>
 
 <Frame>
-  <img src="/images/analyze-brand-health.svg" alt="Brand health summary with AI Recommendation Score of 75 and individual metrics: Visibility (80), Sentiment (85), Purchase Intent (70), Brand Recognition (72)" />
+  <img src="/images/analyze-brand-audit.svg" alt="Brand audit summary with Overall Recommendation of 75 and individual metrics: Visibility (80), Sentiment (85), Purchase Intent (70), Brand Recognition (72)" />
 </Frame>
 
 <Frame>
-  <img src="/images/analyze-trends-chart.svg" alt="30-day performance trends showing all four brand health metrics over time with legend" />
+  <img src="/images/analyze-trends-chart.svg" alt="30-day performance trends showing all four brand audit metrics over time with legend" />
 </Frame>
 
 ---
@@ -48,13 +48,13 @@ Select timeframe for all data on the page:
 - **180 Days** - Half-year view
 - **1 Year** - Annual trends
 
-### 2. Brand Health Summary Card
+### 2. Brand Audit Summary Card
 
 Executive summary showing all scores at once:
 
 
 **Layout**:
-- **AI Recommendation Score** (large radial chart, cyan color)
+- **Overall Recommendation** (large radial chart, cyan color)
 - **4 Metric Scores** (smaller radial charts, navy blue)
   - Visibility
   - Sentiment
@@ -86,7 +86,7 @@ Clicking a tab updates everything below:
 - Interactive tooltips
 
 **Right Chart**: Subcomponent Trend Chart
-- Shows the sub-metrics that make up the AI Recommendation Score
+- Shows the sub-metrics that make up the Overall Recommendation score
 - Multiple lines for different components
 - Same time period as left chart
 
@@ -273,7 +273,7 @@ Shows your selected metric's score over time.
 
 ### Subcomponent Trend Chart (Right)
 
-Shows the individual sub-metrics that combine to create the AI Recommendation Score.
+Shows the individual sub-metrics that combine to create the Overall Recommendation score.
 
 **What you'll see**:
 - Multiple lines (one per sub-metric)
@@ -282,12 +282,12 @@ Shows the individual sub-metrics that combine to create the AI Recommendation Sc
 - Legend showing which line is which
 
 **Use cases**:
-- Understand what's driving AI Recommendation Score changes
+- Understand what's driving Overall Recommendation score changes
 - Identify which sub-metric needs attention
 - See if improvements in one area are offset by declines in another
 
 <Tip>
-  If your AI Recommendation Score is flat but you see diverging sub-metric lines, it means improvements in some areas are being offset by declines in others. Focus on the declining components.
+  If your Overall Recommendation score is flat but you see diverging sub-metric lines, it means improvements in some areas are being offset by declines in others. Focus on the declining components.
 </Tip>
 
 ---
@@ -314,7 +314,7 @@ Click to expand the breakdown and see exactly how your score is calculated.
 **Total Visibility Score**: 76.1 / 100
 
 <Info>
-  Focus optimization efforts on high-weight components for maximum impact. A 10-point improvement in a 30% weighted component adds 3 points to your AI Recommendation Score, while the same improvement in a 10% weighted component only adds 1 point.
+  Focus optimization efforts on high-weight components for maximum impact. A 10-point improvement in a 30% weighted component adds 3 points to your Overall Recommendation score, while the same improvement in a 10% weighted component only adds 1 point.
 </Info>
 
 ---
@@ -453,10 +453,10 @@ Different periods serve different purposes:
 <Note>
   **Important**: The Analyze page shows metrics calculated from **system-generated prompts** (~25 prompts created during onboarding Phase 4).
 
-  These prompts cover standard brand health queries and are different from the user-created prompts you see on the Visibility page.
+  These prompts cover standard brand audit queries and are different from the user-created prompts you see on the Visibility page.
 
   **Why separate?**
-  - System prompts provide consistent, standardized brand health measurement
+  - System prompts provide consistent, standardized brand audit measurement
   - User prompts track custom queries you specifically care about
   - Both are valuable but serve different purposes
 </Note>
@@ -470,7 +470,7 @@ Different periods serve different purposes:
     **Frequency**: Check Analyze page once per week
 
     **What to do**:
-    - Review overall brand health score
+    - Review overall brand audit score
     - Scan for significant trend changes (>10% movement)
     - Read new insights in the panel
     - Note any competitive alerts
@@ -613,7 +613,7 @@ Not all metrics matter equally for every brand:
     icon="gauge"
     href="/dashboard/overview"
   >
-    See high-level brand health summary
+    See high-level brand audit summary
   </Card>
   <Card
     title="Create Custom Prompts"
