@@ -5,7 +5,7 @@
   <!-- Title -->
   <text x="400" y="32" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0A054B">Brand Audit Summary</text>
 
-  <!-- Overall Recommendation (larger) -->
+  <!-- AI Score (larger) -->
   <g transform="translate(80, 90)">
     <!-- Gray background circle -->
     <circle cx="0" cy="0" r="40" fill="none" stroke="#f3f4f6" stroke-width="8"/>
